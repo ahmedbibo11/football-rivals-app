@@ -81,10 +81,19 @@ if not items:
     print("NO_ARTIFACTS"); sys.exit(6)
 art = items[0]
 print("artifact:", art["name"], art["size_in_bytes"])
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+opener = urllib.request.build_opener(NoRedirect)
 req = urllib.request.Request(art["archive_download_url"])
 req.add_header("Authorization", f"Bearer {TOKEN}")
 req.add_header("Accept", "application/vnd.github+json")
-with urllib.request.urlopen(req, timeout=600) as r:
+try:
+    opener.open(req, timeout=60); print("NO_REDIRECT — unexpected"); sys.exit(7)
+except urllib.error.HTTPError as e:
+    loc = e.headers.get("Location")
+    if not loc: print("NO_LOCATION", e.code); sys.exit(8)
+with urllib.request.urlopen(loc, timeout=900) as r:
     blob = r.read()
 z = zipfile.ZipFile(io.BytesIO(blob))
 print("zip contents:", z.namelist())
