@@ -1,0 +1,12 @@
+.fr135-match-detail{margin:6px 0 14px;border:1px solid #bc9d59;color:#eaf5ff;overflow:hidden}
+.fr135-match-detail h3{font-size:.95rem;margin:12px 0 5px;color:#f7d893}
+.fr135-match-detail .fr135-mvp{padding:.7rem;border-radius:10px;background:#253e4a;color:#ffe0a1}
+.fr135-stats>div{display:grid;grid-template-columns:1fr 2fr 1fr;text-align:center;gap:.4rem;padding:.4rem;border-bottom:1px solid #ffffff19}
+.fr135-teams{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:.6rem;margin:.7rem 0}
+.fr135-squad{border:1px solid #315a76;border-radius:10px;padding:.65rem;margin:.5rem 0;background:#0c243b}
+.fr135-squad summary{display:flex;justify-content:space-between;gap:.5rem;cursor:pointer;color:#f5d58d}
+.fr135-squad p{margin:.4rem 0;font-size:.84rem}
+.fr135-squad ul{list-style:none;padding:0;margin:.5rem 0;max-height:320px;overflow:auto}
+.fr135-squad li{display:flex;justify-content:space-between;gap:.7rem;padding:.32rem 0;border-bottom:1px solid #ffffff12;font-size:.82rem}
+.fr135-squad li span{overflow-wrap:anywhere}
+.fr135-squad small{color:#b3cddd}

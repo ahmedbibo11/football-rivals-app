@@ -1,0 +1,46 @@
+/* hide legacy room-local exit in favor of one consistent floating control */
+body #leaveBtn{display:none!important}
+/* FR57: in-flow cancel button; keeps FR46 confirmed cancellation dialog */
+.fr46-exit-fab{
+ position:static!important;z-index:auto!important;
+ inset:auto!important;min-width:0!important;
+ min-height:46px!important;max-width:none!important;
+ border:1px solid rgba(250,154,123,.75)!important;border-radius:999px!important;
+ padding:8px 13px!important;background:linear-gradient(150deg,#241b31,#09233d)!important;
+ box-shadow:0 7px 19px #0009,inset 0 1px #fff3!important;
+ color:#fff1e6!important;font:800 12px/1.35 'Cairo',system-ui,sans-serif!important;
+ cursor:pointer;white-space:nowrap;touch-action:manipulation;
+}
+.fr46-exit-fab:focus-visible{outline:3px solid #ffe8aa!important;outline-offset:2px}
+.fr46-exit-overlay[hidden]{display:none!important}
+.fr46-exit-overlay{
+ position:fixed!important;z-index:999999!important;inset:0!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ padding:16px!important;box-sizing:border-box!important;background:rgba(1,9,25,.83)!important;
+ backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ direction:rtl;
+}
+.fr46-exit-panel{
+ box-sizing:border-box;display:flex;flex-direction:column;align-items:center;
+ gap:13px;width:min(100%,425px);padding:clamp(19px,5vw,30px);
+ background:linear-gradient(145deg,#0e3456,#07182e 72%,#13223f);
+ border:1px solid #5290b7;border-radius:27px;text-align:center;
+ box-shadow:0 24px 78px #000b,0 0 28px #149df329,inset 0 1px #91d7ff50;
+ color:#f0f7ff;font-family:'Cairo',system-ui,sans-serif;
+}
+.fr46-exit-emblem{font-size:36px;color:#f7c674;line-height:1}
+.fr46-exit-panel h2{margin:0;font-size:clamp(19px,5vw,25px);font-weight:900;color:#ffe3a6;line-height:1.45}
+.fr46-exit-panel p{margin:0;font-size:13px;line-height:1.9;color:#d5e6f8;max-width:34ch}
+.fr46-exit-panel .fr46-exit-error{min-height:0;color:#ffae95;font-weight:700}
+.fr46-exit-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.fr46-exit-actions button{
+ min-width:0;min-height:48px;padding:9px;border-radius:14px;border:1px solid #547898;
+ font:800 13px/1.45 'Cairo',system-ui,sans-serif;cursor:pointer;touch-action:manipulation;
+}
+.fr46-exit-confirm{background:linear-gradient(130deg,#fce7aa,#e2a74c);color:#0c1c30;border-color:#ffd787!important}
+.fr46-exit-keep{background:#142a45;color:#eff7ff}
+.fr46-exit-actions button[disabled]{opacity:.55;cursor:wait}
+.fr46-exit-actions:has(.fr46-exit-keep[hidden]){grid-template-columns:1fr}
+.fr46-exit-panel button:focus-visible{outline:3px solid #72dafa;outline-offset:2px}
+@media(max-width:370px){.fr46-exit-fab{font-size:11px!important;padding:7px 9px!important}}
+@media(prefers-reduced-motion:reduce){.fr46-exit-overlay{backdrop-filter:none}}

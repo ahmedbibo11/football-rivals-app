@@ -1,0 +1,106 @@
+/* FR42 — approved homepage visual system. Scope to home only; no extra nav shell. */
+html body.fr42-home{--fr42-night:#071528;--fr42-gold:#f6c75d;--fr42-blue:#159cfc;background:radial-gradient(ellipse 110% 42% at 50% 11%,#0a3150 0%,#061628 69%,#050f20 100%)!important;padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))!important}
+html body.fr42-home #home .landing{display:grid;gap:clamp(16px,3vw,26px);margin:0 auto;max-width:1180px}
+html body.fr42-home #home .eyebrow{font:900 clamp(11px,2.8vw,14px)/1.2 'Barlow Condensed','Cairo',sans-serif;letter-spacing:.17em;color:#70ecd4;margin:10px auto 0}
+html body.fr42-home #home .fr42-hero{isolation:isolate;position:relative;width:100%;aspect-ratio:1341/773;min-height:175px;overflow:hidden;border-radius:clamp(17px,4.5vw,32px);border:1px solid rgba(56,179,247,.74);background:linear-gradient(100deg,rgba(2,14,35,.92),rgba(3,22,44,.5)),url('/assets/brand/rivals-league-hero.webp') center/cover no-repeat;box-shadow:0 16px 42px rgba(0,0,0,.3),inset 0 0 0 1px #d9a74844}
+html body.fr42-home #home .fr42-hero:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;border:1px solid rgba(255,196,80,.18);border-radius:inherit}
+html body.fr42-home #home .fr42-hero-art{display:block;width:100%;height:100%;object-fit:fill;position:absolute;inset:0;z-index:0}
+html body.fr42-home #home .fr42-hero.fr42-missing .fr42-hero-art{display:none}
+html body.fr42-home #home .fr42-discover{position:absolute;z-index:3;inset:auto 5.2% 13.6% 49.3%;height:17.1%;border-radius:999px;display:block;outline-offset:5px;text-decoration:none;transition:filter .2s ease,box-shadow .2s ease,transform .2s ease}
+html body.fr42-home #home .fr42-discover:hover{filter:brightness(1.08);box-shadow:0 0 25px #f4b9417a}
+html body.fr42-home #home .fr42-discover:active{transform:scale(.985)}
+html body.fr42-home #home .fr42-discover:focus-visible{outline:3px solid #7fdbff}
+html body.fr42-home #home .fr42-discover .fr42-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+html body.fr42-home #home .fr42-hero-fallback{position:absolute;inset:0;display:none;flex-direction:column;align-items:flex-start;justify-content:center;gap:clamp(6px,2vw,20px);padding:5% 6% 5% 52%;direction:rtl;background:linear-gradient(270deg,#05172bd9,#061c39a1 75%,transparent)}
+html body.fr42-home #home .fr42-missing .fr42-hero-fallback{display:flex}
+html body.fr42-home #home .fr42-hero-fallback strong{font:900 clamp(17px,4vw,46px)/1.22 'Cairo',sans-serif;color:#ffe49c;text-shadow:0 2px 12px #000b}
+html body.fr42-home #home .fr42-hero-fallback small{font:700 clamp(10px,1.9vw,22px)/1.6 'Cairo';color:#eff7ff}
+html body.fr42-home #home .fr42-hero-fallback b{display:grid;place-items:center;width:100%;min-height:40px;border-radius:100px;background:linear-gradient(#ffe9aa,#e7ad3d);font:900 clamp(12px,2.6vw,27px)/1.2 'Cairo';color:#08203b;box-shadow:0 3px 12px #0008,0 0 12px #e8aa4188}
+html body.fr42-home #home .fr42-missing .fr42-discover{border:0}
+html body.fr42-home #home .first-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,18px);margin:0!important;width:100%!important}
+html body.fr42-home #home .first-actions .launch{display:grid!important;grid-template-columns:1fr;grid-template-rows:auto auto;align-content:center;justify-items:center;text-align:center;gap:10px!important;position:relative;min-width:0;min-height:clamp(140px,29vw,205px);padding:clamp(13px,3vw,22px)!important;border-radius:clamp(17px,4vw,28px)!important;text-decoration:none!important;overflow:hidden;box-sizing:border-box;isolation:isolate;transition:transform .18s ease,box-shadow .18s ease}
+html body.fr42-home #home .first-actions .launch:hover{transform:translateY(-2px)}
+html body.fr42-home #home .first-actions .launch:active{transform:scale(.985)}
+html body.fr42-home #home .first-actions .launch.primary{background:radial-gradient(circle at 15% 5%,#fff4c2 0%,#f8d881 42%,#dfac3e 100%)!important;color:#071b32!important;border:1px solid #fbedb4!important;box-shadow:inset 0 2px 3px #fff9,0 12px 23px #0006,0 0 16px #ddac3b40!important}
+html body.fr42-home #home .first-actions .launch.secondary{background:linear-gradient(135deg,#0b3557,#0b203b 68%,#082a4c)!important;border:1px solid #2883c0!important;color:#f7fbff!important;box-shadow:inset 0 2px 5px #81d2f825,0 10px 24px #0007,0 0 12px #087ef142!important}
+html body.fr42-home #home .first-actions .launch:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(135deg,#fff8 0%,transparent 20%,transparent 80%,#fff2 100%);opacity:.32}
+html body.fr42-home #home .first-actions .launch-icon{position:relative;display:grid;place-items:center;flex:0 0 auto;width:clamp(42px,9vw,66px);height:clamp(42px,9vw,66px);font-size:clamp(24px,5vw,38px)!important;border:1px solid #d7b25d80;border-radius:20px;background:linear-gradient(140deg,#072448d9,#18558dbb)!important;filter:drop-shadow(0 4px 8px #0006)}
+html body.fr42-home #home .first-actions .launch-info{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;width:100%}
+html body.fr42-home #home .first-actions .launch-info strong{font:900 clamp(19px,4.2vw,29px)/1.35 'Cairo',sans-serif!important;letter-spacing:0!important;color:inherit!important;white-space:nowrap}
+html body.fr42-home #home .first-actions .launch-info small{font:700 clamp(10px,2.25vw,15px)/1.7 'Cairo',sans-serif!important;text-align:center;max-width:100%;color:inherit!important;opacity:.83;white-space:normal;overflow-wrap:break-word}
+html body.fr42-home #home .first-actions .launch-arrow{position:absolute;inset:auto 12px 9px auto;font-size:18px;line-height:1;opacity:.78;color:inherit!important}
+html body.fr42-home #home #frPwaPromo{margin:2px 0 12px!important;border:1px solid #2d86bf!important;border-radius:23px!important;background:radial-gradient(ellipse at 20% 0%,#124d7b 0%,#082342 52%,#031529 100%)!important;box-shadow:inset 0 2px 8px #3dbbfc1c,0 12px 25px #0009,0 0 13px #1274be33;padding:clamp(13px,3vw,22px)!important}
+html body.fr42-home #home #frPwaPromo .fr-pwa-cta{background:linear-gradient(125deg,#ffe99d,#e5ae41)!important;color:#081e36!important;border:1px solid #ffe2a7;box-shadow:inset 0 1px #fff8,0 4px 12px #0008!important}
+html body.fr42-home nav.fr-bottom-nav{position:fixed!important;z-index:999!important;bottom:0!important;left:50%!important;transform:translateX(-50%)!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;width:min(100% - 12px,720px)!important;max-width:720px!important;height:calc(84px + env(safe-area-inset-bottom,0px))!important;margin:0!important;padding:7px 7px max(7px,env(safe-area-inset-bottom,0px))!important;background:linear-gradient(160deg,#0b3a60 0%,#051c39 32%,#061630 100%)!important;border:1px solid #3ebaff!important;border-bottom:0!important;border-radius:27px 27px 0 0!important;box-shadow:inset 0 2px 1px #8cdafa55,inset 0 -3px 6px #0005,0 -7px 28px #000a,0 -2px 14px #0b7ff15c!important;backdrop-filter:blur(15px);overflow:visible;box-sizing:border-box!important}
+html body.fr42-home nav.fr-bottom-nav>*{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:2px!important;min-width:0!important;height:100%!important;padding:3px 1px!important;margin:0!important;box-sizing:border-box!important;border-radius:20px!important;background:transparent!important;border:1px solid transparent!important;color:#d9e8fa!important;box-shadow:none!important;text-decoration:none!important;font:800 clamp(11px,2.9vw,14px)/1.25 'Cairo',sans-serif!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease;cursor:pointer}
+html body.fr42-home nav.fr-bottom-nav>*:hover{background:#174a74!important}
+html body.fr42-home nav.fr-bottom-nav>*.active,html body.fr42-home nav.fr-bottom-nav>*[aria-current='page']{background:linear-gradient(155deg,#fff5c7,#f5d36e 48%,#cf8e1e 100%)!important;border:1px solid #ffdf7c!important;color:#071c34!important;box-shadow:inset 0 2px #ffffffc2,inset 0 -3px #9d691a55,0 2px 12px #f7bd5069!important;transform:translateY(-2px)}
+html body.fr42-home nav.fr-bottom-nav>*.active>*,html body.fr42-home nav.fr-bottom-nav>*[aria-current='page']>*{color:inherit!important}
+html body.fr42-home nav.fr-bottom-nav .fr-nav-icon{display:block!important;font:900 clamp(23px,6vw,30px)/1 system-ui!important;color:inherit!important;filter:drop-shadow(0 2px 2px #0005)}
+html body.fr42-home nav.fr-bottom-nav>*:focus-visible{outline:3px solid #ffe7a2!important;outline-offset:3px!important}
+html body.fr42-home nav.fr31-site-nav,html body.fr42-home .fr-brand-dock{display:none!important;visibility:hidden!important}
+html body.fr42-home #home .league-tile{display:none!important}
+html body.fr42-home #home .landing-note{display:none!important}
+@media(max-width:380px){html body.fr42-home #home .fr42-hero{border-radius:17px}html body.fr42-home #home .first-actions .launch{min-height:150px;padding:11px!important}html body.fr42-home #home .first-actions .launch-info strong{font-size:19px!important}html body.fr42-home nav.fr-bottom-nav{height:calc(76px + env(safe-area-inset-bottom,0px))!important}html body.fr42-home nav.fr-bottom-nav .fr-nav-icon{font-size:23px!important}}
+@media(prefers-reduced-motion:reduce){html body.fr42-home #home .first-actions .launch,html body.fr42-home nav.fr-bottom-nav>*,html body.fr42-home #home .fr42-discover{transition:none!important}}
+
+
+/* FR42.1 screenshot fixes — RTL positioning, card legibility, stale hero fallback. */
+html body.fr42-home nav.fr-bottom-nav.fr42-dock {
+  right:auto!important;
+  inset-inline-start:auto!important;
+  inset-inline-end:auto!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  width:min(calc(100% - 16px), 700px)!important;
+  height:calc(78px + env(safe-area-inset-bottom,0px))!important;
+  padding:7px 7px max(7px,env(safe-area-inset-bottom,0px))!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+html body.fr42-home nav.fr-bottom-nav.fr42-dock>* {
+  font-family:'Cairo',system-ui,sans-serif!important;
+  font-size:clamp(11px,2.8vw,14px)!important;
+  letter-spacing:0!important;
+}
+html body.fr42-home nav.fr-bottom-nav.fr42-dock .fr-nav-icon{font-size:clamp(22px,6vw,27px)!important}
+html body.fr42-home #home .fr42-hero.fr42-missing {
+  background:radial-gradient(ellipse 75% 135% at 20% 38%,#145077 0%,#092d54 36%,#071f41 68%,#061b32 100%)!important;
+}
+html body.fr42-home #home .fr42-hero.fr42-missing::after {
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(135deg,#2b9bdc24 0%,transparent 35%,#d8a95117 80%,transparent 100%);
+}
+html body.fr42-home #home .fr42-hero.fr42-missing .fr42-hero-fallback {
+  background:linear-gradient(270deg,rgba(4,21,43,.92),rgba(4,22,49,.56) 75%,transparent)!important;
+}
+html body.fr42-home #home .first-actions{gap:12px!important}
+html body.fr42-home #home .first-actions .launch {
+  min-height:clamp(156px,28vw,193px)!important;
+  grid-template-rows:52px auto!important;
+  align-content:center!important;
+  justify-content:initial!important;
+  padding:12px 9px!important;
+  gap:8px!important;
+}
+html body.fr42-home #home .first-actions .launch-icon{
+  width:50px!important;height:50px!important;font-size:26px!important;border-radius:15px!important;
+}
+html body.fr42-home #home .first-actions .launch-info{
+  justify-content:start!important;gap:4px!important;padding:0!important;
+}
+html body.fr42-home #home .first-actions .launch-info strong {
+  font-size:clamp(18px,4.4vw,25px)!important;line-height:1.35!important;
+}
+html body.fr42-home #home .first-actions .launch-info small {
+  font-size:clamp(10px,2.4vw,13px)!important;
+  line-height:1.5!important;max-width:19ch!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  display:block!important;
+}
+html body.fr42-home #home .first-actions .launch-arrow{display:none!important}
+@media(max-width:370px) {
+  html body.fr42-home #home .first-actions .launch{min-height:154px!important;padding:10px 7px!important}
+  html body.fr42-home #home .first-actions .launch-info small{font-size:10px!important;max-width:16ch!important}
+}

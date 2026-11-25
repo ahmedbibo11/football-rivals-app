@@ -1,0 +1,26 @@
+<div class="social24-wrap">
+<section class="social24-panel">
+<div class="social24-head"><span><small>OFFICIAL CLUBS & PHOTO ID</small><h2>🖼️ صورتك وشعار ناديك</h2></span><span class="social24-pill">YOUR LOOK</span></div>
+<p class="social24-help">صورتك الشخصية وشعار ناديك اختياران منفصلان. تقدر تظهر صورتك الأساسية أو شعار النادي وتحافظ على اسم النادي جنب بروفايلك.</p>
+<div class="social24-avatar-row"><div id="s24Avatar" class="social24-avatar">⚽</div><div class="social24-avatar-info"><strong id="s24Display">RIVALS ID</strong><span id="s24Club">اختار فريقك</span><div class="social24-small" id="s24Badge">⚽ شعار النادي</div></div></div>
+<label class="social24-label">اختار ناديك من قائمة الأندية<select id="s24ClubSelect"><option value="">اختار الفريق</option></select></label>
+<div class="social24-actions"><button data-s24="saveClub" class="s24-primary">✔ حفظ الفريق</button>
+<label class="s24-upload">📷 ارفع صورتك<input id="s24AvatarFile" type="file" accept="image/jpeg,image/png,image/webp" hidden></label>
+<label class="s24-upload">🛡️ ارفع شعار النادي<input id="s24LogoFile" type="file" accept="image/jpeg,image/png,image/webp" hidden></label></div>
+<div class="social24-modes"><button data-mode="photo">👤 صورتي</button><button data-mode="club">🛡️ شعار النادي</button><button data-mode="emoji">⚽ الرمز</button><button data-s24="removePhoto" class="s24-muted">حذف صورتي</button><button data-s24="removeLogo" class="s24-muted">حذف الشعار</button></div>
+<p class="social24-hint">ارفع فقط الصور أو الشعارات التي تملك إذن استخدامها. لا نعرض شعارات منسوبة رسميًا لأي نادٍ بدون أصول معتمدة. تُضغط الصور وتُحفظ في تخزين سحابي.</p>
+</section>
+<section class="social24-panel">
+<div class="social24-head"><span><small>FRIENDS & RIVALRIES</small><h2>🤝 الأصدقاء والتحديات</h2></span><button data-s24="refresh" class="s24-quiet">تحديث ↻</button></div>
+<div class="s24-columns"><div class="s24-sub"><h3>طلبات الصداقة <span id="s24IncomingCount">0</span></h3><div id="s24Incoming" class="s24-items"></div>
+<h3>الطلبات المرسلة</h3><div id="s24Outgoing" class="s24-items"></div></div>
+<div class="s24-sub"><h3>أصدقائي <span id="s24FriendsCount">0</span></h3><div id="s24Friends" class="s24-items"></div></div></div>
+<div class="s24-friend-action"><strong>ابحث عن صاحبك من البحث الموجود في البروفايل</strong><p>افتح بروفايل المنافس، وبعدها اضغط «إرسال طلب صداقة». لما يقبله تقدروا تتحدوا بعض في RIVALS CUP.</p><button id="s24Request" class="s24-primary" disabled>➕ إرسال طلب صداقة للمنافس المعروض</button></div>
+<div class="social24-head"><span><small>LIVE CHALLENGES</small><h2>⚔️ دعوات المنافسة</h2></span></div><div id="s24Challenges" class="s24-items"></div>
+</section>
+<section class="social24-panel"><div class="social24-head"><span><small>PRIVATE RIVALS LEAGUES</small><h2>🏆 دوريات الأصدقاء</h2></span></div>
+<p class="social24-help">أنشئ دوريًا خاصًا بكود دعوة حتى 12 لاعبًا. الترتيب يُحسب من مباريات RIVALS CUP المسجلة بين الأعضاء بعد إنشاء الدوري: فوز 3 نقاط وتعادل نقطة.</p>
+<div class="s24-league-forms"><div><input id="s24LeagueName" maxlength="38" placeholder="اسم الدوري: دوري الشلة"><button class="s24-primary" data-s24="leagueCreate">🏆 أنشئ دوري</button></div>
+<div><input id="s24LeagueCode" maxlength="10" placeholder="كود الدوري" dir="ltr"><button class="s24-quiet" data-s24="leagueJoin">انضم للدوري</button></div></div>
+<div id="s24Leagues" class="s24-items"></div><div id="s24Standings" class="s24-standings"></div>
+</section></div>

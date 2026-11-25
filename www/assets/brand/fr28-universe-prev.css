@@ -1,0 +1,31 @@
+/* FR 28.2 - final visual precedence against legacy high-specificity headers. */
+@import url("./fr28-universe-compat.css?v=28.2");
+html body.fr28-universe.fr28-route-home.fr-home-brand header.head,
+html body.fr28-universe.fr28-route-league.fr-shell-secondary header.nav.fr26-ready,
+html body.fr28-universe.fr28-route-league.fr-shell-secondary header.navbar.fr26-ready,
+html body.fr28-universe.fr28-route-account.fr-shell-secondary header.nav.fr26-ready,
+html body.fr28-universe.fr28-route-account.fr-shell-secondary header.navbar.fr26-ready{
+ display:none!important;visibility:hidden!important;height:0!important;min-height:0!important;
+ margin:0!important;padding:0!important;border:0!important;
+}
+html body.fr28-universe.fr28-route-dobak header.topbar.fr28-context:not(.fr28-context-empty){
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ min-height:0!important;height:auto!important;max-height:62px!important;
+ padding:5px 9px!important;margin:3px auto 8px!important;
+ border:1px solid var(--fr28-line)!important;border-radius:12px!important;
+ overflow:hidden!important;background:var(--fr28-paper)!important;box-shadow:none!important;
+}
+html body.fr28-universe.fr28-route-dobak header.fr28-context .brand{display:none!important}
+html body.fr28-universe.fr28-route-dobak header.fr28-context nav{
+ display:flex!important;flex-wrap:nowrap!important;align-items:center!important;
+ gap:4px!important;min-width:0!important;overflow:auto!important;
+}
+html body.fr28-universe.fr28-route-dobak header.fr28-context nav :is(a,button){
+ min-width:0!important;min-height:32px!important;font-size:11px!important;
+ padding:4px 7px!important;border-radius:9px!important;box-shadow:none!important;
+}
+html body.fr28-universe.fr28-route-hiddenxi header.fr28-context:not(.fr28-context-empty){
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ min-height:0!important;padding:5px 9px!important;
+ box-shadow:none!important;
+}

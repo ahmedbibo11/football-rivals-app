@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<script>/*FR-APP-SHIM*/(function(){var C=window.Capacitor;if(!C||!C.isNativePlatform||!C.isNativePlatform())return;var API='https://football-rivals-arena.vercel.app';function rw(u){if(typeof u==='string'&&u.indexOf('/api/')===0)return API+u;return u}var of=window.fetch;window.fetch=function(u,o){if(typeof u==='string')u=rw(u);else if(u&&typeof u.url==='string'){var p=new URL(u.url,location.href);if(p.origin===location.origin&&p.pathname.indexOf('/api/')===0)u=new Request(API+p.pathname+p.search,u)}return of.call(this,u,o)};var oo=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(m,u){u=rw(u);var a=[m,u];for(var i=2;i<arguments.length;i++)a.push(arguments[i]);return oo.apply(this,a)};if(navigator.serviceWorker&&navigator.serviceWorker.register){navigator.serviceWorker.register=function(){return Promise.reject(new Error('sw-disabled-in-app'))}}})();</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071523">
+  <meta name="description" content="FOOTBALL RIVALS CARD EVOLUTION — استكشف كل كروت اللاعبين وقارنها واحفظ المفضلة">
+  <title>CARD EVOLUTION | FOOTBALL RIVALS</title>
+  <link rel="stylesheet" href="/assets/brand/fr99-global-nav.css">
+  <link rel="stylesheet" href="./library.css?v=card-evolution-1">
+  <script defer src="/assets/brand/fr99-global-nav.js?v=cards2"></script>
+  <script defer src="./library.js?v=card-evolution-1"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="/?view=games" aria-label="الرجوع للألعاب">❮</a>
+    <a class="brand" href="/"><img src="/assets/brand/logo-fr.svg" alt=""><span>FOOTBALL <b>RIVALS</b><small>THE GAME ARENA</small></span></a>
+    <span class="topbadge">CARD EVOLUTION <span>01</span></span>
+  </header>
+  <main id="mainContent">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="glow-dot" aria-hidden="true"></span> THE COLLECTION / CARD EVOLUTION</div>
+        <h1 id="heroTitle">كل كارت، <em>له هيبته.</em></h1>
+        <p>2121 حكاية كروية في مكان واحد. اكتشف الإصدارات، قارن القدرات الحقيقية، واجمع كروتك المفضلة.</p>
+        <div class="hero-actions">
+          <a href="#catalog" class="primary-action">اكتشف الكروت <span aria-hidden="true">↙</span></a>
+          <button type="button" class="outline-action" id="heroPackOpen">✦ افتح باك استعراضي</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="total">—</strong><span>إجمالي الكروت</span></div>
+          <div><strong id="specialTotal">—</strong><span>SPECIAL EDITION</span></div>
+          <div><strong id="statsTotal">—</strong><span>بست قدرات مسجلة</span></div>
+        </div>
+      </div>
+      <div class="hero-feature" aria-label="بطاقة مميزة من المكتبة">
+        <div class="featured-halo" aria-hidden="true"></div>
+        <button type="button" id="featuredOpen" class="featured-card" disabled aria-label="تفاصيل البطاقة المميزة"><span class="featured-art" id="featuredArt"></span></button>
+        <div class="featured-caption"><span>FEATURED CARD</span><b id="featuredName">الكروت الحقيقية من المكتبة</b></div>
+      </div>
+    </section>
+
+    <section class="collection-section" aria-labelledby="collectionTitle">
+      <div class="section-head"><div><small>EXPLORE THE COLLECTION</small><h2 id="collectionTitle">أرفف المجموعة</h2></div><span class="subtle">اختار القسم اللي يعجبك</span></div>
+      <div class="collection-scroll" role="group" aria-label="مجموعات البطاقات">
+        <button class="collection-tile is-active" type="button" data-collection="all" aria-pressed="true"><span class="collection-icon">◈</span><b>كل الكروت</b><small>THE FULL VAULT</small><strong data-collection-count="all">—</strong></button>
+        <button class="collection-tile" type="button" data-collection="fifa" aria-pressed="false"><span class="collection-icon">♛</span><b>FIFA / FUT</b><small>OFFICIAL STYLES</small><strong data-collection-count="fifa">—</strong></button>
+        <button class="collection-tile" type="button" data-collection="icons" aria-pressed="false"><span class="collection-icon">★</span><b>Icons & Heroes</b><small>FOOTBALL GREATS</small><strong data-collection-count="icons">—</strong></button>
+        <button class="collection-tile" type="button" data-collection="special" aria-pressed="false"><span class="collection-icon">✦</span><b>Special Edition</b><small>EXCLUSIVE DESIGNS</small><strong data-collection-count="special">—</strong></button>
+        <button class="collection-tile" type="button" data-collection="new" aria-pressed="false"><span class="collection-icon">◆</span><b>Collection 708</b><small>NEW ADDITIONS</small><strong data-collection-count="new">—</strong></button>
+        <button class="collection-tile" type="button" data-collection="favorites" aria-pressed="false"><span class="collection-icon">♥</span><b>المفضلة</b><small>YOUR SAVED CARDS</small><strong data-collection-count="favorites">0</strong></button>
+        <button class="collection-tile" type="button" data-collection="recent" aria-pressed="false"><span class="collection-icon">◷</span><b>شوفتها مؤخرًا</b><small>RECENTLY VIEWED</small><strong data-collection-count="recent">0</strong></button>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section" aria-label="استعراض كروت اللاعبين">
+      <div class="section-head catalog-head"><div><small>YOUR PLAYER VAULT</small><h2 id="catalogTitle">كل الكروت</h2></div><span id="count" class="catalog-count" role="status" aria-live="polite">جاري تحميل الكروت…</span></div>
+      <div class="browser-panel">
+        <div class="search-row">
+          <label class="search-box" for="search"><span aria-hidden="true" class="search-icon">⌕</span><input type="search" id="search" placeholder="ابحث باسم اللاعب أو النادي أو الإصدار…" autocomplete="off"><span class="key-hint">SEARCH</span></label>
+          <button id="packOpen" class="pack-trigger" type="button"><span aria-hidden="true">✦</span> PACK REVEAL</button>
+          <button id="filterToggle" class="filter-toggle" type="button" aria-expanded="true" aria-controls="filters">⚙ الفلاتر</button>
+        </div>
+        <div id="filters" class="filters">
+          <label>المركز<select id="pos"><option value="all">كل المراكز</option></select></label>
+          <label>التقييم<select id="rating"><option value="0">أي تقييم</option><option value="80">80+</option><option value="85">85+</option><option value="90">90+</option><option value="95">95+</option></select></label>
+          <label>النادي<select id="club"><option value="all">كل الأندية</option></select></label>
+          <label>الدوري<select id="league"><option value="all">كل الدوريات</option></select></label>
+          <label>الدولة<select id="nation"><option value="all">كل الدول</option></select></label>
+          <label>القدرات<select id="ability"><option value="all">الكل</option><option value="complete">6 قدرات مكتملة</option><option value="incomplete">غير مكتملة</option></select></label>
+          <label>الترتيب<select id="sort"><option value="default">الافتراضي</option><option value="ovrDesc">الأعلى تقييمًا</option><option value="ovrAsc">الأقل تقييمًا</option><option value="name">الاسم A–Z</option></select></label>
+          <button type="button" id="reset" class="reset">↻ مسح الكل</button>
+        </div>
+        <div class="catalog-meta"><span id="filterSummary">جاري التحميل…</span><span class="local-note">♥ المفضلة محفوظة على الجهاز فقط</span></div>
+      </div>
+      <div id="grid" class="grid" aria-label="الكروت المتاحة"></div>
+      <div id="empty" class="empty" hidden><span>◇</span><h3>مفيش كروت مطابقة</h3><p>غيّر الفلاتر أو جرّب اسم تاني.</p><button type="button" id="emptyReset">امسح الفلاتر</button></div>
+      <button id="more" class="more" type="button" hidden>عرض المزيد من الكروت <span aria-hidden="true">↓</span></button>
+    </section>
+  </main>
+
+  <div id="compareTray" class="compare-tray" hidden aria-label="الكروت المختارة للمقارنة">
+    <span class="tray-label">⚔ مقارنة</span><div id="compareSlots" class="compare-slots"></div>
+    <button id="compareOpen" type="button" disabled>ابدأ المقارنة</button><button id="compareClear" type="button" class="tray-close" aria-label="مسح الكروت المختارة">×</button>
+  </div>
+  <div class="overlay" id="dialogOverlay" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" tabindex="-1">
+      <header class="dialog-head"><div><small id="dialogEyebrow">THE CARD ROOM</small><h2 id="dialogTitle">تفاصيل الكارت</h2></div><button type="button" id="dialogClose" class="dialog-close" aria-label="إغلاق">×</button></header>
+      <div id="dialogContent" class="dialog-content"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+</body>
+</html>

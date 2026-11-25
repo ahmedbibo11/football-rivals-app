@@ -1,0 +1,50 @@
+/* FOOTBALL RIVALS / UNIVERSAL APP SYSTEM 28.0: layout only; never hide functional game overlays. */
+html{scroll-padding-top:90px}
+body.fr28-universe{--fr28-paper:#f4f9ff;--fr28-text:#0c314e;--fr28-line:#c7deee;--fr28-accent:#f5ce79;--fr28-soft:#eaf4fd;--fr28-shadow:0 3px 12px rgba(22,67,105,.05);padding-top:0!important}
+html[data-fr-theme=dark] body.fr28-universe{--fr28-paper:#0c233a;--fr28-text:#f2f8ff;--fr28-line:#31506b;--fr28-accent:#edc577;--fr28-soft:#122e48;--fr28-shadow:none}
+body.fr28-universe>.fr28-header{position:relative!important;z-index:780!important;display:block!important;inset:auto!important;max-width:100%!important;width:100%!important;margin:0 auto 12px!important;min-height:76px!important;height:auto!important;padding:0 10px!important;box-sizing:border-box!important;overflow:visible!important;background:#f8fcff!important;border-bottom:1px solid #bcd6e7!important;box-shadow:0 2px 9px rgba(15,67,110,.06)!important;color:#0d3351!important}
+html[data-fr-theme=dark] body.fr28-universe>.fr28-header{background:#0a1d32!important;border-color:#294965!important;box-shadow:none!important;color:#eff5ff!important}
+body.fr28-universe>.fr28-header .fr28-header-inner{max-width:1090px;margin:0 auto;min-height:75px;display:flex!important;justify-content:space-between!important;align-items:center!important;gap:8px!important;direction:rtl!important}
+body.fr28-universe>.fr28-header .fr28-wordmark{display:flex!important;align-items:center!important;gap:7px!important;min-width:0!important;flex:0 1 auto!important;max-width:58%!important;color:inherit!important;text-decoration:none!important;background:transparent!important;border:0!important;box-shadow:none!important}
+body.fr28-universe>.fr28-header .fr28-wordmark img{display:block!important;width:43px!important;height:43px!important;min-width:43px!important;object-fit:contain!important}
+body.fr28-universe>.fr28-header .fr28-wordmark span{display:block;min-width:0;white-space:nowrap}
+body.fr28-universe>.fr28-header .fr28-wordmark strong{display:block;color:inherit!important;font-family:system-ui,sans-serif;font-size:clamp(11px,3.1vw,17px)!important;line-height:1.2!important;font-weight:950!important;font-style:italic!important;letter-spacing:-.6px!important;white-space:nowrap!important}
+body.fr28-universe>.fr28-header .fr28-wordmark strong em{font-style:italic!important;color:#b98527!important}
+html[data-fr-theme=dark] body.fr28-universe>.fr28-header .fr28-wordmark strong em{color:#f0c96e!important}
+body.fr28-universe>.fr28-header .fr28-wordmark small{display:block!important;text-align:start!important;font-size:clamp(7px,2vw,9px)!important;color:#5f7789!important;letter-spacing:1.3px!important;line-height:1.5!important;font-weight:800!important}
+html[data-fr-theme=dark] body.fr28-universe>.fr28-header .fr28-wordmark small{color:#9abed6!important}
+body.fr28-universe>.fr28-header .fr28-controls{direction:ltr!important;display:flex!important;flex:0 0 auto!important;gap:5px!important;align-items:center!important}
+body.fr28-universe>.fr28-header .fr28-pair{display:flex!important;gap:1px!important;align-items:center!important;padding:3px!important;box-sizing:border-box!important;background:#e9f4fd!important;border:1px solid #cadfec!important;border-radius:12px!important}
+html[data-fr-theme=dark] body.fr28-universe>.fr28-header .fr28-pair{background:#132f49!important;border-color:#3e5873!important}
+body.fr28-universe>.fr28-header .fr28-pair button{font-family:Cairo,system-ui,sans-serif!important;appearance:none!important;min-height:33px!important;min-width:30px!important;border:0!important;border-radius:9px!important;background:transparent!important;color:#234862!important;font-size:12px!important;line-height:1!important;font-weight:900!important;padding:5px 8px!important;cursor:pointer!important;box-shadow:none!important;filter:none!important}
+html[data-fr-theme=dark] body.fr28-universe>.fr28-header .fr28-pair button{color:#d7eaff!important}
+body.fr28-universe>.fr28-header .fr28-pair button.selected{background:#1c587d!important;color:white!important}
+html[data-fr-theme=dark] body.fr28-universe>.fr28-header .fr28-pair button.selected{background:#eec774!important;color:#0b2a44!important}
+@media(max-width:360px){body.fr28-universe>.fr28-header{padding:0 7px!important}body.fr28-universe>.fr28-header .fr28-header-inner{gap:4px!important}body.fr28-universe>.fr28-header .fr28-wordmark{gap:3px!important}body.fr28-universe>.fr28-header .fr28-wordmark img{width:38px!important;height:38px!important;min-width:38px!important}body.fr28-universe>.fr28-header .fr28-pair button{min-width:25px!important;padding:5px!important;font-size:11px!important}body.fr28-universe>.fr28-header .fr28-controls{gap:2px!important}}
+/* Deduplicate ALL previous page-level navigation. Main game controls remain visible below the one true header. */
+body.fr28-universe.fr28-route-home header.head,
+body.fr28-universe.fr28-route-league header.nav,
+body.fr28-universe.fr28-route-league header.navbar,
+body.fr28-universe.fr28-route-account header.nav,
+body.fr28-universe.fr28-route-account header.navbar{display:none!important}
+body.fr28-universe>.fr-brand-dock{display:none!important}
+body.fr28-universe header.fr28-context-empty{display:none!important}
+body.fr28-universe header.fr28-context:not(.fr28-context-empty){position:relative!important;z-index:10!important;min-height:0!important;height:auto!important;max-width:100%!important;margin:0 auto 10px!important;padding:6px 12px!important;border-radius:12px!important;border:1px solid var(--fr28-line)!important;background:var(--fr28-paper)!important;box-shadow:none!important;color:var(--fr28-text)!important}
+body.fr28-universe header.fr28-context:not(.fr28-context-empty) :is(a.brand,.brand,.brand-logo,.brand-name){display:none!important}
+body.fr28-universe header.fr28-context:not(.fr28-context-empty) :is(button,a):not(.brand){min-height:32px!important}
+body.fr28-universe :is(.ambient,.backdrop,.starfield,.glow):not(.game-glow):not(.fr28-header){pointer-events:none!important;display:none!important}
+body.fr28-universe :is(.hero,.panel,.game-banner,.play-card){backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important}
+body.fr28-universe :is(.hero,.panel,.play-card){animation:none!important}
+body.fr28-universe:not(.fr28-route-home) .app{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+html[data-fr-theme=dark] body.fr28-universe:not(.fr28-route-home){background:#06192a!important;color:#f0f7ff!important}
+/* Visual game modes: never force navy text on a navy surface. */
+body.fr28-universe.fr28-route-star .hero{position:relative!important;overflow:hidden!important;background:linear-gradient(155deg,rgba(5,22,43,.92),rgba(12,52,89,.89)),url('/assets/brand/covers-ar/star.webp') center 36%/cover no-repeat!important;border:1px solid #4f90b6!important;box-shadow:none!important;color:#f3f9ff!important;border-radius:24px!important}
+body.fr28-universe.fr28-route-star .hero :is(h1,h2,h3,p,small,.hero-kicker,.hero-facts,.hero-facts span,.hero-facts strong){color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important;text-shadow:none!important;opacity:1!important}
+body.fr28-universe.fr28-route-star .hero h1{color:#f5c765!important;-webkit-text-fill-color:#f5c765!important}
+body.fr28-universe.fr28-route-star .hero .logo-star{color:#f4d17e!important}
+body.fr28-universe.fr28-route-star .cards-play .play-card{background:#fff!important;color:#123451!important;border:1px solid #b7d2e7!important;box-shadow:none!important;min-height:100px!important}
+body.fr28-universe.fr28-route-star .cards-play .play-card :is(h2,h3,strong,p,small,span){color:#123451!important;-webkit-text-fill-color:#123451!important;opacity:1!important;text-shadow:none!important}
+html[data-fr-theme=dark] body.fr28-universe.fr28-route-star .cards-play .play-card{background:#102b45!important;border-color:#426180!important;color:#f4f9ff!important}
+html[data-fr-theme=dark] body.fr28-universe.fr28-route-star .cards-play .play-card :is(h2,h3,strong,p,small,span){color:#f4f9ff!important;-webkit-text-fill-color:#f4f9ff!important}.fr-library-covers)>.fr-cover{background:#0b2745!important;border:1px solid #77a7c8!important;aspect-ratio:4/5!important;border-radius:16px!important;box-shadow:none!important;overflow:hidden!important;isolation:isolate!important}.fr-library-covers)>.fr-cover::before{display:block!important;content:""!important;position:absolute!important;inset:45% 0 0!important;z-index:1!important;background:linear-gradient(transparent,rgba(5,22,41,.94))!important;pointer-events:none!important}.fr-library-covers)>.fr-cover::after{position:absolute!important;content:""!important;inset:0!important;z-index:0!important;background-image:var(--fr28-cover)!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;opacity:1!important;filter:none!important}.fr-library-covers)>.fr-cover .fr-native-title{position:absolute!important;inset:auto 0 0!important;z-index:3!important;display:flex!important;justify-content:center!important;align-items:flex-end!important;min-height:46px!important;height:auto!important;max-height:30%!important;padding:7px 7px 11px!important;margin:0!important;opacity:1!important;visibility:visible!important;color:#fff!important;-webkit-text-fill-color:#fff!important;font-size:clamp(14px,3.75vw,20px)!important;line-height:1.28!important;background:transparent!important;border:0!important;text-shadow:0 2px 7px #091e36!important;transform:none!important}.btn-gold,.btn-blue),.outline-btn){color:#102f4c!important;-webkit-text-fill-color:#102f4c!important}h2,h3,p){color:#f7f9ff!important;-webkit-text-fill-color:#f7f9ff!important;text-shadow:0 1px 3px #112a4c!important}
+html[data-fr-theme=dark] body.fr28-universe :is(.play-card,.mode,.panel){backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+@media (prefers-reduced-motion:reduce){body.fr28-universe *:not(.timer):not(.countdown){scroll-behavior:auto!important}}

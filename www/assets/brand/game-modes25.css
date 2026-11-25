@@ -1,0 +1,10 @@
+
+html[data-fr-theme] body.fr-home-brand #modes .game-banner :is(h2,h3,strong){color:#f8fdff!important;-webkit-text-fill-color:#f8fdff!important;opacity:1!important}
+html[data-fr-theme] body.fr-home-brand #modes .game-banner :is(p,small){color:#c7e2ef!important;-webkit-text-fill-color:#c7e2ef!important;opacity:1!important}
+html[data-fr-theme] body.fr-home-brand #modes .modes-list>.mode{background:linear-gradient(125deg,#153950,#09243b)!important;color:#f8fcff!important;border:1px solid #48748d!important}
+html[data-fr-theme] body.fr-home-brand #modes .modes-list .mode .mode-info :is(strong,b){color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important}
+html[data-fr-theme] body.fr-home-brand #modes .modes-list .mode .mode-info small{color:#c8e0ed!important;-webkit-text-fill-color:#c8e0ed!important;opacity:1!important}
+html[data-fr-theme] body.fr-home-brand #modes .modes-list .mode .tag{color:#caffdf!important;-webkit-text-fill-color:#caffdf!important;background:#175a4c!important;border:1px solid #4b957b!important;opacity:1!important}
+html[data-fr-theme] body.fr-home-brand #modes .modes-list .mode .chev{color:#f6d083!important;-webkit-text-fill-color:#f6d083!important;opacity:1!important}
+html[data-fr-theme] body.fr-home-brand #modes .info-box{color:#d8eaf2!important;background:#14354a!important;border:1px solid #47819b!important}
+html[data-fr-theme] body.fr-home-brand #modes .info-box strong{color:#fbe0a2!important}

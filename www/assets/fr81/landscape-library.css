@@ -1,0 +1,37 @@
+/* FOOTBALL RIVALS — FR81: ONE library, four original landscape posters.
+   No switchable classic/modern layers, never render former portrait cards. */
+#games .fr81-arena{width:100%;max-width:980px;margin:0 auto;padding:0 0 34px;direction:rtl;font-family:'Cairo',system-ui,sans-serif}
+#games .fr81-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin:8px 0 18px}
+#games .fr81-brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#eaf4fa;font:900 15px 'Barlow Condensed','Cairo',sans-serif;letter-spacing:.4px;white-space:nowrap}
+#games .fr81-brand img{display:block;width:35px;height:38px;object-fit:contain}
+#games .fr81-navigation{display:flex;gap:7px}
+#games .fr81-navigation a{display:inline-flex;align-items:center;justify-content:center;min-height:37px;padding:7px 13px;border-radius:999px;border:1px solid rgba(159,199,225,.24);background:rgba(10,29,45,.72);color:#e7eef6;font-weight:800;font-size:11px;text-decoration:none}
+#games .fr81-navigation a:focus-visible,#games .fr81-card:focus-visible,#games .fr81-discover:focus-visible{outline:3px solid #f5d58c;outline-offset:4px}
+#games .fr81-hero{position:relative;overflow:hidden;isolation:isolate;min-height:214px;padding:26px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;border:1px solid rgba(224,181,90,.4);border-radius:21px;background:linear-gradient(180deg,rgba(6,24,43,.18),rgba(5,19,34,.92)),url('/assets/brand/fr58-stadium.svg') center/cover no-repeat,#092037;box-shadow:0 9px 28px rgba(0,0,0,.22)}
+#games .fr81-kicker{display:block;color:#a0d9ff;font:800 11px 'Barlow Condensed','Cairo',sans-serif;letter-spacing:1.25px}
+#games .fr81-hero h1{margin:0!important;color:#fff;font:900 clamp(28px,7vw,49px)/1.25 'Cairo',sans-serif;text-shadow:0 2px 15px #000a}
+#games .fr81-hero h1 em{font-style:normal;color:#f3bd64}
+#games .fr81-hero p{color:#dde8f1;font-size:12px;line-height:1.8;max-width:600px;margin:0}
+#games .fr81-discover{margin-top:3px;padding:10px 27px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#f9d58b,#cf9f49);border-radius:11px;color:#152435;font-weight:900;font-size:12px;text-decoration:none;box-shadow:0 3px 12px #0005}
+#games .fr81-section{margin:25px 0 0}
+#games .fr81-section-heading{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:6px 18px;padding:0 2px;margin-bottom:12px}
+#games .fr81-section-heading small{display:block;color:#91cef7;font:800 10px 'Barlow Condensed','Cairo',sans-serif;letter-spacing:1.3px}
+#games .fr81-section-heading h2{font:900 clamp(21px,5vw,30px)/1.5 'Cairo',sans-serif;color:#fff;margin:2px 0 0}
+#games .fr81-section-heading p{color:#b5c7d6;font-size:11px;margin:0}
+#games .fr81-gallery{display:grid;grid-template-columns:1fr;gap:17px;align-items:stretch}
+#games .fr81-card{position:relative;display:block;overflow:hidden;border-radius:20px;border:1px solid rgba(218,178,90,.32);background:#0b1b34;aspect-ratio:1692/930;max-width:100%;height:auto;box-shadow:0 12px 24px #0006,0 0 0 1px #ffffff09;isolation:isolate;transition:transform .2s,border-color .2s}
+#games .fr81-card img{width:100%;height:100%;display:block;object-fit:contain;aspect-ratio:1692/930}
+#games .fr81-card:hover{transform:translateY(-2px);border-color:rgba(243,192,98,.88)}
+#games .fr81-card:active{transform:scale(.994)}
+#games .fr81-card span{position:absolute;left:-9999px}
+#games .fr81-end{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px 0 0}
+#games .fr81-end a{padding:10px 18px;border-radius:12px;border:1px solid rgba(159,202,231,.25);background:rgba(10,38,62,.65);color:#e3edf4;font-size:12px;font-weight:800;text-decoration:none}
+#games .fr81-compat{display:none!important}
+#games .fr81-arena #fr79-women-control{display:block;max-width:100%;box-sizing:border-box;margin:10px 0 17px}
+html[lang="ar"] #games [data-fr81-lang="en"]{display:none!important}
+html[lang="en"] #games [data-fr81-lang="ar"]{display:none!important}
+html[lang="en"] #games .fr81-arena{direction:ltr}
+@media(min-width:960px){#games .fr81-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+@media(max-width:520px){#games .fr81-arena{padding-bottom:24px}#games .fr81-brand{font-size:12px}#games .fr81-top{margin:4px 0 13px}#games .fr81-navigation a{font-size:10px;padding:6px 10px;min-height:34px}#games .fr81-hero{min-height:204px;padding:22px 13px;border-radius:17px}#games .fr81-hero p{font-size:11px}#games .fr81-section{margin-top:21px}#games .fr81-gallery{gap:15px}#games .fr81-card{border-radius:16px}#games .fr81-section-heading{margin-bottom:10px}}
+@media(prefers-reduced-motion:reduce){#games .fr81-card{transition:none}}
+

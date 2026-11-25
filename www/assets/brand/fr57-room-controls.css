@@ -1,0 +1,32 @@
+/* FR57 ROOM CONTROLS — Primary integrated game actions, never floating. */
+#fr57-room-toolbar[hidden]{display:none!important}
+#fr57-room-toolbar{
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+ gap:8px;align-items:start;box-sizing:border-box;direction:rtl;
+ width:100%;max-width:100%;min-width:0;margin:10px auto 14px;padding:9px;
+ border:1px solid #d9ad5a9c;border-radius:17px;
+ background:linear-gradient(145deg,#0c304c,#081e35 70%,#122b3c);
+ box-shadow:inset 0 1px #ffe7af35,0 7px 19px #0006;
+ font-family:'Cairo',system-ui,sans-serif;
+}
+#fr57-room-toolbar #fr-voice26{grid-column:1;grid-row:1;min-width:0}
+#fr57-room-toolbar #fr46-exit-btn{
+ grid-column:2;grid-row:1;justify-self:stretch;align-self:stretch;
+ display:flex!important;justify-content:center;align-items:center;
+ position:static!important;inset:auto!important;transform:none!important;
+ width:100%!important;max-width:none!important;min-width:0!important;
+ min-height:46px!important;white-space:normal!important;
+ margin:0!important;padding:7px 8px!important;border:1px solid #d28c82!important;
+ border-radius:12px!important;
+ background:linear-gradient(145deg,#592d37,#222339)!important;
+ box-shadow:inset 0 1px #ffe4dd24,0 3px 9px #0005!important;
+ color:#ffe5e0!important;text-align:center!important;
+ font:900 clamp(11px,2.75vw,14px)/1.4 'Cairo',system-ui,sans-serif!important;
+}
+#fr57-room-toolbar #fr46-exit-btn[hidden]{display:none!important}
+#fr57-room-toolbar #frv-panel{grid-column:1/-1;grid-row:2}
+#fr57-room-toolbar button:focus-visible{outline:2px solid #f7d690!important;outline-offset:2px}
+@media(max-width:360px){
+ #fr57-room-toolbar{padding:6px;gap:6px;border-radius:13px}
+ #fr57-room-toolbar #fr46-exit-btn{font-size:11px!important;padding:6px 3px!important}
+}

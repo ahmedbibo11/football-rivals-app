@@ -1,0 +1,222 @@
+/* hidden for all non-CAREER modes; keeps existing 11 modes untouched */
+.fr47-arena-head,.fr47-mode-label,.fr47-streak,.fr47-crest-progress{display:none!important}
+/* FR47 — CAREER PATH: production UI directly based on approved three-screen concept. */
+:root{--fr47-gold:#f7c769;--fr47-gold-light:#ffe8a7;--fr47-ink:#041b33;--fr47-cyan:#74eadb}
+body.fr47-career-setup,body.fr47-career-play,body.fr47-career-reveal{
+ background-color:#041526!important;
+ background-image:linear-gradient(180deg,rgba(3,19,38,.25),rgba(2,12,26,.74) 70%),url('/assets/brand/fr47-stadium.svg')!important;
+ background-size:cover!important;background-position:center top!important;
+}
+body.fr47-career-setup #app,body.fr47-career-play #app,body.fr47-career-reveal #app{isolation:isolate}
+#fr47-intro,#fr47-hud,#fr47-mode-banner,#fr47-timeline,#fr47-bonus,#fr47-menu,#fr47-reveal-scene{display:none}
+body.fr47-career-setup #fr47-intro{display:flex}
+body.fr47-career-setup #setup .heading{margin:12px 0!important}
+body.fr47-career-setup #setup .heading h2{font-size:22px}
+body.fr47-career-setup #setup .setup-panel{margin-top:16px!important}
+.fr47-intro{direction:rtl;flex-direction:column;align-items:center;position:relative;
+ text-align:center;gap:12px;width:100%;box-sizing:border-box;
+ padding:23px clamp(12px,4vw,26px) 19px;border-radius:26px;
+ border:1px solid rgba(249,203,113,.7);
+ background:radial-gradient(ellipse at 50% 10%,rgba(29,104,146,.43),transparent 54%),linear-gradient(160deg,#0a2f51,#05182d 68%);
+ box-shadow:inset 0 1px 0 #ffffff4b,inset 0 0 50px #0e6c9436,0 16px 42px #0008;
+ overflow:hidden;font-family:'Cairo',system-ui,sans-serif}
+.fr47-intro:before{content:'';position:absolute;inset:0;background:url('/assets/brand/fr47-stadium.svg') center/cover;opacity:.27;pointer-events:none}
+.fr47-intro>*{position:relative;z-index:1}
+.fr47-kicker{font:900 10px/1.4 'Barlow Condensed','Cairo',sans-serif;letter-spacing:2px;color:#92f8d6}
+.fr47-intro-badge{display:flex;align-items:center;gap:8px;border:1px solid #fed480;
+ border-radius:50px;padding:7px 17px;background:linear-gradient(120deg,#153d5c,#071a33);
+ box-shadow:0 0 0 3px #f0b85116,0 4px 16px #0007;color:white}
+.fr47-intro-badge>span{font-size:28px}
+.fr47-intro-badge>b{font:900 21px/1.1 'Barlow Condensed',sans-serif;letter-spacing:.5px}
+.fr47-intro-badge>small{font:800 12px 'Cairo',sans-serif;color:#ffe1a1}
+.fr47-demo-crests{display:flex;justify-content:center;align-items:center;gap:7px;direction:ltr;
+ margin:8px auto 2px;min-height:114px;width:100%;max-width:390px}
+.fr47-demo-card{width:clamp(70px,23vw,109px);height:103px;padding:8px 7px 6px;display:flex;flex-direction:column;align-items:center;gap:5px;
+ border:1px solid #cfa45e;border-radius:16px;background:linear-gradient(154deg,#214764,#0b243c);
+ box-shadow:0 9px 21px #0008,0 0 16px #efbc5140;transform:rotate(-9deg);overflow:hidden;box-sizing:border-box}
+.fr47-demo-card:last-child{transform:rotate(9deg)}
+.fr47-demo-card.active{z-index:2;border:2px solid #ffe7a4;box-shadow:0 0 20px #ffca7c96,0 10px 24px #0009;transform:translateY(-5px);height:112px}
+.fr47-demo-card img{display:block;width:100%;height:72px;object-fit:contain;background:#f4f7f5;border-radius:10px;padding:6px;box-sizing:border-box}
+.fr47-demo-card small{font:900 11px/1.1 'Barlow Condensed',sans-serif;color:#f0e4c9}
+.fr47-demo-card.missing-logo img{display:none}
+.fr47-demo-card.missing-logo:before{content:'★';font-size:34px;color:#ffe6a0;line-height:70px}
+.fr47-intro h2{margin:2px 0 0;color:#f6f8fc;font:900 clamp(20px,5.7vw,28px)/1.4 'Cairo',sans-serif}
+.fr47-intro>p{margin:0;max-width:35ch;line-height:1.7;font:600 13px 'Cairo',sans-serif;color:#c8d5e1}
+.fr47-intro-tip{display:flex;justify-content:center;align-items:center;gap:10px;max-width:100%;padding:10px 12px;
+ background:linear-gradient(115deg,#372d16,#142c3e);border:1px solid #c59240;
+ border-radius:13px;color:#ffe0a0;font:800 11px/1.6 'Cairo',sans-serif}
+.fr47-intro-tip b{color:#ffdc76;white-space:nowrap;font:900 23px 'Barlow Condensed',sans-serif}
+.fr47-intro-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:8px}
+.fr47-intro-stats>span{display:flex;flex-direction:column;gap:2px;align-items:center;min-width:0;
+ padding:7px 3px 8px;border:1px solid #356d90;background:linear-gradient(155deg,#103b5b,#051c34);border-radius:14px;color:#f4dbad;font-size:13px}
+.fr47-intro-stats b{font:900 clamp(17px,4.5vw,24px) 'Barlow Condensed','Cairo',sans-serif;color:#ffe08e}
+.fr47-intro-stats small{font:700 10px 'Cairo',sans-serif;color:#d3e1ee}
+#fr47-start{width:100%;min-height:55px;border:1px solid #ffe29a;border-radius:15px;
+ background:linear-gradient(178deg,#ffecae,#f2c35e 52%,#dca33c);color:#142235;
+ box-shadow:inset 0 2px 2px #fff8,0 5px 0 #75501b,0 12px 22px #0008;
+ font:900 20px 'Cairo',sans-serif;cursor:pointer;transition:transform .16s ease}
+#fr47-start:active{transform:translateY(3px);box-shadow:inset 0 2px 2px #fff8,0 2px 0 #75501b}
+#fr47-start span[aria-hidden]{display:inline-block;margin-inline-start:11px}
+#fr47-settings-note{font:700 11px/1.5 'Cairo',sans-serif;color:#a8c9da}
+body.fr47-career-play #play .game-top{display:none!important}
+body.fr47-career-play #play #fr47-hud{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;direction:rtl;margin:12px 0 9px}
+.fr47-hud .fr47-stat{min-width:0;min-height:65px;display:flex;flex-direction:column;gap:5px;justify-content:center;align-items:center;
+ border:1px solid #236f99;border-radius:13px;background:linear-gradient(155deg,rgba(15,67,103,.97),rgba(4,30,53,.97));
+ box-shadow:inset 0 2px 1px #89dfff2d,0 3px 10px #0005}
+.fr47-hud .fr47-stat span{font:800 clamp(9px,2.4vw,12px)/1.25 'Cairo',sans-serif;color:#ecf3fd;white-space:nowrap}
+.fr47-hud .fr47-stat b{font:900 clamp(20px,5.7vw,29px)/1 'Barlow Condensed','Cairo',sans-serif;color:#f6d781;direction:ltr;white-space:nowrap}
+.fr47-hud .fr47-time b{color:#65e8d9}
+.fr47-hud .fr47-flame b{color:#f4c871;text-shadow:0 0 10px #f4b8545d}
+.fr47-hud .fr47-time b.urgent{color:#ff8d87;animation:fr47-pulse 650ms ease-in-out infinite alternate}
+@keyframes fr47-pulse{to{opacity:.55}}
+body.fr47-career-play #play .timer-track{margin:0 0 12px!important;height:7px!important;background:#0d3652!important;border-radius:12px!important;overflow:hidden!important}
+body.fr47-career-play #play .timer-track>span{background:linear-gradient(90deg,#ffba4e,#f7d475 44%,#62ebd9)!important;border-radius:12px!important}
+body.fr47-career-play #play .question-panel{
+ position:relative!important;overflow:hidden!important;
+ min-height:0!important;padding:18px clamp(11px,3vw,23px) 15px!important;margin:0!important;
+ background:radial-gradient(ellipse at 50% 8%,rgba(44,118,146,.3),transparent 55%),
+ linear-gradient(180deg,#0b2f4a,#061b32 88%)!important;
+ border:1px solid #477d9c!important;border-radius:25px!important;
+ box-shadow:inset 0 1px 1px #a5e6ff2b,0 9px 32px #0006!important;
+}
+body.fr47-career-play #play .question-panel>.challenge-icon{display:none!important}
+body.fr47-career-play #play .question-panel>#fr47-mode-banner{display:flex;margin:0 auto 12px;align-items:center;justify-content:center;gap:7px;
+ padding:6px 13px;width:max-content;max-width:85%;border:1px solid #f9d77b;border-radius:999px;
+ background:linear-gradient(115deg,#123650,#071f39);box-shadow:0 0 15px #efbf5635;color:#fbf4dd}
+.fr47-mode-banner .fr47-shield{font-size:19px}
+.fr47-mode-banner strong{font:900 clamp(15px,4.4vw,20px) 'Barlow Condensed',sans-serif;letter-spacing:.6px}
+.fr47-mode-banner small{font:800 10px 'Cairo',sans-serif;color:#f4dca6;white-space:nowrap}
+body.fr47-career-play #play .question-panel>h2{font:900 clamp(20px,5.5vw,27px)/1.45 'Cairo',sans-serif!important;color:#f6f6fa!important;margin:0 0 4px!important}
+body.fr47-career-play #play .question-panel>p#questionSubtitle{font:600 11px/1.65 'Cairo',sans-serif!important;color:#aec8d8!important;margin:0 0 11px!important}
+body.fr47-career-play #play .question-panel>#fr47-menu{display:grid;place-items:center;position:absolute;top:10px;inset-inline-start:10px;
+ z-index:2;width:33px;height:33px;border:1px solid #557b94;border-radius:10px;background:#183a51;color:#ffdc8f;cursor:pointer;font:900 23px/1 sans-serif}
+body.fr47-career-play #fr46-exit-btn{display:none!important}
+body.fr47-career-play #play #fr47-timeline{display:flex;position:relative;justify-content:space-around;align-items:center;width:70%;
+ max-width:290px;margin:0 auto 9px;direction:rtl;min-height:27px}
+.fr47-timeline .fr47-line{position:absolute;left:13%;right:13%;top:50%;height:3px;background:linear-gradient(90deg,#477f91,#ecbd61);z-index:0}
+.fr47-timeline i{font:900 12px/1 sans-serif;display:grid;place-items:center;z-index:1;width:23px;height:23px;
+ border:2px solid #afc6d1;border-radius:50%;font-style:normal;color:#d9e4ed;background:#17364b;box-shadow:0 0 0 3px #08223b}
+.fr47-timeline i.lit{background:linear-gradient(145deg,#ffe292,#b57c22);color:#163043;border-color:#ffe7a9;box-shadow:0 0 0 3px #08223b,0 0 14px #ffc95c88}
+body.fr47-career-play #play #hints{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:8px!important;align-items:stretch!important;margin:3px 0 11px!important;direction:rtl}
+body.fr47-career-play #play #hints .hint.club,
+body.fr47-career-play #play #hints .fr47-crest-locked{position:relative;box-sizing:border-box;min-width:0;height:clamp(112px,30vw,140px)!important;
+ display:flex!important;flex-direction:column;justify-content:center;align-items:center;gap:5px!important;
+ margin:0!important;padding:6px!important;
+ background:linear-gradient(150deg,#194968,#0a233e)!important;border:1px solid #4784aa!important;border-radius:15px!important;
+ box-shadow:inset 0 1px #d1f9ff29,0 4px 8px #0005!important;animation:fr47-in .28s ease both}
+@keyframes fr47-in{from{opacity:0;transform:translateY(7px) scale(.96)}to{opacity:1;transform:none}}
+body.fr47-career-play #play #hints .hint.club:before{content:attr(data-fr47-index);position:absolute;z-index:2;top:2px;right:5px;
+ color:#eecb85;font:900 10px 'Barlow Condensed',sans-serif}
+body.fr47-career-play #play #hints .crest-plate{box-sizing:border-box!important;flex:0 0 auto!important;width:100%!important;
+ height:clamp(67px,19vw,86px)!important;min-width:0!important;
+ background:linear-gradient(155deg,#fff,#e8edf0)!important;border-radius:11px!important;
+ display:grid!important;place-items:center!important;overflow:hidden!important;padding:5px!important}
+body.fr47-career-play #play #hints .crest-plate img{width:100%!important;height:100%!important;max-width:100%!important;
+ object-fit:contain!important;object-position:center!important;aspect-ratio:auto!important;filter:none!important}
+body.fr47-career-play #play #hints .hint.club strong{display:-webkit-box!important;
+ font:800 clamp(9px,2.55vw,12px)/1.4 'Cairo',sans-serif!important;color:#f5f6ff!important;
+ -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden!important;max-width:100%;max-height:38px;text-align:center!important}
+body.fr47-career-play #play #hints .hint.club.failed .crest-fallback{font:800 9px 'Cairo';display:flex!important;align-items:center;justify-content:center}
+.fr47-crest-locked{color:#c8dbeb;opacity:.82}
+.fr47-crest-locked>span{height:71px;width:100%;display:grid;place-items:center;border-radius:11px;
+ border:1px dashed #719eb4;background:#0d283e;font:900 36px 'Barlow Condensed';color:#86acc4}
+.fr47-crest-locked small{font:700 9px 'Cairo';color:#a9c0d2}
+body.fr47-career-play #play #fr47-bonus{display:flex;align-items:center;justify-content:center;gap:7px;
+ padding:9px 8px;margin:0 0 11px;min-height:35px;box-sizing:border-box;
+ background:linear-gradient(120deg,#26321e,#303020 50%,#14394b)!important;
+ border:1px solid #d5aa4f;border-radius:11px;color:#ffe1a5;font:800 clamp(9px,2.7vw,12px)/1.4 'Cairo',sans-serif}
+.fr47-bonus>span:first-child{font:900 20px sans-serif;color:#ffdf85}
+.fr47-bonus b{font:900 22px 'Barlow Condensed',sans-serif;color:#ffd875}
+body.fr47-career-play #play #choices{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ gap:9px!important;margin:0!important;direction:rtl}
+body.fr47-career-play #play #choices .answer{min-width:0!important;min-height:61px!important;margin:0!important;
+ display:flex!important;flex-direction:row-reverse!important;align-items:center!important;justify-content:space-between!important;gap:6px!important;
+ padding:9px 10px!important;border:1px solid #5b9ac0!important;border-radius:13px!important;
+ background:linear-gradient(135deg,#204b68,#0b2945)!important;color:#f7f8fc!important;
+ box-shadow:inset 0 1px #c9eafa20!important;font:800 clamp(12px,3.2vw,17px)/1.45 'Cairo',sans-serif!important;
+ text-align:center!important;white-space:normal!important;word-break:normal!important;cursor:pointer}
+body.fr47-career-play #play #choices .answer>span{flex:0 0 auto!important;display:grid!important;place-items:center!important;
+ width:30px!important;height:33px!important;border-radius:9px!important;background:#235773!important;
+ color:#66ead3!important;font:900 17px 'Barlow Condensed',sans-serif!important}
+body.fr47-career-play #play #choices .answer.chosen{background:linear-gradient(145deg,#7e611d,#b9943e)!important;color:#091c32!important;border-color:#ffdc7e!important}
+body.fr47-career-play #play #choices .answer:focus-visible{outline:3px solid #ffe9a2!important;outline-offset:2px!important}
+body.fr47-career-play #play #choices .answer:disabled{opacity:.8!important;cursor:default}
+body.fr47-career-play #play .answer-status{margin:10px auto 0!important;color:#a8c6d6!important;font:700 10px/1.5 'Cairo',sans-serif!important}
+body.fr47-career-play #play #star33Sync{font-size:10px!important;opacity:.65!important}
+body.fr47-career-play #play #opponentBar{margin-top:10px!important}
+/* A real result card with a sprite from the deployed player catalogue. */
+body.fr47-career-reveal #reveal .panel.reveal{position:relative!important;overflow:hidden!important;
+ padding:22px 12px 17px!important;border:1px solid #c79e4c!important;border-radius:25px!important;
+ background:radial-gradient(ellipse at 50% 27%,#1d5b6b,#092d45 50%,#04172e 85%)!important;
+ box-shadow:inset 0 1px #ffda9c52,0 13px 43px #0008!important}
+body.fr47-career-reveal #reveal .panel.reveal>.reveal-glow,
+body.fr47-career-reveal #reveal .panel.reveal>#revealHeadline,
+body.fr47-career-reveal #reveal .panel.reveal>#revealName,
+body.fr47-career-reveal #reveal .panel.reveal>#revealMessage,
+body.fr47-career-reveal #reveal .panel.reveal>.points-award,
+body.fr47-career-reveal #reveal .panel.reveal>#revealOpponent,
+body.fr47-career-reveal #reveal .panel.reveal>.auto-next,
+body.fr47-career-reveal #reveal #star33RevealReview{display:none!important}
+body.fr47-career-reveal #reveal #fr47-reveal-scene{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.fr47-reveal-banner{padding:7px 23px;background:linear-gradient(120deg,#304a62,#0b2842);border:1px solid #f9d480;
+ color:#ffe1a4;border-radius:12px;box-shadow:0 0 20px #f7c7692a;font:900 clamp(18px,4.8vw,23px) 'Cairo',sans-serif}
+.fr47-reveal-banner.correct{background:linear-gradient(145deg,#0c7a51,#095037);border-color:#80f1b9;color:#eaffef;box-shadow:0 0 24px #2ad49072}
+.fr47-foil-card{position:relative;width:clamp(180px,56vw,249px);height:clamp(227px,71vw,306px);
+ padding:6px;box-sizing:border-box;filter:drop-shadow(0 0 24px #ffbe5b6e);
+ clip-path:polygon(13% 0,87% 0,100% 11%,100% 87%,81% 100%,19% 100%,0 87%,0 11%);
+ background:linear-gradient(115deg,#9f6420,#fff4b5 14%,#d59d41 30%,#fff0aa 52%,#ac6b21 80%,#ffe9a1);
+ border-radius:20px}
+.fr47-foil-inner{position:relative;width:100%;height:100%;overflow:hidden;
+ clip-path:polygon(12% 0,88% 0,100% 10%,100% 88%,80% 100%,20% 100%,0 88%,0 10%);
+ background:radial-gradient(circle at 55% 20%,#4b9db3,#092f4a 45%,#092239 78%);}
+.fr47-halo{position:absolute;inset:3% 0 0;background:conic-gradient(from 30deg,#fac97124,#ffe08b99,#286b8c10,#d7a34c6e,#fad68821);
+ filter:blur(11px);opacity:.65}
+.fr47-player-art{position:absolute;inset:0 0 17%;background-repeat:no-repeat;background-position:center;
+ image-rendering:auto;filter:contrast(1.06) saturate(1.08);mask-image:linear-gradient(#000 75%,transparent)}
+.fr47-player-placeholder[hidden]{display:none!important}
+.fr47-player-placeholder{position:absolute;inset:2% 0 17%;display:grid;place-items:center;color:#ffe5a2;font-size:95px}
+.fr47-foil-caption{position:absolute;bottom:0;left:0;right:0;min-height:24%;padding:6px 8px;display:flex;flex-direction:column;justify-content:center;align-items:center;
+ background:linear-gradient(155deg,#08283d,#061529);border-top:2px solid #e1ab55;color:#fbf7e9}
+.fr47-foil-caption strong{font:900 clamp(14px,4.4vw,19px)/1.45 'Cairo',sans-serif}
+.fr47-foil-caption span{color:#ffcf7f;font:700 12px 'Cairo',sans-serif}
+.fr47-rewards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:420px;direction:rtl}
+.fr47-rewards>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+ min-height:78px;border:1px solid #4488b5;border-radius:14px;padding:8px;background:linear-gradient(145deg,#10405e,#08263d)}
+.fr47-rewards>div:nth-child(2){border-color:#c39747;background:linear-gradient(145deg,#3c371e,#112c3e)}
+.fr47-rewards span{font:800 12px 'Cairo',sans-serif;color:#d6e8f4}
+.fr47-rewards b{font:900 31px 'Barlow Condensed','Cairo',sans-serif;color:#f8d477}
+#fr47-next{width:min(100%,420px);min-height:56px;border-radius:14px;border:1px solid #ffe6a3;
+ background:linear-gradient(160deg,#ffecab,#edbd59 62%,#ce913b);color:#112a40;
+ font:900 clamp(17px,4.8vw,22px)/1.4 'Cairo',sans-serif;
+ box-shadow:inset 0 1px #fff9,0 6px 15px #0008;cursor:pointer}
+#fr47-next:disabled{opacity:.6;cursor:wait}
+#fr47-next-status{font:700 11px 'Cairo',sans-serif;color:#a7d7da;margin:0}
+body.fr47-career-reveal #fr46-exit-btn{bottom:calc(16px + env(safe-area-inset-bottom,0px))!important}
+/* Mobile-first, 320 through 768 px; no overflow or clipped club logos. */
+@media(max-width:390px){
+ body.fr47-career-play #play .question-panel{padding:13px 9px 11px!important}
+ body.fr47-career-play #play #choices{gap:7px!important}
+ body.fr47-career-play #play #choices .answer{min-height:55px!important;padding:7px 7px!important;font-size:12px!important}
+ body.fr47-career-play #play .question-panel>#fr47-mode-banner{margin-bottom:8px}
+ body.fr47-career-play #play #hints .hint.club,body.fr47-career-play #play #hints .fr47-crest-locked{height:111px!important}
+ body.fr47-career-play #play #hints .crest-plate{height:69px!important}
+}
+@media(max-width:340px){
+ .fr47-hud .fr47-stat{min-height:60px}.fr47-hud .fr47-stat b{font-size:19px}
+ .fr47-intro-badge{padding:6px 9px}.fr47-intro-badge>b{font-size:18px}
+ .fr47-intro-badge>small{font-size:10px}
+ .fr47-demo-card{width:74px}
+ body.fr47-career-play #play #hints .hint.club strong{font-size:9px!important}
+}
+@media(min-width:640px){
+ body.fr47-career-play #play .question-panel{max-width:740px;margin-inline:auto!important}
+ body.fr47-career-play #play .fr47-hud{max-width:740px;margin-inline:auto}
+ body.fr47-career-play #play .timer-track{max-width:740px;margin-inline:auto!important}
+ .fr47-intro{max-width:690px;margin-inline:auto}
+}
+@media(prefers-reduced-motion:reduce){.fr47-demo-card,.fr47-intro,.fr47-hud,.fr47-foil-card{animation:none!important;transition:none!important}}
+
+/* FR47 final visual polish: no obsolete floating action in the preparation view or stale success toast on reveal. */
+body.fr47-career-setup #fr46-exit-btn{display:none!important}
+body.fr47-career-reveal #toast:not(.bad){display:none!important}

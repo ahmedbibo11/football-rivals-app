@@ -1,0 +1,137 @@
+/* FOOTBALL RIVALS — Gaming App A / mobile-first layout; keeps existing artwork */
+body.fr-home-brand {padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))!important}
+.fr-home-brand .fr-layout>.fr-insights {display:none!important}
+.fr-home-brand #home .fr-home-featured,.fr-home-brand #home .fr-home-summary {width:100%;min-width:0;max-width:100%}
+.fr-home-brand #home .landing .league-tile,.fr-home-brand #home .landing .landing-note{display:none!important}
+.fr-section-head {display:flex;justify-content:space-between;align-items:end;gap:12px;margin:18px 0 12px}
+.fr-section-head small {display:block;color:#80c2e8;font-size:10px;letter-spacing:1.2px;font-weight:700;margin-bottom:3px}
+.fr-section-head h2{font-weight:900;font-size:clamp(20px,5.1vw,27px);line-height:1.2;color:#f0f6ff;margin:0}
+.fr-see-games{background:#0d3255;border:1px solid #368db9;color:#eef8ff;border-radius:999px;padding:9px 12px;white-space:nowrap;font-size:12px;font-weight:800;min-height:42px;cursor:pointer}
+.fr-featured-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+.fr-featured-grid>.fr-cover,.fr-library-covers>.fr-cover{width:100%!important;min-width:0!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important;position:relative!important;display:flex!important;aspect-ratio:4/5!important;min-height:0!important;height:auto!important;border-radius:16px!important;overflow:hidden!important;background-size:cover!important;background-position:center!important;text-decoration:none!important;padding:10px!important;transition:transform .15s ease,border-color .15s ease!important}
+.fr-featured-grid>.fr-cover:active,.fr-library-covers>.fr-cover:active{transform:scale(.985)!important}
+.fr-featured-grid>.fr-cover .art,.fr-library-covers>.fr-cover .art{visibility:hidden!important}
+.fr-featured-grid>.fr-cover:before,.fr-library-covers>.fr-cover:before{inset:65% 0 0!important;background:linear-gradient(transparent,rgba(2,14,31,.98) 88%)!important}
+.fr-featured-grid>.fr-cover .fr-native-title,.fr-library-covers>.fr-cover .fr-native-title{font-family:inherit!important;color:#fff!important;direction:inherit!important;font-size:clamp(14px,3.9vw,19px)!important;font-weight:900!important;line-height:1.32!important;display:block!important;position:relative!important;z-index:2!important;text-shadow:0 2px 8px #001!important;padding:0 4px 4px!important;overflow-wrap:break-word!important}
+.fr-home-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:18px 0 8px!important}
+.fr-home-summary .fr-summary-card{min-width:0!important;width:100%!important;max-width:100%!important;min-height:0!important;height:auto!important;margin:0!important;padding:15px!important;border-radius:16px!important;border:1px solid #1d5b87!important;box-sizing:border-box!important;background:#0a2543!important;display:flex!important;flex-direction:column!important;gap:10px!important}
+.fr-home-summary .fr-summary-card h3{font-size:15px!important;line-height:1.3!important;margin:0!important}
+.fr-home-summary .fr-summary-card .fr-rank-badge{font-size:25px!important;margin:2px 0!important}
+.fr-home-summary .fr-summary-card #frRating{font-size:24px!important;line-height:1!important;margin:0!important}
+.fr-home-summary .fr-summary-card #frRankTier{font-size:16px!important}
+.fr-home-summary .fr-summary-card .fr-meter{height:6px!important;margin:0!important}
+.fr-home-summary .fr-summary-card .fr-progress-row{padding:7px 0!important;font-size:12px!important;gap:6px!important}
+.fr-home-summary .fr-summary-card>a{margin-top:auto!important;font-size:12px!important}
+.fr-home-summary .fr-summary-card small{font-size:11px!important}
+.fr-library-intro{color:#a8c6dc;font-size:13px;line-height:1.7;margin:6px 0 14px}
+.fr-library-tools{display:grid;gap:10px;margin:14px 0 14px}
+.fr-library-search{display:flex;align-items:center;gap:9px;background:#0d2946;border:1px solid #28658d;border-radius:13px;padding:0 13px;height:48px;color:#81b5e7}
+.fr-library-search>span{font-size:27px;line-height:1;opacity:.8}
+.fr-library-search input{background:transparent;outline:0;border:0;color:#f7fbff;width:100%;min-width:0;height:100%;font-family:inherit;font-weight:600;font-size:14px;direction:inherit}
+.fr-library-search input::placeholder{color:#a5bdd1;opacity:1}
+.fr-library-search:focus-within{border-color:#61c6f6;box-shadow:0 0 0 2px #1887bf50}
+.fr-library-filters{display:flex;gap:7px;overflow-x:auto;max-width:100%;padding-bottom:2px;scrollbar-width:none}
+.fr-library-filters::-webkit-scrollbar{display:none}
+.fr-library-filters button{white-space:nowrap;flex-shrink:0;border-radius:999px;background:#112b49;border:1px solid #2b577e;color:#c3d7e8;min-height:39px;padding:7px 12px;font-weight:700;font-size:12px;cursor:pointer}
+.fr-library-filters button.active{background:#168fdf;border-color:#57baff;color:white;box-shadow:0 3px 12px #078fdd36}
+.fr-library-covers{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0 0 24px!important;align-items:stretch!important}
+.fr-library-covers>.fr-cover[hidden]{display:none!important}
+.fr-library-empty{padding:40px 12px;text-align:center;color:#c0d8ed}
+#games .genre-tabs,#games .genre-heading,#games #gamesList,#games .genre-hint,#games>.description{display:none!important}
+.fr-guide-details{margin:20px 0;border:1px solid #2a658f;border-radius:15px;overflow:hidden;background:#0b2544}
+.fr-guide-details summary{padding:15px;cursor:pointer;font-weight:800;font-size:14px;color:#d3edff;list-style:none}
+.fr-guide-details summary::-webkit-details-marker{display:none}
+.fr-guide-details summary:after{content:"⌄";float:left;font-size:18px}
+.fr-guide-details[open] summary:after{content:"⌃"}
+.fr-guide-details .fr-guide-box{border:0!important;box-shadow:none!important;background:transparent!important;padding:12px!important}
+.fr-bottom-nav{position:fixed;z-index:800;bottom:0;left:0;right:0;max-width:520px;margin-inline:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:3px;min-height:69px;padding:7px 8px calc(7px + env(safe-area-inset-bottom,0px));border:1px solid #1b547a;border-bottom:0;border-radius:17px 17px 0 0;background:rgba(5,23,43,.97);box-shadow:0 -6px 30px rgba(0,0,0,.25);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-sizing:border-box}
+.fr-bottom-nav button,.fr-bottom-nav a{appearance:none;text-decoration:none;border:0;background:transparent;min-width:0;min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;font-weight:700;color:#9fbad0;border-radius:11px;cursor:pointer;white-space:nowrap;padding:4px}
+.fr-bottom-nav .fr-nav-icon{font-size:20px;line-height:1.1;display:block}
+.fr-bottom-nav .active{background:#123b61;color:#f9ce72;box-shadow:inset 0 0 0 1px #245b83}
+.fr-bottom-nav :is(button,a):focus-visible{outline:2px solid #82d7ff;outline-offset:-2px}
+@media (max-width:600px){.fr-home-summary{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.fr-home-summary .fr-summary-card{padding:11px!important}.fr-home-summary .fr-summary-card h3{font-size:13px!important}.fr-home-summary .fr-summary-card #frRating{font-size:20px!important}.fr-home-summary .fr-summary-card .fr-progress-row{font-size:11px!important}.fr-bottom-nav{max-width:100%}}
+@media (max-width:350px){.fr-home-summary{grid-template-columns:1fr!important}.fr-featured-grid{gap:8px!important}.fr-library-covers{gap:8px!important}.fr-bottom-nav button,.fr-bottom-nav a{font-size:10px}}
+@media (min-width:1051px){.fr-bottom-nav{display:none!important}body.fr-home-brand{padding-bottom:0!important}.fr-home-summary{gap:14px}.fr-home-summary .fr-summary-card{min-height:230px!important}.fr-library-covers{grid-template-columns:repeat(4,minmax(0,1fr))!important}.fr-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (prefers-reduced-motion:reduce){.fr-featured-grid>.fr-cover,.fr-library-covers>.fr-cover{transition:none!important}}
+
+
+/* FOOTBALL RIVALS — Arabic master artworks / 2026-11-01.
+   Same 4:5 cards; only visual assets change. Navigation and game engine untouched. */
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="star"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="star"] {
+  background-image:url('/assets/brand/covers-ar/star.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="secret30"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="secret30"] {
+  background-image:url('/assets/brand/covers-ar/secret30.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="penalty"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="penalty"] {
+  background-image:url('/assets/brand/covers-ar/penalty.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="hiddenxi"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="hiddenxi"] {
+  background-image:url('/assets/brand/covers-ar/hiddenxi.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="dobak"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="dobak"] {
+  background-image:url('/assets/brand/covers-ar/dobak.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="cup"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="cup"] {
+  background-image:url('/assets/brand/covers-ar/cup.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+body.fr-home-brand .fr-featured-grid > .fr-cover[data-game="club"],
+body.fr-home-brand .fr-library-covers > .fr-cover[data-game="club"] {
+  background-image:url('/assets/brand/covers-ar/club.webp') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+
+/* Arabic text is already professionally composed inside each artwork.
+   Hide duplicate HTML labels while keeping semantic title/aria-label links. */
+html[lang="ar"] body.fr-home-brand .fr-featured-grid > .fr-cover::before,
+html[lang="ar"] body.fr-home-brand .fr-library-covers > .fr-cover::before {
+  opacity:0 !important;
+}
+html[lang="ar"] body.fr-home-brand .fr-featured-grid > .fr-cover .fr-native-title,
+html[lang="ar"] body.fr-home-brand .fr-library-covers > .fr-cover .fr-native-title {
+  opacity:0 !important; pointer-events:none !important;
+}
+/* English UI: mask the baked Arabic footer and show translated HTML title.
+   This avoids a mismatched bilingual label on the same card. */
+html[lang="en"] body.fr-home-brand .fr-featured-grid > .fr-cover::after,
+html[lang="en"] body.fr-home-brand .fr-library-covers > .fr-cover::after {
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;right:0 !important;bottom:0 !important;
+  height:30% !important;
+  background:linear-gradient(180deg,#061128 0%,#061128 55%,#050e23 100%) !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+html[lang="en"] body.fr-home-brand .fr-featured-grid > .fr-cover .fr-native-title,
+html[lang="en"] body.fr-home-brand .fr-library-covers > .fr-cover .fr-native-title {
+  opacity:1 !important; position:relative !important;z-index:3 !important;
+  font-weight:900 !important;line-height:1.26 !important;
+  padding-bottom:6px !important;
+}

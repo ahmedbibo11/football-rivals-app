@@ -1,0 +1,39 @@
+{
+  "id": "/",
+  "name": "FOOTBALL RIVALS — The Game Arena",
+  "short_name": "FOOTBALL RIVALS",
+  "description": "Play three football games: WHO'S THE STAR, YA DOBAK, and HIDDEN XI.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#071729",
+  "theme_color": "#071729",
+  "categories": [
+    "games",
+    "sports",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "/assets/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

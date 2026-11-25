@@ -1,0 +1,48 @@
+
+/* STARVERSE: setup, filters, levels,.panel,.join-panel,.answer-panel,.question-panel){
+ background:#ffffff!important;color:#102f49!important;border:1px solid #bfd7e8!important;
+ box-shadow:none!important;backdrop-filter:none!important;
+}h2,h3,strong,b,.form-caption,.heading-inline,.heading-inline strong){
+ color:#102f49!important;-webkit-text-fill-color:#102f49!important;text-shadow:none!important;opacity:1!important;
+}small,.heading-inline small){
+ color:#476377!important;-webkit-text-fill-color:#476377!important;opacity:1!important;
+}.difficulty,.mode-grid,.quick-modes) button{
+ background:#edf6ff!important;color:#163c58!important;-webkit-text-fill-color:#163c58!important;
+ border:1px solid #a9cce2!important;box-shadow:none!important;text-shadow:none!important;
+}.difficulty,.mode-grid,.quick-modes) button :is(b,strong,span,small),strong,span,small){
+ color:#163c58!important;-webkit-text-fill-color:#163c58!important;
+ opacity:1!important;text-shadow:none!important;
+}.difficulty,.mode-grid,.quick-modes) button.active{
+ background:#d7f4e9!important;color:#0b5142!important;-webkit-text-fill-color:#0b5142!important;
+ border:2px solid #0e927e!important;
+}.difficulty,.mode-grid,.quick-modes) button.active :is(b,strong,span,small),strong,span,small){
+ color:#0b5142!important;-webkit-text-fill-color:#0b5142!important;
+}.play-card strong,.play-card small){
+ opacity:1!important;
+}.answer-btn,.option,.option-btn){
+ color:#143951!important;-webkit-text-fill-color:#143951!important;
+}.joinpanel,.result-panel,.winnercard,.questionbox,.answer-panel){
+ background:#ffffff!important;color:#153b55!important;
+ border:1px solid #b9d7e8!important;box-shadow:none!important;
+}.joinpanel,.result-panel,.winnercard,.questionbox,.answer-panel)
+ :is(h1,h2,h3,h4,b,strong,small,span,p,.roomcode,.code-caption,.players-status,.result-icon){
+ color:#153b55!important;-webkit-text-fill-color:#153b55!important;opacity:1!important;text-shadow:none!important;
+}.pill-row>span){
+ color:#153b55!important;-webkit-text-fill-color:#153b55!important;
+ border-color:#96b7cf!important;
+}small,b){
+ color:#143d59!important;-webkit-text-fill-color:#143d59!important;
+}.secret-strip,.guessbar){
+ border-color:#b2d1e4!important;
+}.secret-strip,.guessbar) :is(b,strong,small,span){
+ color:#184563!important;-webkit-text-fill-color:#184563!important;
+}.eyebrow,.balance b,.balance span,.balance .soft){
+ color:#f2f8ff!important;-webkit-text-fill-color:#f2f8ff!important;
+ opacity:1!important;text-shadow:none!important;
+}.resultcard){
+ background:#163754!important;color:#f5faff!important;border-color:#6e99b6!important;
+}.resultcard) :is(b,strong,small,span){
+ color:#f5faff!important;-webkit-text-fill-color:#f5faff!important;opacity:1!important;
+}.sub){
+ color:#173a54!important;-webkit-text-fill-color:#173a54!important;
+}

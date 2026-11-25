@@ -1,0 +1,3 @@
+/* FR 29 contrast patch after all legacy 28 rules, source retained. */
+@import url("./fr28-universe-before29.css?v=fr38-darkonly");
+@import url("./fr29-contrast.css?v=fr38-darkonly");

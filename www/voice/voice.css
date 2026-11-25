@@ -1,0 +1,56 @@
+/* FR57 — RIVALS VOICE is an in-flow game control, never a floating widget. */
+#fr-voice26{font-family:'Cairo',system-ui,Tahoma,sans-serif;direction:rtl;color:#eefcff;position:static!important;z-index:auto!important;min-width:0;width:100%}
+#fr-voice26 *,#frv-panel *{box-sizing:border-box}
+#fr-voice26 .frv-primary{display:flex;align-items:stretch;gap:5px;min-width:0;width:100%}
+#frv-floating{
+ position:static!important;inset:auto!important;z-index:auto!important;
+ display:flex;align-items:center;justify-content:center;flex:1 1 auto;
+ gap:5px;min-width:0;min-height:46px;padding:8px 7px;
+ border:1px solid #5acbb8;border-radius:12px;
+ background:linear-gradient(140deg,#0d614f,#0a3445 88%);
+ color:#e2fff2;font:900 clamp(11px,2.7vw,14px)/1.45 'Cairo',system-ui,sans-serif;
+ box-shadow:inset 0 1px #e9fffb39,0 3px 10px #0006;
+ cursor:pointer;white-space:normal;text-align:center;
+}
+#frv-floating.live{border-color:#7bf4b2;background:linear-gradient(140deg,#0d845b,#10534b);box-shadow:0 0 12px #30e79b48}
+#frv-floating[aria-pressed="true"]{color:#fff}
+#frv-settings{
+ position:static!important;flex:0 0 30px;min-width:30px;min-height:44px;
+ display:grid;place-items:center;padding:0;
+ border:1px solid #7396a1;border-radius:10px;
+ color:#e5d39d;background:linear-gradient(135deg,#143147,#081d33);
+ font-size:17px;cursor:pointer;
+}
+#frv-settings[aria-expanded="true"]{border-color:#f0ca78;color:#ffe9ad}
+#frv-panel{
+ grid-column:1/-1;position:static!important;inset:auto!important;z-index:auto!important;
+ width:100%!important;max-width:none!important;max-height:none!important;
+ box-sizing:border-box;overflow:visible!important;
+ margin:0!important;padding:12px!important;
+ text-align:right;direction:rtl;
+ background:linear-gradient(140deg,#12374d,#071e31);
+ border:1px solid #4b8295;border-radius:13px;
+ box-shadow:inset 0 1px #ffffff26,0 5px 12px #0007;
+}
+#frv-panel[hidden],#fr-voice26 [hidden]{display:none!important}
+#frv-panel .frv-head{display:flex;justify-content:space-between;align-items:center;gap:9px}
+#frv-panel .frv-head small{display:block;color:#80dcc7;font:800 10px 'Cairo',sans-serif}
+#frv-panel .frv-head strong{display:block;color:#ffdc8c;font:900 16px 'Cairo',sans-serif}
+#frv-panel p{font:700 12px/1.7 'Cairo',sans-serif;margin:7px 0}
+#frv-panel .frv-explain{color:#c8dce6}
+#frv-panel button{font:800 12px 'Cairo',sans-serif;border:1px solid #688e9c;border-radius:9px;background:#195069;color:#fff;padding:9px;min-height:40px;cursor:pointer}
+#frv-panel button:disabled{opacity:.55;cursor:not-allowed}
+#frv-panel label{display:block;font:800 12px 'Cairo',sans-serif;color:#d9e9ed;margin:9px 0 5px}
+#frv-panel input{width:100%;min-height:39px;border:1px solid #5d8e9d;border-radius:9px;padding:7px;background:#082236;color:#f4fcff;text-align:center;letter-spacing:.7px}
+#frv-status{min-height:36px;padding:8px;border:1px solid #2d7b71;border-radius:9px;background:#0a3b3b;color:#b4ffdf}
+#frv-status.bad{border-color:#ba6a79;background:#432432;color:#ffccd8}
+#frv-panel .frv-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0}
+#frv-join,#frv-copy{grid-column:1/-1}
+#frv-join{background:linear-gradient(110deg,#b8e8cb,#6edac5)!important;color:#0b3035!important}
+#frv-panel .frv-code{display:block;direction:ltr;text-align:left;color:#e1d49f;font-size:11px}
+#frv-login{display:block;color:#ffe4a3;font-size:12px;text-decoration:underline}
+@media(max-width:350px){
+ #frv-floating{font-size:10px;padding:5px 3px}
+ #frv-settings{min-width:26px;flex-basis:26px}
+ #frv-panel{padding:9px!important}
+}

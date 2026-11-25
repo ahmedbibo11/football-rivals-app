@@ -1,0 +1,41 @@
+/* Football Rivals 6.1 — no decorative overlap, reduced paint */
+:root{color-scheme:dark}
+html{scroll-behavior:auto}
+body:before{display:none!important}
+body *{animation:none!important}
+.topbar,.hero,.games,.features,.game,.game-visual,.art,.stage,.scoreboard{transform:none!important;filter:none!important;backdrop-filter:none!important}
+.hero{grid-template-columns:minmax(0,1.14fr) minmax(270px,.86fr)!important;min-height:0!important;gap:28px!important;padding:38px 0 45px!important}
+.hero h1{font-size:clamp(32px,5vw,64px)!important;line-height:1.14!important}
+.hero p{max-width:640px!important;margin:0 0 22px!important}
+.art{min-height:0!important;display:flex!important;align-items:stretch;position:static!important}
+.art:before{display:none!important}
+.fr61-display{width:100%;min-width:0;display:flex;flex-direction:column;gap:17px;background:#0c1b2d;border:1px solid #466175;border-radius:20px;padding:26px;box-shadow:none}
+.fr61-display>small{font:800 11px Arial;letter-spacing:1.6px;color:#6ed8d6;direction:ltr}
+.fr61-display h2{font:900 clamp(32px,4vw,49px) 'Barlow Condensed',system-ui,sans-serif;direction:ltr;line-height:.97;letter-spacing:1.5px;margin:0}
+.fr61-display h2 span{color:#f4cf84}
+.fr61-display p{font-size:12px;color:#a7bad0;line-height:1.9;margin:0}
+.fr61-match{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:9px;padding:20px 10px;border-radius:12px;background:#152940;border:1px solid #39556d;direction:ltr;text-align:center}
+.fr61-match b{font:900 13px Arial;overflow-wrap:anywhere}.fr61-match em{font:900 26px 'Barlow Condensed',system-ui;color:#f4d08d;font-style:normal}
+.fr61-split{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fr61-split span{background:#101f30;border:1px solid #354f63;border-radius:11px;padding:11px;text-align:center;font:800 10px Arial;color:#b1d5de}.fr61-split b{display:block;font:900 24px 'Barlow Condensed',Arial;color:#f3d18a;margin-bottom:4px}
+.games{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+.game{min-width:0!important;transform:none!important;box-shadow:none!important;border:1px solid #42647b!important;display:flex;flex-direction:column;background:#0d1d31!important}
+.game:hover{transform:none!important;box-shadow:none!important;border-color:#d6b574!important}
+.game-visual{height:auto!important;min-height:130px!important;padding:23px!important;display:flex!important;flex-direction:column;gap:13px;position:relative!important;background:#102942!important}
+.game-visual:after{display:none!important}
+.game-visual .category{position:static!important;align-self:flex-start;z-index:auto!important;font-size:10px}
+.fr61-game-identity{display:flex;flex-direction:column;align-items:flex-start;gap:7px;position:static;z-index:auto}
+.fr61-game-identity strong{font:900 clamp(27px,4.1vw,42px) 'Barlow Condensed',Arial;letter-spacing:1px;line-height:1}
+.fr61-game-identity span{font:800 10px Arial;letter-spacing:1px;color:#b2cadc}
+.game-body{padding:22px!important;display:flex;flex-direction:column;flex:1}
+.game-body h3{font-size:clamp(28px,3.5vw,40px)!important}
+.game-body p{font-size:12px}
+.game-bottom{margin-top:auto!important}
+.btn{box-shadow:none!important}
+.btn:hover{transform:none!important;box-shadow:none!important}
+.features{box-shadow:none!important;gap:14px!important}
+.feature{min-width:0}
+.share:hover,.btn:hover{border-color:#e7c37c}
+@media(max-width:860px){.hero{grid-template-columns:1fr!important;padding:32px 0 34px!important;gap:18px!important}.art{min-height:0!important}.fr61-display{padding:21px}.games{gap:12px!important}}
+@media(max-width:640px){.hero h1{font-size:clamp(32px,9vw,43px)!important}.games{grid-template-columns:1fr!important}.game-visual{min-height:125px!important}.fr61-display h2{font-size:39px}.topbar{height:68px}.fr61-match{padding:16px 7px}.stats{gap:13px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+

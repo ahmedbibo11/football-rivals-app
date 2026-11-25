@@ -1,0 +1,61 @@
+
+/* FR68 Five: isolated responsive polish, original auction art and cards retained. */
+.coach-grid .coach-option{position:relative;overflow:hidden;transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+.coach-grid .coach-option:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(0,0,0,.23)}
+.coach-grid .coach-portrait{width:min(150px,72%);aspect-ratio:1;min-height:unset;height:auto;overflow:hidden;border-radius:20px;margin-inline:auto;background:#10223c;border:1px solid rgba(240,197,110,.6)}
+.coach-grid .coach-portrait svg{width:100%;height:100%;display:block}
+.coach-grid .coach-option .btn{min-height:48px;font-weight:900}
+.coach-grid .coach-option .cost{font-variant-numeric:tabular-nums}
+.coach-grid .coach-option .tier{letter-spacing:.03em}
+.match-hero .vs-header{position:relative;isolation:isolate;gap:clamp(4px,2vw,18px)}
+.match-hero .vs-header .score{background:rgba(2,13,31,.91);border:1px solid rgba(247,204,121,.74);border-radius:18px;padding:6px 13px;min-width:105px;box-shadow:0 8px 26px rgba(0,0,0,.53),inset 0 1px rgba(255,255,255,.15);font-variant-numeric:tabular-nums;font-size:clamp(34px,6.8vw,74px);white-space:nowrap;text-shadow:0 3px 16px #001327}
+.match-hero .vs-team{min-width:0}
+.match-hero .vs-team strong{line-height:1.3}
+.match-hero .match-clock{background:rgba(1,16,35,.9);width:max-content;max-width:100%;padding:2px 16px;margin:8px auto 0;border:1px solid rgba(249,207,129,.55);border-radius:12px;color:#ffe5a0}
+#match-events.timeline{display:grid;gap:8px}
+#match-events .event{min-height:unset;padding:13px 15px;margin:0;border-radius:15px;line-height:1.45}
+#match-events .event strong{font-size:clamp(14px,2.9vw,17px)}
+#match-events .event time{font-weight:900;font-variant-numeric:tabular-nums;color:#ffe09a}
+#match-events .event .hint{font-size:12px}
+.fr68-section-kicker{text-transform:uppercase;letter-spacing:.12em;color:#e9ba66;font-size:12px;font-weight:900;margin-bottom:8px}
+.fr68-awards,.fr68-ratings{margin-top:17px;border:1px solid rgba(231,185,96,.33);background:linear-gradient(135deg,#102d4c,#07152d 80%)}
+.fr68-motm{display:grid;grid-template-columns:minmax(140px,210px) 1fr;gap:22px;align-items:center}
+.fr68-motm-card{width:100%;min-width:0;display:grid;place-items:center}
+.fr68-star-card{max-width:200px!important;margin:auto}
+.fr68-trophy{color:#ffe399;background:rgba(209,151,48,.14);padding:5px 10px;border:1px solid rgba(247,205,125,.38);border-radius:999px;font-size:12px;font-weight:900;display:inline-block}
+.fr68-motm-info h3{font-size:clamp(24px,4vw,42px);margin:12px 0 2px;color:#fff}
+.fr68-motm-info p{color:#bbd1e7;margin:0 0 12px}
+.fr68-rating-badge{display:inline-flex;align-items:center;justify-content:center;min-width:54px;min-height:42px;border-radius:13px;background:linear-gradient(145deg,#ffedaa,#d49b35);color:#0a233f;font-size:20px;font-weight:900;border:1px solid #fff1b5;font-variant-numeric:tabular-nums}
+.fr68-rating-big{font-size:37px;padding:5px 19px}
+.fr68-award-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.fr68-award-stats>span{border:1px solid #34516d;border-radius:10px;background:#0b243f;color:#dbeef9;padding:6px 9px;font-size:13px}
+.fr68-rating-teams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.fr68-rating-team{min-width:0}
+.fr68-rating-team h3{font-size:20px;margin:12px 0}
+.fr68-rating-team h3 small{display:block;font-size:13px;color:#b7ccde;font-weight:600}
+.fr68-player-rating{display:flex;align-items:center;gap:9px;min-width:0;padding:8px;background:rgba(7,26,48,.75);border:1px solid #264466;border-radius:14px;margin-bottom:8px}
+.fr68-player-rating.fr68-best{border-color:#e8c56d;background:rgba(177,124,40,.16)}
+.fr68-player-thumb{width:53px;min-width:53px;max-height:62px;overflow:hidden;display:grid;place-items:center}
+.fr68-rating-sprite{width:100%!important;max-width:53px!important}
+.fr68-player-line{display:flex;min-width:0;flex:1;flex-direction:column;gap:4px}
+.fr68-player-line strong{font-size:14px;overflow-wrap:anywhere;line-height:1.35}
+.fr68-player-line span{font-size:11px;color:#bbd0df}
+.fr68-player-rating .fr68-rating-badge{min-width:48px;min-height:37px;font-size:17px}
+.fr68-rating-badge.fr68-excellent{background:linear-gradient(145deg,#ffe999,#e4b646)}
+.fr68-rating-badge.fr68-low{background:linear-gradient(145deg,#a0b4c0,#688398);border-color:#b2c6d0}
+.fr68-goal-overlay{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:15px;background:radial-gradient(ellipse at 50% 35%,rgba(23,78,119,.92),rgba(2,8,23,.96) 67%);backdrop-filter:blur(9px);animation:fr68-in .28s ease-out both;pointer-events:none}
+.fr68-goal-overlay.leaving{animation:fr68-out .22s ease-in both}
+.fr68-goal-inner{text-align:center;width:min(94vw,455px);max-height:92dvh;overflow:hidden;border:1px solid rgba(255,215,129,.8);border-radius:24px;padding:clamp(12px,3vw,22px);background:linear-gradient(170deg,#153c62,#07192f 70%);box-shadow:0 0 0 4px rgba(240,181,65,.07),0 25px 90px #0008;display:flex;align-items:center;flex-direction:column}
+.fr68-goal-kicker{font-size:11px;letter-spacing:.15em;color:#eacb87;font-weight:900}
+.fr68-goal-head{font-size:clamp(38px,10vw,66px);line-height:1.2;font-weight:900;color:#ffe29a;filter:drop-shadow(0 2px 10px rgba(228,171,66,.4))}
+.fr68-goal-card{width:min(48vw,180px);max-height:230px;display:grid;place-items:center;margin:7px auto}
+.fr68-score-card{width:100%;max-width:180px!important}
+.fr68-goal-inner h2{font-size:clamp(22px,6vw,34px);margin:4px 0;color:white}
+.fr68-goal-inner p{margin:3px 0;color:#cbdeee}
+.fr68-goal-assist{margin-top:8px;font-size:14px;color:#ffe6b2}
+.fr68-goal-label{margin-top:8px;font:900 20px 'Barlow Condensed',sans-serif;letter-spacing:.12em;color:#f5cd74}
+@keyframes fr68-in{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+@keyframes fr68-out{from{opacity:1}to{opacity:0;transform:scale(1.02)}}
+@media(max-width:620px){.fr68-rating-teams{grid-template-columns:1fr}.fr68-motm{grid-template-columns:130px 1fr;gap:13px}.fr68-motm-info h3{font-size:24px}.fr68-trophy{font-size:10px}.fr68-award-stats{gap:5px}.fr68-award-stats>span{font-size:11px}.match-hero .vs-header .score{min-width:84px;padding:3px 8px}.coach-grid .coach-option{padding:12px 10px}.coach-grid .coach-portrait{width:115px;max-width:87%}}
+@media(max-width:360px){.fr68-motm{grid-template-columns:1fr;text-align:center}.fr68-award-stats{justify-content:center}.fr68-motm-card{max-width:140px;margin:auto}.match-hero .vs-header .score{font-size:30px;min-width:70px}}
+@media(prefers-reduced-motion:reduce){.fr68-goal-overlay,.fr68-goal-overlay.leaving{animation:none}.coach-grid .coach-option{transition:none}}

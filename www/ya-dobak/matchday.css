@@ -1,0 +1,43 @@
+/* FOOTBALL RIVALS 14.0 · RIVALS LIVE MATCHDAY */
+.fr14-topline{display:flex;align-items:center;justify-content:space-between;gap:6px;font:900 10px Arial,sans-serif;letter-spacing:1.4px;color:#8cf5d3;margin-bottom:10px}.fr14-topline b{color:#f8daa3}
+.fr14-ready{border-color:#eac578!important;background:radial-gradient(ellipse at 50% 0,#e4ba5a31,transparent 70%),linear-gradient(130deg,#172f40,#0d2133)!important}
+.fr14-ready h2{font-size:clamp(23px,3.5vw,34px);color:#ffe2a0;margin:7px 0}.fr14-ready>p{font-size:12px;color:#b2ced7;max-width:700px}
+.fr14-ready-squads{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:18px 0}.fr14-ready-squads>div{border:1px solid #6e9793;border-radius:13px;background:#102e3b;padding:13px;display:flex;align-items:center;flex-direction:column;gap:5px}
+.fr14-ready-squads b{color:#d9f5eb}.fr14-ready-squads strong{font:900 35px 'Barlow Condensed';color:#ffdd91}.fr14-ready-squads small{color:#9ed3c7;font-size:10px}
+.fr14-speeds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.fr14-start{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:96px;background:linear-gradient(130deg,#d8a85a,#fce49c);border-radius:14px;border:1px solid #fff0bd;font-weight:1000;color:#192d37;font-size:18px;box-shadow:0 10px 30px #d7b56f33}.fr14-start+button{background:linear-gradient(130deg,#76d6ba,#197b74);color:white;border-color:#9efce2}.fr14-start small{font-size:10px;font-weight:700}.fr14-wait{text-align:center;padding:19px;color:#bbded6;border:1px solid #638f82;border-radius:12px;background:#103c3a;font-size:12px}
+.fr14-match{border-color:#d9bc74!important;background:linear-gradient(150deg,#163749,#101d30)!important}
+.fr14-scoreboard{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;text-align:center;padding:12px 0 18px}
+.fr14-scoreboard>span{font-weight:1000;color:#e7f7f1;font-size:clamp(12px,2vw,17px);overflow-wrap:anywhere}
+.fr14-scoreboard>div strong{font:900 clamp(42px,9vw,78px) 'Barlow Condensed';color:#ffe09c;letter-spacing:2px;display:block;line-height:1.1;text-shadow:0 3px 16px #efc36e45}
+.fr14-scoreboard>div small{font-size:11px;font-weight:900;color:#80e0c9}
+.fr14-progress{height:6px;border-radius:8px;background:#1e4254;overflow:hidden;margin-bottom:13px}.fr14-progress i{display:block;height:100%;background:linear-gradient(90deg,#54e2b9,#ffcb68);transition:width .8s ease}
+.fr14-pitch{border:2px solid #6ed5aeaa;border-radius:12px;overflow:hidden;background:#174c3c;position:relative}.fr14-pitch svg{display:block;width:100%;height:auto;max-height:390px}
+.fr14-pitch>div{position:absolute;bottom:5px;right:12px;z-index:2;font:900 9px Arial;color:#cbfce0;letter-spacing:2px;text-shadow:0 1px 4px #000}
+.fr14-dot.a{fill:#fbd885;stroke:#fff8ea;stroke-width:.38}.fr14-dot.b{fill:#68c2ff;stroke:#e1f5ff;stroke-width:.38}
+.fr14-match-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:13px;margin-top:13px}.fr14-match-grid>article,.fr14-report-grid>article{background:#0a2233;border:1px solid #467d80;border-radius:13px;padding:13px;min-width:0}.fr14-match-grid h3,.fr14-report-grid h4{font-size:15px;color:#ffe5ab;margin:2px 0 12px}
+.fr14-feed{height:275px;overflow:auto;display:flex;flex-direction:column;gap:7px}
+.fr14-event{display:flex;gap:9px;align-items:flex-start;background:#163444;border:1px solid #386777a9;border-radius:9px;padding:9px;font-size:11px;color:#cbe4e6;line-height:1.65}
+.fr14-event b{flex-shrink:0;color:#ffdb8d;font:900 17px 'Barlow Condensed';letter-spacing:.5px}.fr14-event span{flex:1}
+.fr14-event.is-goal{border-color:#f7c568;background:#52452b;color:#fff0c3}.fr14-no-events{font-size:11px;color:#95b6c3}
+.fr14-stat{display:grid;grid-template-columns:1fr 2.6fr 1fr;text-align:center;align-items:center;border-bottom:1px solid #305769;padding:6px;gap:6px;font-size:11px;color:#afc6d3}.fr14-stat strong{color:#fce3b1;font:900 18px 'Barlow Condensed'}
+.fr14-tactics{margin-top:15px;border-top:1px solid #476c72;padding-top:10px}.fr14-tactics p{font-size:11px;line-height:1.6;color:#b7cdd3}.fr14-buttons{display:grid;grid-template-columns:1fr 1fr;gap:6px}.fr14-buttons button{background:#143945;border:1px solid #537e8e;color:#e4f4ee;padding:10px 6px;border-radius:9px;font-size:11px;font-weight:900}.fr14-buttons button.active{background:#35513c;border-color:#e9c87e;color:#ffe6ac}.fr14-tactics small{display:block;color:#8ed9c5;margin-top:8px;font-size:10px}
+.fr14-goal{position:absolute;inset:0;z-index:6;pointer-events:none;display:grid;place-items:center;background:#091823db;backdrop-filter:blur(5px);border-radius:16px;animation:fr14goal 4.8s both}
+.fr14-match{position:relative}.fr14-goal>div{text-align:center;border:2px solid #ffdf91;border-radius:20px;max-width:330px;width:86%;padding:16px;background:radial-gradient(ellipse at center,#66502c,#0d2337 75%);box-shadow:0 0 50px #ffd28155}.fr14-goal span{font:900 27px 'Barlow Condensed';color:#ffe6ac}.fr14-goal h2{font-size:20px;color:#fff4d7;margin:7px}.fr14-goal p{color:#acebdc;font-size:11px}.fr14-goal .card-frame{width:min(160px,50vw);margin:auto}
+@keyframes fr14goal{0%{opacity:0;transform:scale(.7)}13%{opacity:1;transform:scale(1)}85%{opacity:1}100%{opacity:0}}
+.fr14-report{margin-top:14px;border:1px solid #f5d384;border-radius:16px;padding:17px;background:linear-gradient(130deg,#172f3f,#101d2e)}.fr14-report-head{display:flex;align-items:center;justify-content:space-between;gap:13px;flex-wrap:wrap}.fr14-report-head small{font:900 9px Arial;letter-spacing:2px;color:#8ae1ca}.fr14-report-head h3{color:#ffdc9b;font-size:20px;margin:5px 0}.fr14-report-head button{background:#2b5547;color:#caffea;border:1px solid #80dab8;border-radius:8px;padding:9px;font-size:10px;font-weight:900}
+.fr14-report-score{text-align:center;color:#cbe5db;font-weight:900;margin:10px}.fr14-report-score strong{color:#ffe3a3;font:900 37px 'Barlow Condensed';padding:0 14px}
+.fr14-report-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:11px}.fr14-report-events{max-height:320px;overflow:auto}.fr14-report-foot{text-align:center;color:#efdcab;font-size:12px;margin-top:11px;font-weight:900}
+@media(max-width:730px){.fr14-match-grid,.fr14-report-grid{grid-template-columns:1fr}.fr14-feed{height:190px}.fr14-pitch>div{font-size:7px}.fr14-scoreboard>div strong{font-size:50px}.fr14-speeds{grid-template-columns:1fr}.fr14-start{min-height:77px}}
+@media(max-width:420px){.fr14-scoreboard>div strong{font-size:42px}.fr14-scoreboard>span{font-size:10px}.fr14-match-grid>article{padding:10px}.fr14-match{padding:10px!important}}
+@media(prefers-reduced-motion:reduce){.fr14-goal{animation:none}}
+
+
+/* The server owns the six-second freeze, and clients keep the goal visible
+   for that whole freeze rather than removing it on the next tick. */
+.fr14-goal{animation:fr14goal-hold 6s ease-in-out both}
+.fr14-goal>div{width:min(94%,365px);max-width:365px;padding:16px 12px;box-shadow:0 0 55px #ffcf7d7a}
+.fr14-goal .card-frame{width:min(220px,62vw);margin:12px auto;box-shadow:0 0 30px #f9c6768a}
+.fr14-speeds{grid-template-columns:repeat(3,minmax(0,1fr));}
+@keyframes fr14goal-hold{0%{opacity:0;transform:scale(.92)}7%{opacity:1;transform:scale(1)}93%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@media(max-width:650px){.fr14-speeds{grid-template-columns:1fr}.fr14-goal>div{width:min(92%,330px)}}
+@media(prefers-reduced-motion:reduce){.fr14-goal{animation:none!important;opacity:1!important}}

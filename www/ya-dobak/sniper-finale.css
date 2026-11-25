@@ -1,0 +1,45 @@
+/* YA DOBAK 17.2 — Pack market, reveal, finale visual finishing */
+body.yd-active #stage:has(.pack-grid) .stage-frame{border-color:#b5a06b8f!important;background:radial-gradient(ellipse at 50% 0%,#826b373d,transparent 48%),linear-gradient(140deg,#133246,#071b2e)!important}
+body.yd-active .shop-header{gap:8px!important;align-items:center!important;margin:6px 0 8px!important}
+body.yd-active .shop-header p{margin:0!important;font-size:clamp(11px,2.7vw,14px)!important;line-height:1.6!important;color:#badbe5!important}
+body.yd-active .shop-header p b{color:#ffe1a1!important}
+body.yd-active .wallet{padding:7px 13px!important;background:linear-gradient(135deg,#3a3322,#122d39)!important;border:1px solid #e9c47c!important;border-radius:12px!important;white-space:nowrap!important}
+body.yd-active .wallet b{font-size:clamp(22px,6vw,34px)!important}
+body.yd-active .pack-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:9px!important;margin:14px 0!important}
+body.yd-active .pack{position:relative!important;min-width:0!important;min-height:132px!important;padding:12px 6px!important;border:1px solid #fff9!important;border-radius:15px!important;overflow:hidden!important;box-shadow:0 5px 16px #0007!important;transition:transform .16s ease,box-shadow .16s ease!important}
+body.yd-active .pack::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(125deg,#fff5 0%,transparent 28%,transparent 60%,#0002 100%)}
+body.yd-active .pack.selected{transform:translateY(-3px)!important;border:2px solid #fff8d7!important;box-shadow:0 0 0 2px #f6d48e73,0 0 23px #f5bb637c!important}
+body.yd-active .pack strong{font-size:clamp(11px,2.8vw,16px)!important;font-weight:1000!important;overflow-wrap:anywhere}
+body.yd-active .packprice{font-size:clamp(24px,6vw,32px)!important;line-height:1!important}
+body.yd-active .pack span{font-weight:1000!important;font-size:clamp(10px,2.5vw,13px)!important}
+body.yd-active .boost-row{margin:9px 0!important;padding:10px 13px!important;background:linear-gradient(120deg,#123a47,#081f35)!important;border:1px solid #43867a!important}
+body.yd-active .boost-row h4{color:#ffe4ad!important}
+body.yd-active #stage #buyPack{width:100%!important;min-height:52px!important;border-radius:13px!important;font-weight:1000!important;box-shadow:0 6px 20px #edc36a52!important}
+body.yd-active .pack-card-reveal{border:1px solid #eac277!important;border-radius:18px!important;background:linear-gradient(130deg,#1a4552,#091e35)!important;box-shadow:0 0 30px #ecd28643!important;animation:yd-unlock .75s cubic-bezier(.2,.9,.3,1.12) both}
+body.yd-active .reveal-board{display:grid!important;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;gap:12px!important}
+body.yd-active .reveal-board .card-stage{min-height:0!important;max-height:340px!important;overflow:hidden!important}
+body.yd-active .reveal-board .card-frame{max-width:190px!important}
+body.yd-active .fr15-reveal-intro{padding:10px!important;margin:8px auto!important}
+body.yd-active .fr15-reveal-intro strong{font-size:clamp(49px,14vw,83px)!important;color:#ffe1a0!important}
+body.yd-active .result-stat{padding:9px!important}
+body.yd-active .result-stat strong{font-size:clamp(44px,12vw,75px)!important;line-height:1.05!important}
+body.yd-active .reveal-picks{gap:6px!important}
+body.yd-active .pick-result{padding:8px 5px!important;min-width:0!important;border-radius:12px!important}
+body.yd-active .pick-result strong{font-size:clamp(24px,6vw,40px)!important}
+body.yd-active .reveal-summary{padding:11px!important;line-height:1.7!important;border:1px solid #e0c2818c!important;background:linear-gradient(120deg,#173a48,#0d2739)!important}
+body.yd-active .final-banner{border-radius:21px!important;border:1px solid #f0cd83!important;background:radial-gradient(ellipse at 50% 8%,#bb994c4d,transparent 60%),linear-gradient(130deg,#14384b,#061b2d)!important;box-shadow:0 0 26px #f9c56b35!important}
+body.yd-active .final-banner h2{color:#ffe39e!important;text-shadow:0 0 16px #e3b46380!important}
+body.yd-active .final-score{margin:10px auto!important}
+body.yd-active .final-score strong{color:#ffe6b3!important;text-shadow:0 0 20px #f6c46c!important}
+body.yd-active .match-events{border-radius:16px!important;border-color:#427790!important}
+@media(max-width:600px){
+body.yd-active .pack-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+body.yd-active .pack{min-height:108px!important;padding:9px 6px!important}
+body.yd-active .pack strong{font-size:13px!important}
+body.yd-active .reveal-board{grid-template-columns:1fr!important}
+body.yd-active .reveal-board .card-stage{max-height:260px!important;padding:8px!important}
+body.yd-active .reveal-board .card-frame{width:clamp(150px,43vw,174px)!important}
+body.yd-active .reveal-board .reveal-picks{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+body.yd-active .result-stat strong{font-size:53px!important}
+}
+@media(prefers-reduced-motion:reduce){body.yd-active .pack-card-reveal{animation:none!important}body.yd-active .pack{transition:none!important}}

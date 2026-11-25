@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Football stadium lights background">
+<defs>
+<radialGradient id="bg"><stop stop-color="#123a5c"/><stop offset=".58" stop-color="#061e3a"/><stop offset="1" stop-color="#030e22"/></radialGradient>
+<radialGradient id="beam"><stop stop-color="#9ceaff" stop-opacity=".38"/><stop offset=".45" stop-color="#249af1" stop-opacity=".12"/><stop offset="1" stop-color="#249af1" stop-opacity="0"/></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#936429"/><stop offset=".4" stop-color="#ffebad"/><stop offset=".75" stop-color="#f1b947"/><stop offset="1" stop-color="#65431f"/></linearGradient>
+<pattern id="stands" width="16" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="1.2" fill="#85daee" opacity=".18"/><circle cx="10" cy="7" r=".8" fill="#ffc873" opacity=".15"/></pattern>
+<filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<ellipse cx="250" cy="40" rx="580" ry="340" fill="url(#beam)"/><ellipse cx="1370" cy="50" rx="580" ry="340" fill="url(#beam)"/>
+<path d="M0 340 Q800 135 1600 340 V900 H0Z" fill="#071a31" opacity=".9"/>
+<path d="M0 360 Q800 165 1600 360 V650 H0Z" fill="url(#stands)" opacity=".55"/>
+<path d="M0 575 Q800 340 1600 575" stroke="#4b9fc6" stroke-opacity=".24" stroke-width="18" fill="none"/>
+<path d="M0 585 Q800 360 1600 585" stroke="#f1c877" stroke-opacity=".24" stroke-width="3" fill="none"/>
+<path d="M0 895 Q800 740 1600 895" fill="none" stroke="url(#gold)" stroke-width="5" opacity=".45"/>
+<path d="M0 680 Q800 510 1600 680" fill="none" stroke="#5fcddd" stroke-width="1" opacity=".2"/>
+<g opacity=".65">
+<g transform="translate(20 18) rotate(-13)">
+<rect width="230" height="65" rx="8" fill="#0f426e" stroke="#79cdf7" stroke-width="3"/>
+<g fill="#b9f4ff"><circle cx="25" cy="19" r="7"/><circle cx="65" cy="19" r="7"/><circle cx="105" cy="19" r="7"/><circle cx="145" cy="19" r="7"/><circle cx="185" cy="19" r="7"/><circle cx="25" cy="46" r="7"/><circle cx="65" cy="46" r="7"/><circle cx="105" cy="46" r="7"/><circle cx="145" cy="46" r="7"/><circle cx="185" cy="46" r="7"/></g>
+</g>
+<g transform="translate(1360 0) rotate(13)">
+<rect width="230" height="65" rx="8" fill="#0f426e" stroke="#79cdf7" stroke-width="3"/>
+<g fill="#b9f4ff"><circle cx="25" cy="19" r="7"/><circle cx="65" cy="19" r="7"/><circle cx="105" cy="19" r="7"/><circle cx="145" cy="19" r="7"/><circle cx="185" cy="19" r="7"/><circle cx="25" cy="46" r="7"/><circle cx="65" cy="46" r="7"/><circle cx="105" cy="46" r="7"/><circle cx="145" cy="46" r="7"/><circle cx="185" cy="46" r="7"/></g>
+</g></g>
+<g fill="#fff" opacity=".25"><circle cx="456" cy="108" r="2"/><circle cx="612" cy="166" r="1.3"/><circle cx="1145" cy="150" r="1.8"/><circle cx="930" cy="65" r="1.5"/><circle cx="770" cy="240" r="1.2"/></g>
+</svg>

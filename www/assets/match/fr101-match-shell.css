@@ -1,0 +1,7 @@
+/* FR101 hosts the same Five match layout without a second visual identity. */
+body:has(.fr101-match-host){background:#071629}
+#fr95-root:has(.fr101-match-host){max-width:none;width:100%;padding:0!important;overflow:visible!important}
+.fr101-match-host{width:100%;max-width:100%;margin:0 auto;padding:0 12px calc(145px + env(safe-area-inset-bottom,0px));box-sizing:border-box;direction:rtl}
+.fr101-match-host .fr70-experience{width:100%;max-width:900px;margin:0 auto}
+.fr101-match-host .panel{background:linear-gradient(145deg,#122d50,#091b33);border:1px solid #476585;border-radius:18px}
+@media(max-width:360px){.fr101-match-host{padding-left:7px;padding-right:7px}}

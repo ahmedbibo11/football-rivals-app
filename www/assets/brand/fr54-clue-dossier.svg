@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 415" fill="none" role="img" aria-label="Football mystery investigation dossier">
+<defs>
+ <linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8d69b"/><stop offset=".48" stop-color="#a66c32"/><stop offset="1" stop-color="#eed2a2"/></linearGradient>
+ <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#183047"/><stop offset="1" stop-color="#050b18"/></linearGradient>
+ <radialGradient id="halo" cx=".5" cy=".45" r=".54"><stop stop-color="#d0a154" stop-opacity=".62"/><stop offset="1" stop-color="#d0a154" stop-opacity="0"/></radialGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0ac"/><stop offset=".5" stop-color="#e0a543"/><stop offset="1" stop-color="#885117"/></linearGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="13"/></filter>
+ <filter id="glow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="6"/></filter>
+ <pattern id="lines" width="15" height="16" patternUnits="userSpaceOnUse"><path d="M1 14H13" stroke="#6a4727" stroke-width=".7" opacity=".28"/></pattern>
+</defs>
+<ellipse cx="360" cy="365" rx="240" ry="29" fill="#000" opacity=".56" filter="url(#shadow)"/>
+<ellipse cx="360" cy="208" rx="260" ry="180" fill="url(#halo)"/>
+<g transform="translate(182 36) rotate(-11 160 174)">
+ <rect x="5" y="10" width="326" height="330" rx="15" fill="#070e1a" opacity=".7"/>
+ <rect width="326" height="330" rx="15" fill="url(#p)" stroke="#ffe6a7" stroke-width="2.5"/>
+ <rect x="16" y="17" width="294" height="296" rx="8" fill="url(#lines)" stroke="#604427" stroke-opacity=".5"/>
+ <path d="M44 70H176M44 91H250M44 110H211M44 129H232M44 265H259M44 281H223" stroke="#65482b" stroke-width="4" stroke-linecap="round" opacity=".35"/>
+ <circle cx="256" cy="236" r="40" stroke="#8c4e2a" stroke-width="5" opacity=".42"/>
+ <path d="M233 238l15 15 31-34" stroke="#8c4e2a" stroke-width="6" opacity=".35"/>
+</g>
+<g transform="translate(259 29) rotate(9 152 176)">
+ <rect width="310" height="340" rx="12" fill="url(#p)" stroke="#f9db99" stroke-width="2"/>
+ <rect x="20" y="23" width="270" height="295" rx="7" fill="url(#lines)" stroke="#a87540" stroke-width="2" opacity=".67"/>
+ <path d="M40 59H139M40 77H250M40 96H196M40 249H257M40 267H214M40 285H245" stroke="#815b33" stroke-width="4" stroke-linecap="round" opacity=".42"/>
+</g>
+<g>
+ <path d="M235 48h258l20 22v276l-19 17H224l-18-22V78z" fill="#0a111d" stroke="url(#gold)" stroke-width="5"/>
+ <path d="M242 63h240l14 17v253l-12 15H232l-12-15V82z" fill="url(#dark)" stroke="#7c622e" stroke-width="1"/>
+ <circle cx="359" cy="191" r="158" fill="url(#halo)"/>
+ <ellipse cx="361" cy="190" rx="100" ry="118" fill="#172439" stroke="#8a662f" stroke-width="2"/>
+ <path d="M358 100c-41 0-69 31-69 78 0 32 9 54 31 73l-5 22c-52 18-89 44-98 76h279c-9-34-47-60-100-76l-5-22c20-18 30-46 30-77 0-43-23-74-63-74z" fill="#040a13" stroke="#f1bd5c" stroke-width="2"/>
+ <path d="M316 264c25 24 65 24 88 0" stroke="#af8744" stroke-opacity=".58" stroke-width="2"/>
+ <text x="362" y="230" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="150" fill="#e8a943" opacity=".52" filter="url(#glow)">?</text>
+ <text x="362" y="230" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="150" fill="url(#gold)" stroke="#ffe7a2" stroke-width="1">?</text>
+</g>
+<g>
+ <rect x="326" y="18" width="73" height="29" rx="9" fill="#3a3a2d" stroke="#f2cb7c" stroke-width="3"/>
+ <rect x="350" y="8" width="25" height="25" rx="8" fill="#24251e" stroke="#ffdc8d" stroke-width="3"/>
+ <circle cx="362.5" cy="18" r="4" fill="#eac06b"/>
+ <path d="M249 65l14 14m201-14-14 14" stroke="#ffd889" stroke-width="3"/>
+ <path d="M115 120l11 0m-5-6v12M582 86l12 0m-6-6v12M595 294h20m-10-10v20" stroke="#ffd479" stroke-width="3" opacity=".78"/>
+</g>
+</svg>

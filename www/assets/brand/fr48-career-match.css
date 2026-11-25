@@ -1,0 +1,64 @@
+/* FR48: CAREER PATH visual system; intentionally isolated from all other STARVERSE modes */
+body.fr28-route-star.fr47-career {background:#031427!important;color:#eef8ff!important}
+body.fr28-route-star.fr47-career .app{max-width:1000px}
+body.fr28-route-star.fr47-career #play{position:relative;isolation:isolate;padding-bottom:34px!important}
+body.fr28-route-star.fr47-career #play::before{content:"";position:absolute;pointer-events:none;z-index:-1;inset:0 -10px auto;height:min(1060px,115svh);background:url("/assets/brand/fr47-career-arena.svg") top center/cover no-repeat;opacity:.93}
+body.fr28-route-star.fr47-career .topbar{border-bottom:1px solid #4e91ba71!important;box-shadow:0 7px 20px #0008}
+body.fr28-route-star.fr47-career .fr47-arena-head{display:flex!important;flex-direction:column!important;gap:2px;align-items:center;justify-content:center;text-align:center;margin:12px 0 12px!important;padding:10px 0 0;position:relative;z-index:2}
+body.fr28-route-star.fr47-career .fr47-title{font:900 clamp(29px,8vw,53px)/1.16 'Cairo',sans-serif!important;color:#ffda8c!important;margin:0!important;text-shadow:0 1px #73522c,0 0 18px #ffe18a77,0 4px 16px #000}
+body.fr28-route-star.fr47-career .fr47-title::before,body.fr28-route-star.fr47-career .fr47-title::after{content:"❧";color:#f6c66a;display:inline-block;font:800 .62em Georgia,serif;margin-inline:8px;transform:rotate(-25deg)}
+body.fr28-route-star.fr47-career .fr47-title::after{transform:rotate(25deg) scaleX(-1)}
+body.fr28-route-star.fr47-career .fr47-english{font:900 clamp(15px,4vw,24px)/1.1 'Barlow Condensed',sans-serif;letter-spacing:.07em;color:#f3f9ff;text-shadow:0 3px 9px #000}
+body.fr28-route-star.fr47-career .fr47-roundline{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;margin:13px 0 4px;direction:rtl}
+body.fr28-route-star.fr47-career .fr47-round{display:flex;align-items:center;justify-content:center;min-height:38px;font:900 12px/1.3 'Cairo',sans-serif;color:#ffdda5;background:linear-gradient(155deg,#12385a,#07172e);border:1px solid #60b3e38f;border-radius:100px;padding:7px 13px;white-space:nowrap;box-shadow:inset 0 1px #b6eaff45}
+body.fr28-route-star.fr47-career .fr47-rules{flex:1;min-width:0;font:800 clamp(10px,2.4vw,12px)/1.3 'Cairo',sans-serif;color:#a7ece2;text-align:center}
+body.fr28-route-star.fr47-career .fr47-exit{min-width:0!important;min-height:38px!important;border:1px solid #dc858a!important;border-radius:100px!important;padding:8px 11px!important;background:linear-gradient(150deg,#402438,#1b1b31)!important;color:#ffd8d5!important;font:850 12px 'Cairo'!important;white-space:nowrap;cursor:pointer}
+body.fr28-route-star.fr47-career .fr47-exit:focus-visible{outline:3px solid #f6cd75;outline-offset:3px}
+body.fr28-route-star.fr47-career #fr46-exit-btn{display:none!important}
+body.fr28-route-star.fr47-career .game-top{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;direction:rtl!important;gap:8px!important;align-items:stretch!important;margin:0 0 10px!important;padding:0!important}
+body.fr28-route-star.fr47-career .game-top>*{box-sizing:border-box!important;min-width:0!important}
+body.fr28-route-star.fr47-career .game-top .game-stat,body.fr28-route-star.fr47-career .game-top .game-timer,body.fr28-route-star.fr47-career .fr47-streak{height:82px!important;min-height:82px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;padding:9px 5px!important;border-radius:18px!important;border:1px solid #3dafe9!important;background:linear-gradient(155deg,#113553,#071d36 85%)!important;box-shadow:inset 0 1px #d1f2ff2a,0 8px 16px #0007,0 0 12px #1386d830!important;text-align:center!important}
+body.fr28-route-star.fr47-career .game-top .game-stat{grid-column:2;grid-row:1;border-color:#f2c85d!important;background:linear-gradient(150deg,#212122,#121c2c)!important;box-shadow:inset 0 0 1px #ffe09a,0 0 16px #edb34550!important}
+body.fr28-route-star.fr47-career .game-top .game-timer{grid-column:3;grid-row:1}
+body.fr28-route-star.fr47-career .fr47-streak{grid-column:1;grid-row:1}
+body.fr28-route-star.fr47-career .game-top .game-stat #roundText{display:none!important}
+body.fr28-route-star.fr47-career .game-top b,body.fr28-route-star.fr47-career .fr47-streak b{font:900 clamp(22px,6.5vw,32px)/1 'Barlow Condensed','Cairo',sans-serif!important;color:#ffe08a!important}
+body.fr28-route-star.fr47-career .game-top .game-timer b{color:#71f5e9!important}
+body.fr28-route-star.fr47-career .game-top small{font:850 10px/1.1 'Barlow Condensed','Cairo',sans-serif!important;color:#bee9fb!important}
+body.fr28-route-star.fr47-career .game-top span,body.fr28-route-star.fr47-career .fr47-streak small{font:850 11px/1.3 'Cairo',sans-serif!important;color:#edf8fe!important}
+body.fr28-route-star.fr47-career #challengeBadge{display:none!important}
+body.fr28-route-star.fr47-career .timer-track{height:7px!important;min-height:7px!important;border-radius:100px!important;background:#193d57!important;overflow:hidden!important;margin:0 2px 19px!important}
+body.fr28-route-star.fr47-career #timerTrack{display:block!important;height:100%!important;background:linear-gradient(90deg,#fbd26f,#67e6ce)!important;box-shadow:0 0 14px #e0c168a6!important;border-radius:100px!important}
+body.fr28-route-star.fr47-career .fr47-mode-label{display:flex!important;position:relative;z-index:2;flex-direction:column;align-items:center;justify-content:center;width:max-content;min-width:min(250px,70%);max-width:86%;margin:0 auto -9px;padding:10px 17px 8px;text-align:center;border:2px solid #f7c76a;border-radius:20px 20px 11px 11px;background:linear-gradient(155deg,#2a281d,#101c2d 82%);color:#ffe7a9;box-shadow:0 0 16px #e7b34a77,0 7px 17px #0007}
+body.fr28-route-star.fr47-career .fr47-mode-label strong{font:900 clamp(19px,5.3vw,30px)/1 'Barlow Condensed',sans-serif;letter-spacing:.05em}
+body.fr28-route-star.fr47-career .fr47-mode-label small{font:800 12px 'Cairo';color:#f9f3db}
+body.fr28-route-star.fr47-career .question-panel{display:block!important;min-width:0!important;padding:25px clamp(11px,3vw,27px) 22px!important;border:2px solid #eac06b!important;border-radius:28px!important;background:linear-gradient(180deg,#08223cdd,#03172bed),url('/assets/brand/fr47-career-arena.svg') center/cover no-repeat!important;box-shadow:0 0 19px #e6b94c39,inset 0 0 0 1px #8acffc40,0 14px 35px #000a!important}
+body.fr28-route-star.fr47-career #challengeIcon{display:none!important}
+body.fr28-route-star.fr47-career #questionTitle{font:900 clamp(20px,5.8vw,33px)/1.36 'Cairo',sans-serif!important;color:#fff!important;margin:11px auto 8px!important;text-align:center!important}
+body.fr28-route-star.fr47-career #questionSubtitle{font:650 clamp(11px,2.8vw,15px)/1.5 'Cairo',sans-serif!important;color:#caddec!important;margin:0 auto 16px!important;text-align:center!important}
+body.fr28-route-star.fr47-career #hints{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(5px,1.7vw,13px)!important;margin:2px auto 15px!important;align-items:stretch!important}
+body.fr28-route-star.fr47-career #hints .fr47-crest-card{display:flex!important;flex-direction:column;align-items:center;justify-content:space-between;position:relative;min-width:0!important;min-height:clamp(148px,39vw,212px);padding:10px 5px 8px;background:linear-gradient(155deg,#172832,#151d24 72%,#292214);border:2px solid #eac06b;border-radius:18px;box-shadow:inset 0 0 14px #ffc95a2a,0 4px 0 #7b511c,0 0 14px #d9aa474f;overflow:hidden;animation:fr48-reveal .42s ease-out both}
+body.fr28-route-star.fr47-career #hints .fr47-crest-card::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(145deg,#fff4,transparent 23%,transparent 78%,#ffe9a319)}
+body.fr28-route-star.fr47-career #hints .fr47-crest-frame{width:100%;min-height:98px;flex:1;display:flex;align-items:center;justify-content:center}
+body.fr28-route-star.fr47-career #hints .fr47-crest-frame img{display:block!important;max-width:96%!important;width:auto!important;height:auto!important;max-height:108px!important;object-fit:contain!important;filter:drop-shadow(0 4px 5px #0008)}
+body.fr28-route-star.fr47-career #hints .fr47-crest-card strong{font:850 clamp(9px,2.45vw,13px)/1.3 'Cairo',sans-serif!important;color:#f0f7ff!important;max-width:100%;text-align:center;overflow-wrap:anywhere}
+body.fr28-route-star.fr47-career #hints .fr47-hidden-crest{border-style:dashed;border-color:#408ec3;background:linear-gradient(140deg,#0b3552,#091e32);box-shadow:inset 0 1px #c0ecff52}
+body.fr28-route-star.fr47-career #hints .fr47-lock{flex:1;display:grid;place-items:center;font:900 53px 'Barlow Condensed';color:#ffdc88;text-shadow:0 0 20px #ecc45a}
+body.fr28-route-star.fr47-career #hints .fr47-crest-fallback{display:none;color:#e9d19a;font:750 12px/1.3 'Cairo';text-align:center}
+body.fr28-route-star.fr47-career #hints .fr47-crest-card.failed img{display:none!important}
+body.fr28-route-star.fr47-career #hints .fr47-crest-card.failed .fr47-crest-fallback{display:block}
+body.fr28-route-star.fr47-career .fr47-crest-progress{display:flex!important;justify-content:center;text-align:center;gap:4px;color:#bad9e9;font:750 11px 'Cairo';margin:2px 0 13px}
+body.fr28-route-star.fr47-career .fr47-crest-progress b{color:#fce29a}
+body.fr28-route-star.fr47-career #choices{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin:10px 0 14px!important}
+body.fr28-route-star.fr47-career #choices .answer{display:flex!important;align-items:center!important;min-height:clamp(62px,16vw,78px)!important;padding:10px 9px!important;gap:9px!important;border-radius:16px!important;border:1px solid #43b7ff!important;background:linear-gradient(165deg,#123d63,#071f3a)!important;box-shadow:inset 0 1px #b8e8ff5e,0 6px 13px #0008!important;color:#eefbff!important;font:850 clamp(10px,2.7vw,16px)/1.38 'Cairo',sans-serif!important;text-align:start!important;min-width:0;overflow-wrap:anywhere;transition:transform .15s,border-color .15s}
+body.fr28-route-star.fr47-career #choices .answer span{display:grid!important;place-items:center!important;min-width:clamp(28px,7vw,40px)!important;width:clamp(28px,7vw,40px)!important;height:clamp(30px,7.5vw,41px)!important;background:linear-gradient(145deg,#67501a,#d5a83c)!important;border:1px solid #f0c869!important;border-radius:10px!important;font:900 clamp(15px,4vw,21px) 'Barlow Condensed'!important;color:#fff3c9!important;box-shadow:inset 0 1px #fff7}
+body.fr28-route-star.fr47-career #choices .answer:hover{border-color:#ffdf8a!important;transform:translateY(-1px)}
+body.fr28-route-star.fr47-career #choices .answer.chosen{border-color:#7cffe9!important;background:#154d52!important;box-shadow:0 0 12px #72efd57d!important}
+body.fr28-route-star.fr47-career #choices .answer[disabled]:not(.chosen){opacity:.68}
+body.fr28-route-star.fr47-career #answerStatus{font:750 11px/1.65 'Cairo'!important;color:#c4dce9!important;text-align:center!important;min-height:20px}
+body.fr28-route-star.fr47-career #opponentBar{background:#0c3448!important;color:#95e7dc!important;border-radius:13px!important}
+body.fr28-route-star.fr47-career #reveal .reveal{border:2px solid #e6c273!important;background:linear-gradient(140deg,#0f3555,#041527)!important;box-shadow:0 0 23px #ffc85a39!important;border-radius:28px!important}
+body.fr28-route-star.fr47-career #fr47CareerBonus{font:850 13px 'Cairo';color:#ffe7ab;text-align:center;margin:10px auto}
+@keyframes fr48-reveal{from{opacity:.25;transform:translateY(8px) perspective(400px) rotateY(-11deg)}to{opacity:1;transform:none}}
+@media(max-width:380px){body.fr28-route-star.fr47-career .fr47-rules{display:none}body.fr28-route-star.fr47-career .fr47-title::before,body.fr28-route-star.fr47-career .fr47-title::after{margin-inline:3px}body.fr28-route-star.fr47-career #hints .fr47-crest-card{min-height:150px;padding:7px 3px}body.fr28-route-star.fr47-career #hints .fr47-crest-frame img{max-height:90px!important}body.fr28-route-star.fr47-career #choices .answer{gap:5px!important;padding:7px!important}}
+@media(prefers-reduced-motion:reduce){body.fr28-route-star.fr47-career #hints .fr47-crest-card{animation:none!important}body.fr28-route-star.fr47-career #choices .answer{transition:none!important}}

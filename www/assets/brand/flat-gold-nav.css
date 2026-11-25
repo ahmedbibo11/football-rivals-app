@@ -1,0 +1,106 @@
+/* FR flat bottom bar — 24.3: gold is the sole selected-tab state.
+ * Remove nested glass/blue layers. Apply consistently on Home, Games, League, Account.
+ */
+body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav{
+  background:#f9fbff!important;
+  background-image:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  border:1px solid #b9cbd9!important;
+  box-shadow:none!important;
+  filter:none!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  border-radius:18px!important;
+  padding:5px!important;
+  gap:5px!important;
+}
+body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav::before,
+body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav::after,
+body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav>*::before,
+body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav>*::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+html[data-fr-theme="dark"] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav{
+  background:#09243b!important;
+  background-image:none!important;
+  border-color:#426b84!important;
+}
+/* Base state is ALWAYS a single flat surface: no button/sub-icon layers */
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav]{
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:1px solid transparent!important;
+  box-shadow:none!important;
+  outline-offset:1px!important;
+  opacity:1!important;
+  filter:none!important;
+  text-shadow:none!important;
+  border-radius:13px!important;
+  transition:background-color .16s ease,color .16s ease!important;
+}a)[data-fr-nav]{
+  color:#183b54!important;
+  -webkit-text-fill-color:#183b54!important;
+}
+html[data-fr-theme="dark"] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav]{
+  color:#e3f3fb!important;
+  -webkit-text-fill-color:#e3f3fb!important;
+}
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav] :is(.fr-nav-icon,span,svg){
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  opacity:1!important;
+  filter:none!important;
+  color:inherit!important;
+  -webkit-text-fill-color:inherit!important;
+  fill:none;
+}
+/* Selected tabs are GOLD, including the full tappable area, on BOTH themes */
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav].active,
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav][aria-current="page"]{
+  color:#132c3d!important;
+  -webkit-text-fill-color:#132c3d!important;
+  background:#f4cb70!important;
+  background-color:#f4cb70!important;
+  background-image:none!important;
+  border:1px solid #d5a347!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  opacity:1!important;
+}
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav].active :is(.fr-nav-icon,span,svg),
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav][aria-current="page"] :is(.fr-nav-icon,span,svg){
+  color:#132c3d!important;
+  -webkit-text-fill-color:#132c3d!important;
+  background:transparent!important;
+  text-shadow:none!important;
+  opacity:1!important;
+}
+/* Focus / hover use the same gold identity without creating another layer. */
+@media(hover:hover){
+  html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav]:hover{
+    background:#f4cb70!important;
+    background-image:none!important;
+    border-color:#d5a347!important;
+    color:#132c3d!important;
+    -webkit-text-fill-color:#132c3d!important;
+    box-shadow:none!important;
+  }
+  html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav]:hover :is(span,.fr-nav-icon,svg){
+    color:#132c3d!important;
+    -webkit-text-fill-color:#132c3d!important;
+  }
+}
+html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav]:focus-visible{
+  outline:2px solid #b17720!important;
+}
+@media(prefers-reduced-motion:reduce){
+ html[data-fr-theme] body.fr-unified-shell nav.fr-bottom-nav.fr-unified-bottom-nav > :is(button,a)[data-fr-nav]{transition:none!important}
+}

@@ -1,0 +1,14 @@
+/* FOOTBALL RIVALS 28.1: imported visual system + penalty route header regression fix. */
+@import url("./fr28-universe-base.css?v=28.1");
+body.fr28-universe.fr28-route-penalty>header.fr28-header.fr28-context-empty{
+ display:block!important;visibility:visible!important;opacity:1!important;
+}
+body.fr28-universe.fr28-route-penalty header:not(.fr28-header){
+ display:none!important;
+}
+html[data-fr-theme=dark] body.fr28-universe.fr28-route-star .hero .hero-facts>*{
+ color:#f4faff!important;opacity:1!important;
+}small),small){
+ color:#173d59!important;-webkit-text-fill-color:#173d59!important;
+}
+@media(max-width:360px){body.fr28-universe>.fr28-header .fr28-wordmark strong{letter-spacing:-.95px!important;font-size:11px!important}}

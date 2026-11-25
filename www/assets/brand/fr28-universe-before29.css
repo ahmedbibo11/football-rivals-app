@@ -1,0 +1,21 @@
+/* FOOTBALL RIVALS 28.3 — legacy match engines adopt unified visual identity.
+   Engine JS remains byte-for-byte unchanged. Only the old branding bar is a compact context tool. */
+@import url("./fr28-universe-prev.css?v=fr38-darkonly");
+html body.fr28-universe header.top:not(.fr28-header){
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ box-sizing:border-box!important;width:min(100% - 20px,1060px)!important;
+ min-height:0!important;height:auto!important;max-height:58px!important;
+ padding:5px 10px!important;margin:3px auto 10px!important;border:1px solid var(--fr28-line)!important;
+ border-radius:12px!important;background:var(--fr28-paper)!important;color:var(--fr28-text)!important;
+ box-shadow:none!important;filter:none!important;backdrop-filter:none!important;
+}
+html body.fr28-universe header.top:not(.fr28-header) .brand{display:none!important}
+html body.fr28-universe header.top:not(.fr28-header) :is(.headActions,.topLinks){
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important;min-width:0!important;
+}
+html body.fr28-universe header.top:not(.fr28-header) :is(button,.iconLink){
+ min-height:32px!important;min-width:32px!important;display:inline-flex!important;
+ align-items:center!important;justify-content:center!important;
+ color:var(--fr28-text)!important;border:1px solid var(--fr28-line)!important;background:var(--fr28-soft)!important;
+ border-radius:9px!important;box-shadow:none!important;
+}

@@ -1,0 +1,78 @@
+/* FR65 — only the two approved Auction game images, no global theme overrides. */
+#frHomeFeatured.fr65-auction-featured-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: clamp(12px, 2.7vw, 22px) !important;
+  align-items: start !important;
+}
+#frHomeFeatured.fr65-auction-featured-grid > * {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  justify-self: stretch !important;
+  margin-inline: 0 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+#frHomeFeatured > a.fr65-auction-outer {
+  display: block !important;
+  position: relative;
+  aspect-ratio: 1086 / 1448;
+  overflow: hidden;
+  border-radius: clamp(13px, 2.8vw, 22px);
+  background: #071528;
+  border: 2px solid #dab45c;
+  box-shadow: 0 10px 22px #0007, 0 0 0 2px #123c5c;
+  padding: 0 !important;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+#frHomeFeatured > a.fr65-auction-outer img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 1086 / 1448;
+  object-fit: contain !important;
+  object-position: center;
+  border: 0 !important;
+  padding: 0 !important;
+}
+#frHomeFeatured > a.fr65-auction-outer:hover,
+#frHomeFeatured > a.fr65-auction-outer:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px #0008, 0 0 15px #deb55166;
+}
+#games.fr61-active #fr61-arena .fr61-grid > a.fr65-auction-inner,
+#fr61-arena .fr61-grid > a.fr65-auction-inner {
+  display: block !important;
+  position: relative;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 1692 / 930 !important;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  grid-column: auto !important;
+  border: 0 !important;
+  border-radius: clamp(15px, 3vw, 25px);
+  background: #071528;
+  box-shadow: 0 12px 25px #01071255;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+#fr61-arena .fr61-grid > a.fr65-auction-inner img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1692 / 930 !important;
+  object-fit: contain !important;
+  object-position: center;
+}
+#fr61-arena .fr61-grid > a.fr65-auction-inner:hover,
+#fr61-arena .fr61-grid > a.fr65-auction-inner:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px #01071270, 0 0 14px #edc56c33;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fr65-auction-outer, .fr65-auction-inner { transition: none !important; }
+}

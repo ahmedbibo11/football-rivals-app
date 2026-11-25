@@ -1,0 +1,32 @@
+/* Retired light-theme import removed. */
+/* FOOTBALL RIVALS · one timer language across games, preserving original theme */
+:root{--fr-clock-cyan:#4bdce9;--fr-clock-gold:#f4d07b;--fr-clock-bg:#09283f;--fr-clock-danger:#fa7484}
+:where(.timer-box,.timer-panel,.timer-card,.game-timer,.round-timer,.clockPlate,.fr9-timer,.fr10-market-clock,.fr11-bcast-clock){
+  box-sizing:border-box;
+  min-width:0;
+  border-radius:15px;
+  background:linear-gradient(125deg,#10334d,var(--fr-clock-bg));
+  border:1px solid #367f96;
+  box-shadow:inset 0 0 14px #4ee7f00d,0 0 18px #21d0e61b;
+}
+:where(.timer-box,.game-timer,.timer-panel,.timer-card,.clockPlate) :is(#timer,#countdown,.timer-number,.timer-value,.countdown){
+  font-size:clamp(23px,6vw,41px);
+  line-height:1.16;
+}
+:where(.timer-box,.timer-panel,.clockPlate,.fr9-timer,.fr10-market-clock):has(.critical,.danger,.low-time,.time-warning),
+:where(.timer-box,.timer-panel,.clockPlate).critical{
+  border-color:var(--fr-clock-danger);
+  box-shadow:0 0 18px #f34c6740;
+}
+:where(.clockTrack,.fr9-progress,.fr10-market-track,.timer-progress,.time-progress){
+  overflow:hidden;border-radius:99px;
+}
+:where(.clockTrack,.fr9-progress,.fr10-market-track,.timer-progress,.time-progress)>:first-child{
+  background:linear-gradient(90deg,var(--fr-clock-cyan),var(--fr-clock-gold));
+}
+@media(max-width:390px){
+ :where(.timer-box,.timer-panel,.game-timer,.clockPlate){max-width:100%;min-width:0}
+}
+@media(prefers-reduced-motion:reduce){
+ :where(.timer-box,.timer-panel,.game-timer,.clockPlate) *, :where(.fr9-timer,.fr10-market-clock) *{animation-duration:.01ms!important}
+}

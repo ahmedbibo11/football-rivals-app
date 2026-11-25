@@ -1,0 +1,66 @@
+/* FR72: isolated MATCHDAY & AUCTION EVOLUTION, no legacy changes */
+.fr72-prematch{width:100%;min-width:0;max-width:1120px;margin:auto;color:#eef5ff}
+.fr72-prematch-heading{text-align:center;padding:22px 8px 13px}
+.fr72-prematch-heading>span{font-size:11px;color:#e8c987;letter-spacing:2px}
+.fr72-prematch-heading h1{font-size:clamp(25px,6vw,43px);margin:8px 0;color:#f4e4b8}
+.fr72-prematch-heading p{color:#b7cce6;font-size:13px;margin:0}
+.fr72-stadium{display:inline-block;margin-top:13px;color:#f6dda0;border:1px solid #e5ba775c;border-radius:999px;background:#142846;padding:8px 13px;font-size:12px}
+.fr72-team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.fr72-team{padding:15px 12px;background:linear-gradient(140deg,#132945,#091829 72%);border:1px solid rgba(217,182,105,.3);border-radius:18px;min-width:0;overflow:hidden;box-shadow:0 14px 36px #0004}
+.fr72-team-heading{display:flex;align-items:center;gap:11px;min-width:0}
+.fr72-team-heading img{height:43px;width:43px;object-fit:contain;flex-shrink:0}
+.fr72-team-heading>div{min-width:0}
+.fr72-team-heading small{color:#efcf86;font-size:10px}
+.fr72-team-heading h2{margin:1px 0;font-size:19px;overflow-wrap:anywhere}
+.fr72-team-heading p{margin:0;color:#a8c0d9;font-size:12px}
+.fr72-strength{display:flex;align-items:center;gap:14px;padding:13px 10px;margin:12px 0;background:#0b1a2d;border:1px solid #caa96433;border-radius:12px}
+.fr72-strength strong{color:#f7d48d;font-size:38px;line-height:1;font-variant-numeric:tabular-nums}
+.fr72-strength span{color:#acbfdb;font-size:11px;line-height:1.5}
+.fr72-players{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;min-width:0}
+.fr72-player{display:flex;align-items:center;flex-direction:column;min-width:0}
+.fr72-player .card-sprite,.fr72-player .fr72-sprite{display:block;max-width:100%;width:100%;height:95px;object-fit:contain}
+.fr72-player>span{font-size:9px;line-height:1.35;text-align:center;color:#dbe6f4;overflow-wrap:anywhere}
+.fr72-coach{display:flex;align-items:center;gap:10px;margin:12px 0 8px;background:linear-gradient(95deg,#213b5c,#121b30);border:1px solid #e0ba6760;border-radius:13px;padding:8px}
+.fr72-coach img{width:64px;height:73px;object-fit:contain;object-position:center top;flex-shrink:0;border-radius:7px;background:#071323}
+.fr72-coach>div{display:grid;gap:3px;min-width:0}
+.fr72-coach small{color:#e8c681;font-size:10px}
+.fr72-coach b{font-size:13px;overflow-wrap:anywhere}
+.fr72-coach span{font-size:10px;color:#b5cade}
+.fr72-star{border-radius:10px;background:#dcb05816;color:#f1deb1;padding:9px;font-size:12px;overflow-wrap:anywhere}
+.fr72-finance{display:grid;gap:5px;margin-top:10px}
+.fr72-finance>div{display:flex;gap:8px;justify-content:space-between;align-items:center;font-size:11px;color:#bdcde0;padding:5px 2px;border-bottom:1px solid #b1c1dc17}
+.fr72-finance strong{color:#eef6ff;white-space:nowrap;font-size:12px}
+.fr72-finance .fr72-finance-total{background:#eac47717;border-radius:6px;padding:8px 6px;color:#f1d493}
+.fr72-finance .fr72-finance-total strong{color:#f7d58a}
+.fr72-ready-status{text-align:center;padding:9px 5px;margin-top:12px;border-radius:9px;font-size:12px;background:#52647f25;border:1px solid #aabbc333;color:#d2deef}
+.fr72-ready-status.yes{background:#1d795730;color:#8eebbd;border-color:#34a97570}
+.fr72-kickoff{text-align:center;margin-top:15px!important;padding:15px!important}
+.fr72-kickoff p{margin:0 0 12px;color:#d3e3f1;font-size:13px}
+.fr72-kickoff .fr72-start{font-size:16px;max-width:430px;width:100%;min-height:48px}
+.fr72-cine{position:fixed;inset:0;z-index:2147482000;display:grid;place-items:center;pointer-events:none;padding:16px;background:radial-gradient(ellipse at 50% 50%,#112f53e9,#020815f5 75%);opacity:1;animation:fr72-appear .3s ease-out}
+.fr72-cine-panel{width:min(100%,390px);max-height:min(92vh,750px);overflow:hidden;display:flex;align-items:center;flex-direction:column;text-align:center;padding:22px 15px 19px;border-radius:19px;background:linear-gradient(160deg,#1c3e60,#081627 65%);border:2px solid #cfa765;box-shadow:0 0 65px #e6b95a28,inset 0 0 35px #fff1}
+.fr72-cine-kicker{font-size:9px;color:#ddc385;letter-spacing:1.7px}
+.fr72-cine-icon{font-size:54px;filter:drop-shadow(0 4px 19px #ffe08b55);animation:fr72-symbol .7s ease-out}
+.fr72-cine-english{font-size:clamp(25px,7vw,35px);font-weight:950;letter-spacing:1.4px;color:#f6d787;text-shadow:0 4px 25px #dda64745}
+.fr72-cine-title{color:#fff;font-size:16px;font-weight:850;margin:4px 0}
+.fr72-cine-player{width:min(50vw,160px);height:min(44vh,205px);display:grid;place-items:center;margin:9px auto;overflow:hidden}
+.fr72-cine-player .fr72-cine-sprite{display:block;width:100%;height:100%;object-fit:contain}
+.fr72-cine-name{font-size:18px;color:#f9df9e;overflow-wrap:anywhere}
+.fr72-cine-panel p{font-size:12px;color:#d1e1f1;margin:7px 0}
+.fr72-cine-footer{border-radius:20px;border:1px solid #ebcc8e55;color:#eac982;font-size:12px;padding:6px 11px;margin-top:4px}
+.fr72-cine-red{background:radial-gradient(ellipse,#6a172be8,#12020cf5 75%)}
+.fr72-cine-red .fr72-cine-panel{border-color:#f75158;background:linear-gradient(160deg,#54232f,#180d16)}
+.fr72-cine-red .fr72-cine-english{color:#ff919a}
+.fr72-cine-yellow .fr72-cine-panel{border-color:#ffe35e}
+.fr72-cine-yellow .fr72-cine-english{color:#ffe15c}
+.fr72-cine-var .fr72-cine-panel,.fr72-cine-cancel .fr72-cine-panel{border-color:#5ebcff;background:linear-gradient(160deg,#124a75,#07152a)}
+.fr72-cine-var .fr72-cine-english,.fr72-cine-cancel .fr72-cine-english{color:#91d2ff}
+.fr72-cine-injury .fr72-cine-panel{border-color:#ef9c78}
+.fr72-cine.leaving{opacity:0;transition:opacity .22s ease-out}
+.fr72-hurt{filter:drop-shadow(0 0 6px #ec975b);opacity:.7}
+.fr72-coach-warning{color:#f2be7b;background:#b35e291a;padding:10px;border:1px solid #de89574e;border-radius:10px}
+@keyframes fr72-appear{0%{opacity:0;transform:scale(.96)}100%{opacity:1;transform:scale(1)}}
+@keyframes fr72-symbol{0%{transform:scale(.5) rotate(-12deg);opacity:.15}75%{transform:scale(1.12)}100%{transform:scale(1)}}
+@media(max-width:580px){.fr72-team-grid{grid-template-columns:1fr}.fr72-players{grid-template-columns:repeat(5,minmax(0,1fr))}.fr72-team{padding:12px}.fr72-player .card-sprite,.fr72-player .fr72-sprite{height:100px}}
+@media(max-width:350px){.fr72-strength strong{font-size:30px}.fr72-team-heading h2{font-size:17px}.fr72-player .card-sprite,.fr72-player .fr72-sprite{height:75px}}
+@media(prefers-reduced-motion:reduce){.fr72-cine,.fr72-cine-icon{animation:none!important}}

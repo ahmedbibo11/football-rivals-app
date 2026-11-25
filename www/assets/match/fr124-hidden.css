@@ -1,0 +1,18 @@
+/* Hidden XI: shared in-flow simulation controls and a single room toolbar. */
+body:has(.fr104-cinema){background:#071629}
+#stage:has(.fr104-cinema){max-width:1000px;width:100%;min-width:0;margin:0 auto;overflow:visible}
+.fr104-cinema{max-width:960px;width:100%;margin:auto;padding:6px 4px 15px;box-sizing:border-box;direction:rtl}
+.fr104-host,.fr104-host .fr70-experience{max-width:900px;width:100%;margin:auto;min-width:0}
+.fr104-host .fr70-dot.fr102-eleven{width:clamp(15px,2.7vw,24px)!important;height:clamp(15px,2.7vw,24px)!important;font-size:clamp(7px,1.6vw,11px)!important;z-index:3}
+.fr104-host .fr70-dot.fr102-eleven span{font-size:inherit}
+.fr104-heading{color:#f3d799;font-weight:900;text-align:center;font-size:clamp(13px,2.3vw,18px);margin:8px auto}
+.fr104-virus{margin:10px auto;max-width:900px}
+#stage .fr104-host #fr74-controls{display:block!important;position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-height:none!important;overflow:visible!important;filter:none!important;z-index:auto!important;margin:10px 0!important}
+.fr104-host .fr73-experience,.fr104-host .fr73-experience[data-fr73-state="done"]{padding-bottom:24px!important}
+.fr104-host .fr122-cancel,.fr104-host .fr122-cancel-back{border:1px solid #cb8f7a;border-radius:9px;background:#4e2730;color:#fff;padding:8px;font-weight:800}
+.fr104-host .fr74-controls-actions{flex-wrap:wrap}
+.fr104-stats{padding:14px!important}.fr104-stat-line{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 6px;border-bottom:1px solid #ffffff20;color:#e5f1fa}.fr104-stat-line span{text-align:center;color:#b5d0df;font-size:13px}.fr104-stat-line b{font-weight:800;font-size:17px}
+html body.hx2-playing #fr57-room-toolbar #frv-floating{display:flex!important;position:static!important;transform:none!important}
+html body .hx2-tools-toggle,html body.hx2-playing .fr-brand-dock,#game .game-toolbar #leaveBtn{display:none!important}
+html body:has(#fr104-live) #fr57-room-toolbar #fr46-exit-btn{display:none!important}
+@media(max-width:390px){.fr104-cinema{padding-inline:2px}.fr104-host .fr70-dot.fr102-eleven{width:15px!important;height:15px!important}.fr104-stat-line{gap:4px;padding:8px 2px}}

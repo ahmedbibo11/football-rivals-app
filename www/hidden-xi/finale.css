@@ -1,0 +1,23 @@
+
+/* Result day | stadium winner | card reveal polish */
+#stage .hx2-brandline{display:block;text-align:center;max-width:max-content;margin:0 auto 5px;padding:3px 11px;border-radius:999px;border:1px solid #cca4626e;background:#0b2b3f;color:#ffe6a8;font-family:'Barlow Condensed',system-ui,sans-serif;letter-spacing:2px;font-size:clamp(9px,2.5vw,12px);font-weight:900;box-shadow:0 3px 12px #0006}
+#stage .reveal-stage .hx2-brandline{color:#f8dca2}
+#stage .waiting-room{border-radius:21px!important;background:radial-gradient(circle at 50% 15%,#164461,#081d31 75%)!important;border:1px solid #3e7489!important;box-shadow:inset 0 0 35px #1da6d01c!important}
+#stage .waiting-room .wait-emoji{filter:drop-shadow(0 0 19px #f8cf80b0)!important;animation:hx2-wait-glow 2.6s ease-in-out infinite alternate}
+@keyframes hx2-wait-glow{from{transform:scale(.98)}to{transform:scale(1.06)}}
+#stage[data-hx2-phase="tactics"] .tactics-grid{position:relative!important}
+#stage[data-hx2-phase="tactics"] .tactics-grid::after{content:'VS';position:absolute;left:50%;top:49%;z-index:3;transform:translate(-50%,-50%);width:45px;height:45px;display:grid;place-items:center;pointer-events:none;border:1px solid #f4cd8f;border-radius:50%;background:linear-gradient(135deg,#fff0b6,#ba8132);font:1000 19px 'Barlow Condensed',Impact,sans-serif;color:#14263c;text-shadow:0 1px #fff7;box-shadow:0 0 19px #f9ce6b60}
+#stage[data-hx2-phase="finished"]{background:radial-gradient(circle at 50% 32%,#36513e55,transparent 45%),radial-gradient(circle at 50% 0%,#4c668044,transparent 58%),linear-gradient(160deg,#0a2b48,#071427 70%)!important}
+#stage[data-hx2-phase="finished"] .finish-trophy{font-size:clamp(92px,22vw,155px)!important}
+#stage[data-hx2-phase="finished"] .winner{font-size:clamp(25px,6.7vw,38px)!important;color:#ffe29b!important;text-shadow:0 0 24px #d8ae69aa!important}
+#stage[data-hx2-phase="finished"] .match-score{max-width:430px!important;margin:12px auto!important;border:1px solid #eed392!important;background:linear-gradient(135deg,#123b56,#071e35)!important;box-shadow:0 0 20px #cca55a45!important}
+#stage[data-hx2-phase="finished"] .match-score b{font-size:clamp(38px,10vw,65px)!important}
+#stage .hx2-result-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:650px;margin:20px auto 14px}
+#stage .hx2-result-button{min-width:0;min-height:78px;border:1px solid #648da5;border-radius:16px;padding:11px 7px;display:grid;place-items:center;background:linear-gradient(145deg,#183950,#0a1c30);color:#f9f1e1;font-weight:900;font-size:clamp(10px,2.6vw,14px);line-height:1.45;box-shadow:0 5px 17px #0006}
+#stage .hx2-result-button:hover,#stage .hx2-result-button:focus-visible{outline:2px solid #f0cd89;outline-offset:2px}
+#stage .hx2-result-button:last-child{border-color:#f4c77c;color:#ffe0a4}
+#stage.hx2-stats-folded .match-events{display:none!important}
+#stage[data-hx2-phase="finished"] .finish-actions{margin-top:13px!important}
+#stage[data-hx2-phase="finished"] .finish-actions .btn{min-height:45px!important;max-width:300px!important}
+@media(max-width:350px){#stage .hx2-result-actions{gap:5px!important}#stage .hx2-result-button{min-height:72px!important;padding:7px 3px!important;font-size:10px!important}}
+@media(prefers-reduced-motion:reduce){#stage .waiting-room .wait-emoji{animation:none!important}}

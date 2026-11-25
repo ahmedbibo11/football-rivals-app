@@ -1,0 +1,175 @@
+.social24-wrap{display:grid;grid-template-columns:1fr;gap:14px;margin:19px 0}
+.social24-panel{border:1px solid #53778d73;background:linear-gradient(145deg,#152f43,#0b2033);border-radius:17px;padding:20px;color:#e8f3f7}
+.social24-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:2px 0 12px}
+.social24-head small{color:#76e9d5;font:900 12px 'Barlow Condensed',sans-serif;letter-spacing:1.2px}.social24-head h2{font-size:22px;margin:4px 0}
+.social24-pill{font:900 10px 'Barlow Condensed',sans-serif;color:#f6d78f;padding:6px 12px;border:1px solid #d5bb7487;border-radius:40px}
+.social24-help{font-size:12px;color:#a7c5cf;line-height:2;max-width:900px}
+.social24-avatar-row{display:flex;align-items:center;gap:17px;margin:17px 0}
+.social24-avatar{height:92px;width:92px;min-width:92px;border:3px solid #f3d185;border-radius:22px;display:grid;place-items:center;background:#1f394e;overflow:hidden;font-size:39px}
+.social24-avatar img,.s24-main-pic{height:100%;width:100%;object-fit:cover;display:block}
+.social24-avatar-info{display:flex;flex-direction:column;gap:5px}.social24-avatar-info strong{font-weight:900;font-size:20px}
+.social24-avatar-info>span{font-size:12px;color:#d5e4e5}.social24-small{display:flex;align-items:center;gap:7px;color:#f2d993;font-weight:800;font-size:11px}.social24-small img{height:28px;width:28px;object-fit:contain;border-radius:5px}
+#teamChip{display:inline-flex;align-items:center;gap:6px}#teamChip img{height:21px;width:21px;object-fit:contain}
+.social24-label{display:flex;flex-direction:column;gap:8px;font-size:12px;margin:9px 0 14px}
+.social24-label select{max-width:500px;background:#0a253a;color:white;padding:12px;border:1px solid #658899a3;border-radius:10px}
+.social24-actions{display:flex;flex-wrap:wrap;gap:9px}
+.s24-primary,.s24-quiet,.s24-upload,.s24-link{border:1px solid #7dbca49b;border-radius:10px;min-height:41px;background:#1d574e;color:#e8fff6;font-weight:900;font-size:11px;display:inline-flex;align-items:center;justify-content:center;padding:9px 13px;cursor:pointer}
+.s24-primary{background:linear-gradient(145deg,#ffe7ad,#d9b15c);color:#182b35;border-color:#f9dd95}
+.s24-quiet{background:#234b60;border-color:#5f9ca7}
+.s24-upload{background:#224153;border-color:#527f91}
+.social24-modes{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.social24-modes button{background:#1c3b50;border:1px solid #52778a;border-radius:9px;color:#cfebef;padding:8px 12px;font-size:11px}
+.social24-modes button.s24-selected{border-color:#f4d58c;background:#494937;color:#ffecae}
+.social24-modes .s24-muted{background:#302b37;color:#d1bbc4;border-color:#806476}
+.social24-hint{color:#9bb3c6;font-size:10px;line-height:2;margin:13px 0 0}
+.s24-columns{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.s24-sub{border:1px solid #4d73805c;border-radius:12px;background:#0d2435;padding:12px;min-width:0}.s24-sub h3{font-size:14px;color:#f6da91}
+.s24-sub h3 span{background:#27555b;padding:3px 7px;border-radius:12px;margin-inline:4px}
+.s24-items{display:flex;flex-direction:column;gap:8px;margin:8px 0 15px}
+.s24-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:#103145;border:1px solid #5476886d;min-width:0}
+.s24-pic{height:42px;width:42px;min-width:42px;border-radius:50%;background:#234c63;display:grid;place-items:center;font-size:23px;overflow:hidden}
+.s24-pic img{width:100%;height:100%;object-fit:cover}.s24-person{flex:1;display:flex;flex-direction:column;min-width:0;gap:2px}
+.s24-person b{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.s24-person small{font-size:9px;color:#afc9d1;overflow:hidden;text-overflow:ellipsis}
+.s24-buttons{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px}
+.s24-buttons button{background:#2c5e6f;border:1px solid #74adac77;color:#eefff6;border-radius:8px;font-size:10px;font-weight:800;padding:6px 9px}
+.s24-buttons .s24-danger{color:#ffd0da;border-color:#a86172;background:#5b303b}
+.s24-pending{font-size:9px;color:#f9d787}.s24-empty{padding:13px;border:1px dashed #5a79836d;border-radius:10px;color:#9eb9c6;text-align:center;font-size:11px;line-height:1.8}
+.s24-friend-action{padding:15px;background:#122e43;border:1px solid #517c8980;border-radius:12px;margin:10px 0 20px}
+.s24-friend-action strong{font-size:13px}.s24-friend-action p{font-size:11px;color:#a9c8d4;line-height:1.8}.s24-friend-action button:disabled{opacity:.45}
+.s24-league-forms{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.s24-league-forms>div{display:flex;gap:7px;align-items:center}
+.s24-league-forms input{background:#091f32;border:1px solid #568096;color:#e9fbfc;border-radius:10px;padding:11px;min-width:0;flex:1;font-size:12px}
+.s24-league-forms button{white-space:nowrap}.s24-league-icon{font-size:30px}.s24-link{text-decoration:none}
+.s24-standings{margin-top:13px}.s24-standings h3{font-size:16px;color:#f5da96}
+.s24-league-stats{display:flex;flex-direction:column;gap:6px}
+.s24-league-stats>div{display:flex;gap:9px;align-items:center;background:#123449;border-radius:8px;border:1px solid #5a7d8b70;padding:10px;font-size:11px}
+.s24-rank{font:900 20px 'Barlow Condensed',sans-serif;color:#f6d78b;width:24px}.s24-league-name{flex:1;font-weight:900}.s24-league-name small{display:block;font-size:9px;color:#9dc3cd}
+@media(max-width:750px){.s24-columns{grid-template-columns:1fr}.social24-panel{padding:14px}.social24-head h2{font-size:18px}.s24-league-forms{grid-template-columns:1fr}.s24-item{gap:6px;padding:7px}.s24-buttons button{font-size:9px;padding:6px}}
+@media(max-width:450px){.social24-avatar{height:70px;width:70px;min-width:70px}.social24-avatar-info strong{font-size:16px}.social24-actions{display:grid;grid-template-columns:1fr 1fr}.social24-actions button:first-child{grid-column:span 2}.s24-friend-action{padding:10px}}
+
+/* RIVALS PROFILE MOBILE FIX 24.1 — keep uploaded photos inside their avatar tile */
+.identity.panel{
+  display:grid;
+  grid-template-columns:86px minmax(0,1fr) auto;
+  align-items:center;
+  column-gap:16px;
+  row-gap:14px;
+  padding:20px;
+  overflow:hidden;
+}
+.identity #avatarPreview{
+  position:relative;
+  box-sizing:border-box;
+  display:grid;
+  place-items:center;
+  width:86px;
+  height:86px;
+  min-width:0;
+  min-height:0;
+  max-width:86px;
+  max-height:86px;
+  aspect-ratio:1;
+  flex:none;
+  isolation:isolate;
+  overflow:hidden;
+  border-radius:19px;
+}
+.identity #avatarPreview>img,
+.identity #avatarPreview img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  max-width:100%;
+  max-height:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:inherit;
+}
+.identity .id-detail{
+  min-width:0;
+  width:100%;
+  overflow:hidden;
+}
+.identity .id-detail h2{
+  margin:2px 0 4px;
+  line-height:1.4;
+  font-size:clamp(18px,2.8vw,27px);
+  overflow-wrap:anywhere;
+}
+.identity .username{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  letter-spacing:.3px;
+  font-size:13px;
+}
+.identity .team-chip{
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  font-size:11px;
+  line-height:1.6;
+}
+.identity .id-actions{
+  display:flex;
+  align-items:stretch;
+  justify-content:center;
+  flex-direction:column;
+  gap:8px;
+  min-width:0;
+  max-width:100%;
+}
+.identity .id-actions>a,
+.identity .id-actions>button{
+  min-width:0;
+  width:100%;
+  white-space:normal;
+  text-align:center;
+  line-height:1.55;
+  padding:9px 12px;
+}
+@media(max-width:760px){
+  .identity.panel{
+    grid-template-columns:76px minmax(0,1fr);
+    padding:16px;
+    column-gap:13px;
+    row-gap:13px;
+  }
+  .identity #avatarPreview{
+    width:76px;
+    height:76px;
+    max-width:76px;
+    max-height:76px;
+    border-radius:17px;
+  }
+  .identity .id-actions{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:stretch;
+    width:100%;
+    gap:8px;
+  }
+  .identity .id-actions>a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:46px;
+    font-size:11px;
+  }
+  .identity .id-actions>.small-btn{
+    grid-column:1/-1;
+    min-height:40px;
+    font-size:11px;
+  }
+}
+@media(max-width:385px){
+  .identity.panel{grid-template-columns:66px minmax(0,1fr);padding:12px;column-gap:10px}
+  .identity #avatarPreview{width:66px;height:66px;max-width:66px;max-height:66px}
+  .identity .id-detail h2{font-size:19px}
+  .identity .id-actions>a{padding:8px 5px;font-size:10px}
+}
+

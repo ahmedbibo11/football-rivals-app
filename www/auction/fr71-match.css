@@ -1,0 +1,46 @@
+
+/* FR71 MATCHDAY REALISM — isolated on top of FR70 */
+.fr71-experience .fr71-events{display:grid;gap:8px;padding:8px 0}
+.fr71-event{display:grid;grid-template-columns:48px 34px minmax(0,1fr);gap:8px;align-items:start;padding:10px 9px;border-radius:12px;background:rgba(12,28,51,.72);border:1px solid rgba(177,196,228,.14);min-width:0}
+.fr71-event-minute{color:#e0c47f;font-weight:800;font-size:13px;white-space:nowrap}
+.fr71-event-emoji{font-size:21px}
+.fr71-event strong{display:block;color:#edf5ff;font-size:13px;overflow-wrap:anywhere}
+.fr71-event p{margin:3px 0 0!important;color:#b6cce2;font-size:12px;overflow-wrap:anywhere}
+.fr71-event-red{border-color:rgba(245,75,75,.5);background:rgba(89,18,27,.25)}
+.fr71-event-var,.fr71-event-goal_disallowed{border-color:rgba(74,158,255,.40)}
+.fr71-discipline{display:flex;flex-wrap:wrap;justify-content:space-evenly;gap:9px;margin-top:12px!important;padding:12px 10px!important;color:#e4edff;font-size:13px;font-weight:700}
+.fr71-shootout{position:relative;padding:16px 12px;border-radius:16px;min-width:0;background:radial-gradient(ellipse at 50% 20%,#254a71 0%,#0a182c 75%);box-shadow:inset 0 0 0 1px rgba(227,194,109,.3);margin:12px 0}
+.fr71-shootout[hidden],#fr71-pitch-wrap[hidden]{display:none!important}
+.fr71-penalty-heading{text-align:center;display:grid;gap:4px;color:#efcf86}
+.fr71-penalty-heading span{font-size:10px;letter-spacing:2px}
+.fr71-penalty-heading strong{font-size:22px}
+.fr71-penalty-score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:13px}
+.fr71-penalty-team{display:grid;gap:5px;text-align:center;border:1px solid rgba(234,198,111,.27);border-radius:13px;background:rgba(6,18,35,.65);padding:10px 6px;min-width:0}
+.fr71-penalty-team>span{font-size:12px;font-weight:750;color:#e3ecf8;white-space:normal}
+.fr71-penalty-team>strong{font-size:31px;color:#f1d48a;font-weight:900;line-height:1}
+.fr71-kick-marks{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;min-height:22px}
+.fr71-kick-marks span{display:grid;place-items:center;border-radius:50%;width:19px;height:19px;font-weight:900;font-size:11px;background:#14223a;color:#8d9eb4}
+.fr71-kick-marks .hit{color:#d1ffe2;background:#126646}
+.fr71-kick-marks .miss{color:#fff1f1;background:#972d3b}
+.fr71-duel{display:grid;grid-template-columns:minmax(0,1fr) 38px minmax(0,1fr);gap:6px;align-items:center;margin:16px 0 5px}
+.fr71-duel-card{min-width:0;display:flex;align-items:center;flex-direction:column;gap:5px;text-align:center}
+.fr71-duel-card>span{font-size:12px;color:#f1d694}
+.fr71-duel-card>.card-art,.fr71-duel-card>.card-sprite,.fr71-duel-card>.fr71-sprite{width:min(100%,125px);max-height:150px;object-fit:contain}
+.fr71-duel-card>b{font-size:12px;color:#fff;overflow-wrap:anywhere}
+.fr71-versus{text-align:center;font-weight:900;color:#f5d17f;font-size:16px}
+.fr71-versus small{display:block;font-size:10px;font-weight:600;white-space:nowrap}
+.fr71-kick-feedback,.fr71-penalty-prompt{text-align:center;color:#e7d3a5;font-size:14px;font-weight:750;margin:15px 0 2px}
+.fr71-final-penalty{text-align:center;color:#efcf86;font-weight:800;margin:12px auto}
+.fr71-experience .fr70-action{min-width:0}
+@media(max-width:430px){.fr71-shootout{padding:12px 8px}.fr71-penalty-heading strong{font-size:19px}.fr71-event{grid-template-columns:40px 27px minmax(0,1fr);gap:6px}.fr71-duel{grid-template-columns:minmax(0,1fr) 29px minmax(0,1fr)}.fr71-duel-card>b{font-size:11px}.fr71-experience .fr70-score{font-size:clamp(26px,9vw,40px)}}
+
+/* FR71.1—sequential real shootout outcomes; never reveal future kick count */
+.fr71-shot-lane{height:104px;border-radius:14px;position:relative;overflow:hidden;margin:12px auto 4px;max-width:440px;background:repeating-linear-gradient(180deg,rgba(29,105,66,.77) 0 20px,rgba(22,85,59,.8) 20px 40px);box-shadow:inset 0 1px 0 #ffffff25;border:1px solid #d6be7855}
+.fr71-shot-target{position:absolute;left:50%;top:8px;transform:translateX(-50%);height:54px;width:105px;border:3px solid #f1f5fcaf;border-bottom:2px solid #f1f5fc90;display:grid;place-items:center;font-size:27px;background:repeating-linear-gradient(90deg,transparent 0 17px,#ffffff26 18px 19px)}
+.fr71-shot-ball{display:block;position:absolute;left:50%;bottom:1px;font-size:23px;transform:translateX(-50%);animation:fr71-shot-goal 1.3s cubic-bezier(.3,.2,.25,1) both}
+.fr71-shot-lane.saved .fr71-shot-ball{animation-name:fr71-shot-save}
+.fr71-shot-lane.miss .fr71-shot-ball{animation-name:fr71-shot-miss}
+@keyframes fr71-shot-goal{0%{transform:translate(-50%,0) scale(1.2);opacity:1}70%{transform:translate(-50%,-61px) scale(.7)}100%{transform:translate(-50%,-72px) scale(.45);opacity:.9}}
+@keyframes fr71-shot-save{0%{transform:translate(-50%,0) scale(1.15)}68%{transform:translate(10%,-61px) scale(.75)}100%{transform:translate(55%,-43px) scale(.68);opacity:.9}}
+@keyframes fr71-shot-miss{0%{transform:translate(-50%,0)}85%{transform:translate(120%,-87px) scale(.6)}100%{transform:translate(155%,-94px) scale(.55);opacity:.7}}
+@media(prefers-reduced-motion:reduce){.fr71-shot-ball{animation:none!important;left:50%;bottom:42px}}

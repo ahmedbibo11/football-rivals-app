@@ -1,0 +1,36 @@
+/* FR31 — site-navigation component; individual game action bars remain functional. */
+body.fr28-universe .fr-brand-dock{display:none!important;visibility:hidden!important;pointer-events:none!important}
+html[dir=ltr] body.fr28-universe>.fr28-header .fr28-header-inner{direction:ltr!important}
+body.fr28-universe>.fr28-header .fr28-header-inner{gap:clamp(4px,1.5vw,12px)!important}
+body.fr28-universe>.fr28-header .fr31-back{display:flex!important;flex:0 0 auto;align-items:center;justify-content:center;gap:5px;min-width:36px;min-height:36px;padding:3px 7px!important;border:1px solid var(--fr28-line)!important;border-radius:12px;background:var(--fr28-soft)!important;color:var(--fr28-text)!important;text-decoration:none!important;font-weight:800!important;box-sizing:border-box!important}
+body.fr28-universe>.fr28-header .fr31-back-icon{font:900 28px/1 system-ui}
+html[dir=rtl] body.fr28-universe>.fr28-header .fr31-back-icon{transform:scaleX(-1)}
+body.fr28-universe>.fr28-header .fr31-back-label{display:none;font:800 12px/1.2 system-ui}
+@media(min-width:720px){body.fr28-universe>.fr28-header .fr31-back-label{display:block}}
+@media(max-width:400px){body.fr28-universe>.fr28-header .fr28-wordmark{max-width:46%!important}body.fr28-universe>.fr28-header .fr28-wordmark img{width:36px!important;height:36px!important;min-width:36px!important}body.fr28-universe>.fr28-header .fr31-back{min-width:30px;padding:2px 4px!important}}
+body.fr28-universe.fr31-hub{padding-bottom:max(108px,calc(88px + env(safe-area-inset-bottom,0px)))!important}
+body.fr28-universe .fr31-site-nav{position:fixed;z-index:780;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,700px);height:calc(72px + env(safe-area-inset-bottom,0px));padding:6px 8px max(6px,env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;box-sizing:border-box;background:#f7fbff;border:1px solid #b9d5e6;border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -5px 20px rgba(10,49,85,.14);font:800 11px/1.2 system-ui}
+html[data-fr-theme=dark] body.fr28-universe .fr31-site-nav{background:#0b2036;border-color:#2c4e69;box-shadow:0 -5px 20px rgba(0,0,0,.2)}
+body.fr28-universe .fr31-site-nav a{display:flex;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:4px;border-radius:11px;text-decoration:none!important;color:#315d7c!important;background:transparent;border:1px solid transparent;box-sizing:border-box;padding:4px 2px;white-space:nowrap}
+html[data-fr-theme=dark] body.fr28-universe .fr31-site-nav a{color:#b9d2e9!important}
+body.fr28-universe .fr31-site-nav a.active{background:#fff0cc!important;border-color:#e4c478!important;color:#704b14!important}
+html[data-fr-theme=dark] body.fr28-universe .fr31-site-nav a.active{background:#3c321b!important;color:#ffe0a2!important;border-color:#b48a43!important}
+body.fr28-universe .fr31-nav-symbol{font-size:24px;line-height:1}
+body.fr28-universe .fr31-site-nav a:focus-visible,body.fr28-universe .fr31-back:focus-visible{outline:3px solid #308ed0!important;outline-offset:2px}
+body.fr28-universe nav.fr-bottom-nav.fr31-existing-site-nav{z-index:780!important}
+/* Hide redundant old logo only; retain game controls, actions, status, rules and sound. */
+body.fr28-universe :is(header.bar,header.top,header.topbar,header.fr28-context):not(.fr28-header) :is(a.identity,a.brand,div.brand){display:none!important}
+body.fr28-universe header.header:not(.fr28-header) .brand{display:none!important}
+body.fr28-universe header:not(.fr28-header) .fr-shell-controls{display:none!important}
+body.fr28-universe header.fr28-context:not(.fr28-header){box-shadow:none!important}
+@media(max-width:360px){body.fr28-universe>.fr28-header .fr28-wordmark strong{font-size:10px!important;letter-spacing:-.9px!important}body.fr28-universe>.fr28-header .fr28-wordmark small{font-size:8px!important}}
+/* Tighten secondary bars: keep functional status and game utilities, suppress duplicate site logo. */
+html body.fr28-universe header.nav:not(.fr28-header) > a.brand{display:none!important}
+html body.fr28-universe header.topbar.fr28-context:not(.fr28-header)>a.logo{display:none!important}
+@media(max-width:360px){}
+
+html body.fr28-universe header:not(.fr28-header)>div.brand{display:none!important}
+html body.fr28-universe header.header:not(.fr28-header) .logo{display:none!important}
+
+/* FR41: three destinations only; no league slot. */
+body.fr28-universe .fr31-site-nav{grid-template-columns:repeat(3,minmax(0,1fr))!important}

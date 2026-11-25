@@ -1,0 +1,37 @@
+:root{color-scheme:dark}
+.fr97-entry{max-width:720px;margin:0 auto;padding:0 14px 32px;color:#f7f9ff;font-family:Cairo,Tahoma,Arial,sans-serif;min-height:100vh;overflow:clip}
+.fr97-entry *{box-sizing:border-box}
+.fr97-entry-header{height:92px;display:flex;align-items:center;justify-content:space-between;direction:ltr;padding:10px 6px 0;max-width:640px;margin:0 auto}
+.fr97-entry-back{height:52px;width:57px;display:grid;place-items:center;border:1px solid #547b9d;border-radius:16px;background:linear-gradient(150deg,#0b3156,#0a1e34);color:#fff;font:900 28px/1 Arial,sans-serif}
+.fr97-entry-brand{display:grid;place-items:center;border:1px solid #e8bd6d;border-radius:14px;color:transparent;background:#132c43 url("/assets/brand/logo-fr.svg") center / auto 80% no-repeat;min-width:65px;height:55px;font:900 29px/1 Barlow Condensed,Arial,sans-serif}
+.fr97-entry-heading{text-align:center;margin:10px auto 20px}
+.fr97-entry-heading h1{font:900 clamp(29px,5vw,42px)/1.4 Cairo,Tahoma,Arial,sans-serif;color:#f8ce7b;margin:0}
+.fr97-entry-heading p{font:900 clamp(13px,2.2vw,17px)/1.35 Barlow Condensed,Arial,sans-serif;color:#9ab9d2;letter-spacing:.05em;margin:0}
+.fr97-entry-poster{border:2px solid #f2c479;border-radius:18px;overflow:hidden;margin:18px auto 20px;width:min(100%,560px);background:#071426;box-shadow:0 14px 40px #000a}
+.fr97-entry-poster img{display:block;width:100%;height:auto;aspect-ratio:1086/1448;object-fit:contain;object-position:center}
+.fr97-entry-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 auto 24px;max-width:620px;direction:ltr}
+.fr97-metric{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:82px;padding:7px 4px;text-align:center;border:1px solid #3f6b99;background:#102b4d;border-radius:14px;direction:rtl}
+.fr97-metric strong{display:block;color:#f7cb76;font:900 clamp(21px,3.8vw,27px)/1.2 Barlow Condensed,Arial,sans-serif}
+.fr97-metric span{display:block;color:#ebf3ff;font:800 clamp(10px,1.7vw,13px)/1.5 Cairo,Tahoma,Arial,sans-serif}
+.fr97-entry-actions{max-width:620px;margin:0 auto 33px;display:grid;gap:12px}
+.fr97-button{width:100%;border-radius:14px;min-height:68px;font:900 clamp(19px,3.5vw,30px)/1.3 Cairo,Tahoma,Arial,sans-serif;cursor:pointer}
+.fr97-primary{color:#09203b;border:2px solid #f7dda0;background:linear-gradient(180deg,#f9d780,#e6a832);box-shadow:inset 0 1px #fffb,0 4px 20px #d18d2b33}
+.fr97-secondary{color:#eaf2ff;border:1px solid #5a86b1;background:#102e52;font-size:clamp(17px,3vw,23px)}
+.fr97-entry button:focus-visible,.fr97-entry a:focus-visible,.fr97-entry summary:focus-visible{outline:3px solid #f9d282;outline-offset:3px}
+.fr97-modes{display:grid;grid-template-columns:1fr;gap:16px;margin:0 auto 24px;max-width:660px;scroll-margin-top:20px}
+.fr97-mode-card{position:relative;min-width:0;min-height:240px;display:flex;flex-direction:column;align-items:stretch;border:1px solid #41658b;border-radius:28px;background:linear-gradient(150deg,#112d50,#0b2039);padding:18px 18px 20px;box-shadow:0 10px 24px #0005}
+.fr97-pvp-card{background:linear-gradient(140deg,#112e4d,#121f39 70%,#27172f)}
+.fr97-mode-tag{align-self:flex-start;direction:ltr;display:inline-flex;padding:8px 13px;border:1px solid #478d8a;background:#12394749;color:#a2e6d4;border-radius:12px;font:700 13px/1.1 Barlow Condensed,Arial,sans-serif}
+.fr97-pvp-tag{color:#f0bac5;border-color:#914762;background:#47233344}
+.fr97-mode-card h2{margin:16px 0 5px;font:900 clamp(21px,3.6vw,30px)/1.5 Cairo,Tahoma,Arial,sans-serif;text-align:right}
+.fr97-mode-card p{font:600 clamp(13px,2.2vw,16px)/1.7 Cairo,Tahoma,Arial,sans-serif;color:#b1c6db;margin:0 0 22px;text-align:right}
+.fr97-mode-button{display:block;width:100%;min-height:72px;margin-top:auto;background:#071b34;color:#edf4ff;border:1px solid #51759b;border-radius:20px;font:900 clamp(16px,2.5vw,21px)/1.4 Cairo,Tahoma,Arial,sans-serif;cursor:pointer}
+.fr97-mode-button:hover{border-color:#e4bd75}
+.fr97-rules{margin:18px auto 30px;max-width:660px;border:1px solid #5376a2;border-radius:22px;background:linear-gradient(145deg,#112d50,#0c1e36);padding:18px;scroll-margin-top:20px}
+.fr97-rules summary{font:900 clamp(17px,3vw,22px)/1.5 Cairo,Tahoma,Arial,sans-serif;color:#f6cb7e;cursor:pointer}
+.fr97-rules p{font-size:14px;line-height:1.9;color:#d3e1f1}
+.fr97-entry-footer{margin-top:42px;padding:22px 8px 0;text-align:center;border-top:1px solid #2a4667;letter-spacing:.14em;color:#819db8;font:900 14px Barlow Condensed,Arial,sans-serif}
+@media(min-width:1000px){.fr97-entry{max-width:740px}.fr97-mode-card{min-height:230px}}
+@media(max-width:520px){.fr97-entry{padding:0 14px 20px}.fr97-entry-header{height:73px;padding:2px 0}.fr97-entry-back{width:43px;height:43px;border-radius:12px;font-size:23px}.fr97-entry-brand{min-width:48px;height:45px;border-radius:11px;font-size:22px}.fr97-entry-heading{margin:9px auto 15px}.fr97-entry-heading h1{font-size:28px}.fr97-entry-heading p{font-size:13px}.fr97-entry-poster{width:min(100%,560px);border-radius:14px;margin:10px auto 14px}.fr97-entry-metrics{gap:6px;margin-bottom:17px}.fr97-metric{min-height:59px;border-radius:11px;padding:5px 2px}.fr97-metric strong{font-size:20px}.fr97-metric span{font-size:10px}.fr97-entry-actions{gap:9px;margin-bottom:27px}.fr97-button{min-height:53px;font-size:22px;border-radius:12px}.fr97-secondary{font-size:18px;min-height:48px}.fr97-modes{gap:14px}.fr97-mode-card{min-height:178px;padding:14px 13px;border-radius:20px}.fr97-mode-card h2{font-size:22px;margin:12px 0 3px}.fr97-mode-card p{font-size:12px;margin-bottom:14px}.fr97-mode-button{min-height:57px;font-size:16px;border-radius:13px}.fr97-mode-tag{font-size:11px;padding:6px 9px}.fr97-rules{border-radius:17px;padding:13px}.fr97-entry-footer{font-size:11px}}
+@media(max-width:350px){.fr97-entry{padding:0 9px 20px}.fr97-entry-heading h1{font-size:25px}.fr97-metric strong{font-size:18px}.fr97-metric span{font-size:9px}.fr97-entry-poster{margin-top:7px}.fr97-mode-card h2{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.fr97-entry *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}

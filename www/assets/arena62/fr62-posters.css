@@ -1,0 +1,83 @@
+/* FR62 — Three original 1692 x 930 game-library posters.
+   Independent from FR61: remove this stylesheet and fr62-posters.js to roll back.
+   Exact original PNG pixels are preserved, no artificial image crop or redundant UI labels. */
+:root{--fr62-poster-ratio:1692 / 930}
+#games.fr61-active #fr61-arena .fr61-grid:has(> .fr61-pick[data-fr62-poster="1"]){
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  width:100%!important;
+  max-width:1030px!important;
+  min-width:0!important;
+  gap:clamp(11px,2.8vw,20px)!important;
+  margin-inline:auto!important;
+}
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]{
+  grid-column:auto!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1692/930!important;
+  border:0!important;
+  border-radius:clamp(15px,3vw,25px)!important;
+  background:transparent!important;
+  padding:0!important;
+  box-shadow:0 12px 25px #01071255!important;
+  overflow:hidden!important;
+  isolation:isolate;
+  display:block!important;
+  transform:translate3d(0,0,0);
+  transition:transform .28s cubic-bezier(.16,.83,.25,1),box-shadow .25s ease!important;
+  -webkit-tap-highlight-color:transparent;
+}
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]:hover{
+  transform:translate3d(0,-3px,0)!important;
+  box-shadow:0 15px 30px #01071270,0 0 13px #e6b95420!important;
+}
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]:active{
+  transform:scale(.987)!important;
+}
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"] .fr61-cover{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  display:block!important;
+  object-fit:contain!important;
+  object-position:50% 50%!important;
+  aspect-ratio:1692/930!important;
+  image-rendering:auto!important;
+  opacity:1!important;
+  transform:none!important;
+  transition:none!important;
+  background:#020b17!important;
+}
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]::before,
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]::after,
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"] .fr61-game-tag,
+#games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"] .fr61-game-copy{
+  display:none!important;
+}
+@media(max-width:740px){
+ #games.fr61-active #fr61-arena .fr61-grid:has(> .fr61-pick[data-fr62-poster="1"]){
+   grid-template-columns:minmax(0,1fr)!important;
+ }
+ #games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]{
+   grid-column:auto!important;aspect-ratio:1692/930!important;
+ }
+}
+@media(max-width:460px){
+ #games.fr61-active #fr61-arena .fr61-grid:has(> .fr61-pick[data-fr62-poster="1"]){gap:10px!important}
+ #games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]{
+   aspect-ratio:1692/930!important;
+   border-radius:17px!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ #games.fr61-active #fr61-arena .fr61-pick[data-fr62-poster="1"]{
+   transition:none!important;transform:none!important
+ }
+}

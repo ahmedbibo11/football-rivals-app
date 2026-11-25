@@ -1,0 +1,9 @@
+/* Native comparison cards only: match the original 4:5 featured and 1692:930 library tiles. */
+#home #frHomeFeatured>.fr-comparison-featured{position:relative!important;display:block!important;aspect-ratio:4/5!important;padding:0!important;background:#06172d!important;border:1px solid #d4ad68!important;overflow:hidden!important;border-radius:16px!important;isolation:isolate}
+#home #frHomeFeatured>.fr-comparison-featured:before{display:none!important}
+#home #frHomeFeatured>.fr-comparison-featured>img{display:block;width:100%;height:100%;object-fit:contain;aspect-ratio:4/5;background:#03172e;position:absolute;inset:0}
+#home #frHomeFeatured>.fr-comparison-featured>.fr-native-title{position:absolute!important;z-index:2!important;bottom:0;left:0;right:0;padding:12px 4px 10px!important;display:block;color:#fff!important;text-align:center;background:linear-gradient(transparent,#06182deb 50%);font:900 clamp(13px,3.9vw,18px)/1.4 Cairo,sans-serif!important}
+#games .fr81-gallery>.fr81-card[data-fr81-card="comparison"]{aspect-ratio:1692/930!important;border-color:rgba(218,178,90,.32)!important;background:#06172b;overflow:hidden}
+#games .fr81-card[data-fr81-card="comparison"] picture{display:block;width:100%;height:100%}
+#games .fr81-card[data-fr81-card="comparison"] img{display:block;width:100%;height:100%;object-fit:contain!important;aspect-ratio:1692/930}
+.fr81-comparison-entry,.comparison-game-promo{display:none!important}

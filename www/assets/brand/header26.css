@@ -1,0 +1,52 @@
+/* FOOTBALL RIVALS 25.2 — matching functional header across hub, league and account */
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready{
+display:flex!important;align-items:center!important;justify-content:space-between!important;
+height:77px!important;min-height:77px!important;box-sizing:border-box!important;
+padding:10px 13px!important;gap:7px!important;overflow:visible!important;
+}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready :is(.nav-links,.navlinks){display:none!important}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand{
+display:flex!important;align-items:center!important;gap:6px!important;
+flex:0 1 auto!important;min-width:0!important;max-width:calc(100% - 134px)!important;
+white-space:nowrap!important;overflow:hidden!important;font-size:clamp(13px,3.65vw,20px)!important;line-height:1.1!important
+}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand :is(.logo,.brand-mark){
+display:grid!important;place-items:center!important;flex:0 0 46px!important;
+width:46px!important;height:48px!important;margin:0!important;overflow:hidden!important
+}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand :is(.logo,.brand-mark) img{
+display:block!important;width:46px!important;height:46px!important;object-fit:contain!important
+}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand>span{
+min-width:0!important;overflow:hidden!important;text-overflow:clip!important
+}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand small{
+display:block!important;font-size:9px!important;line-height:1.45!important;letter-spacing:.35px!important;white-space:nowrap!important
+}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready>.fr-shell-controls[hidden]{display:none!important}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch{display:flex!important;align-items:center!important;gap:4px!important;flex:0 0 auto!important;direction:ltr!important}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch .fr26-group{
+display:flex!important;align-items:center!important;gap:1px!important;padding:2px!important;
+border-radius:12px!important;border:1px solid #376f90!important;background:#102d48!important
+}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch button{
+display:grid!important;place-items:center!important;min-width:30px!important;min-height:35px!important;
+margin:0!important;padding:5px 7px!important;box-sizing:border-box!important;
+border:0!important;border-radius:10px!important;background:transparent!important;
+color:#d9ebf6!important;font:900 11px/1.1 system-ui,sans-serif!important;
+cursor:pointer!important;box-shadow:none!important;white-space:nowrap!important
+}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch button.active{background:#1b70a6!important;color:#fff!important}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch button.active[data-fr26-theme]{
+background:#f2c870!important;color:#163b52!important
+}
+@media(max-width:370px){
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready{padding:8px!important;gap:5px!important}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand{font-size:13px!important;max-width:calc(100% - 124px)!important;gap:4px!important}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand :is(.logo,.brand-mark){flex-basis:40px!important;width:40px!important;height:42px!important}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand :is(.logo,.brand-mark) img{width:40px!important;height:40px!important}
+body.fr-unified-shell.fr-shell-secondary :is(header.nav,header.navbar).fr26-ready .brand small{font-size:7.5px!important}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch{gap:2px!important}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch .fr26-group{padding:1px!important}
+body.fr-unified-shell.fr-shell-secondary .fr26-switch button{min-width:26px!important;min-height:32px!important;padding:4px 5px!important;font-size:10px!important}
+}

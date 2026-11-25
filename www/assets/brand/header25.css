@@ -1,0 +1,29 @@
+/* FR identity 25 — same clean header geometry in Home, Games, League, Account */
+body.fr-home-brand .head{
+min-height:77px!important;height:77px!important;box-sizing:border-box!important;padding:10px 13px!important;
+display:flex!important;align-items:center!important;justify-content:space-between!important;
+border:1px solid #2c6887!important;border-radius:0 0 19px 19px!important;
+background:linear-gradient(125deg,#081d34,#10364e)!important;
+box-shadow:0 6px 18px #0a233a22!important;gap:8px!important;
+}
+body.fr-home-brand .head .brand{min-width:0!important;display:flex!important;align-items:center!important;gap:6px!important;flex:0 1 auto!important;overflow:hidden!important}
+body.fr-home-brand .head .brand-mark{min-width:48px!important;max-width:48px!important;width:48px!important;height:48px!important;display:grid!important;place-items:center!important;background:transparent!important;box-shadow:none!important}
+body.fr-home-brand .head .brand-mark img{width:48px!important;height:48px!important;object-fit:contain!important;filter:none!important}
+body.fr-home-brand .head .fr-brand-copy{min-width:0!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important}
+body.fr-home-brand .head .brand-title{font-size:clamp(15px,4.4vw,22px)!important;line-height:1.05!important;white-space:nowrap!important;color:#fff!important}
+body.fr-home-brand .head .brand-sub{font-size:clamp(8px,2vw,10px)!important;white-space:nowrap!important;letter-spacing:.4px!important;color:#bcd7e8!important}
+body.fr-home-brand .head .fr-switch{display:flex!important;gap:4px!important;min-width:0!important;flex:0 0 auto!important}
+body.fr-home-brand .head .fr-switch>div{display:flex!important;align-items:center!important;gap:1px!important;padding:2px!important;border-radius:12px!important;border:1px solid #376f90!important;background:#102d48!important}
+body.fr-home-brand .head .fr-switch button{min-height:35px!important;min-width:30px!important;padding:5px 7px!important;border:0!important;border-radius:10px!important;font-size:clamp(10px,2.6vw,12px)!important;font-weight:900!important;color:#d9ebf6!important;background:transparent!important}
+body.fr-home-brand .head .fr-switch button.active{background:#1b70a6!important;color:#fff!important}
+body.fr-home-brand .head .fr-switch>a{display:none!important}
+html[data-fr-theme=dark] body.fr-home-brand .head .fr-switch button.active[data-fr-theme-select=dark]{background:#f2c870!important;color:#163b52!important}
+@media(max-width:370px){
+ body.fr-home-brand .head{padding:8px!important;gap:5px!important}
+ body.fr-home-brand .head .brand-mark,body.fr-home-brand .head .brand-mark img{width:41px!important;min-width:41px!important;max-width:41px!important;height:43px!important}
+ body.fr-home-brand .head .brand-title{font-size:15px!important}
+ body.fr-home-brand .head .brand-sub{font-size:7.5px!important}
+ body.fr-home-brand .head .fr-switch{gap:2px!important}
+ body.fr-home-brand .head .fr-switch>div{padding:1px!important}
+ body.fr-home-brand .head .fr-switch button{padding:4px 5px!important;min-width:26px!important;min-height:32px!important;font-size:10px!important}
+}

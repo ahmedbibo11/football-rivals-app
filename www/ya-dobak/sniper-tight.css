@@ -1,0 +1,30 @@
+/* Ya Dobak 17.1 — one-screen decision fit on phone screens */
+@media(max-width:699px){
+body.yd-active .match-banner{padding:5px 8px 5px!important}
+body.yd-active .match-banner .banner-top{min-height:20px!important}
+body.yd-active .opponents{min-height:0!important;padding:5px 0 0!important}
+body.yd-active .opponent{padding:4px 5px!important;gap:5px!important;min-height:51px!important}
+body.yd-active .opponent-avatar{width:24px!important;height:24px!important;flex-basis:24px!important;font-size:15px!important}
+body.yd-active .progress-dots{height:5px!important;padding:0!important;margin:4px 0 0!important}
+body.yd-active #stage .stage-frame{padding:8px 10px 9px!important}
+body.yd-active #stage .stage-head{min-height:43px!important;margin-bottom:5px!important}
+body.yd-active #stage .round-timer{height:47px!important;width:47px!important;min-width:47px!important}
+body.yd-active #stage .round-timer span{font-size:25px!important}
+body.yd-active #stage .guess-layout{gap:6px!important}
+body.yd-active #stage .card-stage-featured{padding:6px 6px 5px!important}
+body.yd-active #stage .fr16-guess-wrap{gap:2px!important}
+body.yd-active #stage .fr16-guess-wrap .card-frame{width:clamp(138px,43vw,180px)!important}
+body.yd-active #stage .fr16-ability-caption{padding:3px 9px!important;margin:0 auto!important;line-height:1.2!important}
+body.yd-active #stage .guess-control{padding:8px 10px 9px!important;gap:5px!important}
+body.yd-active #stage .guess-control .stat-chip{padding:3px 9px!important;font-size:10px!important}
+body.yd-active #stage .guess-control h3{font-size:clamp(16px,4vw,20px)!important}
+body.yd-active #stage .number-row input{height:57px!important;font-size:clamp(45px,11vw,61px)!important}
+body.yd-active #stage .number-row button{width:40px!important;height:40px!important;flex-basis:40px!important}
+body.yd-active #stage .range-labels{height:14px!important;font-size:9px!important}
+body.yd-active #stage .yd-guess-meter{display:none!important}
+body.yd-active #stage #lockGuess{min-height:45px!important;font-size:clamp(14px,3.7vw,19px)!important}
+body.yd-active #stage .guess-control>.waiting{font-size:10px!important}
+}
+@media(max-width:350px){body.yd-active #stage .fr16-guess-wrap .card-frame{width:clamp(128px,43vw,145px)!important}
+body.yd-active #stage .stage-head h2{font-size:16px!important}
+body.yd-active #stage .guess-control .stat-chip{font-size:10px!important}}

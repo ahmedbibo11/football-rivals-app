@@ -1,0 +1,43 @@
+/* The same competition setup handles AI, room creation and direct invitations. */
+(()=>{'use strict';
+const root=document.getElementById('fr127-root');if(!root)return;
+const clubs=[['alahly','الأهلي المصري',0],['real','ريال مدريد',86],['barca','برشلونة',81],['liverpool','ليفربول',64],['city','مانشستر سيتي',65],['arsenal','أرسنال',57],['bayern','بايرن ميونخ',5],['atleti','أتلتيكو مدريد',78],['milan','ميلان',98]];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=s=>document.querySelector(s),invite=(new URLSearchParams(location.search).get('room')||'').trim().toUpperCase();
+let join=!!invite,scene=join?'setup':'entry',mode=join?'pvp':'ai',difficulty=(()=>{try{const v=localStorage.getItem('fr:ai:difficulty:v1');return ['easy','medium','pro'].includes(v)?v:'medium'}catch(e){return 'medium'}})(),club='real',name='',room=invite;
+try{name=localStorage.getItem('fr:pentagon:name')||'';club=localStorage.getItem('fr:club:preferred:v1')||localStorage.getItem('fr127:yadobak:club')||'real'}catch(e){}
+if(!clubs.some(c=>c[0]===club))club='real';
+function rememberChoice(){window.FR127Choice={club,mode,difficulty}}
+rememberChoice();
+function header(){return '<header class="topbar"><button type="button" class="back" data-fr128="back" aria-label="العودة">❮</button><span class="brand" aria-hidden="true"></span><span class="mode-brand">يا دوبك</span></header>'}
+function rules(){return '<details class="panel help" id="fr128-rules"><summary>قواعد يا دوبك بالتفصيل</summary><p>سبع جولات لتخمين الإحصائية أو التقييم الحقيقي. الأقرب يكسب الكارت، وكل لاعب يجمع كوينز حسب دقة تخمينه.</p><p>بعد الجولات تشتري أربع بطاقات لإكمال 11 لاعبًا، ثم تبدأ المباراة وتقدر تغيّر خطتك أثناء اللعب.</p></details>'}
+function entry(){return '<div class="fr123-ui app-shell">'+header()+'<main><section class="fr108-entry"><div class="fr108-hero"><figure class="fr108-poster"><img src="/assets/brand/covers-ar/dobak.webp?frb=football-rivals-arena-bundled1124-bibo21_vercel_app" width="720" height="900" alt="يا دوبك" fetchpriority="high"></figure><div class="fr108-story"><span class="fr108-kicker">YA DOBAK · STAT WARS</span><h1>يا دوبك</h1><p class="fr108-lede">خمن الإحصائية، اكسب الكارت، واجمع فريقك لمواجهة منافسك!</p><div class="fr108-facts"><span><b>07</b><small>جولات تخمين</small></span><span><b>11</b><small>لاعب لكل فريق</small></span><span><b>AI · 1V1</b><small>طريقتان للعب</small></span></div><div class="fr108-main-actions"><button class="btn gold" type="button" data-fr128="start-ai">ابدأ اللعب الآن</button><button class="btn ghost" type="button" data-fr128="rules">قواعد اللعبة</button></div></div></div><div class="fr108-section-label"><span>CHOOSE YOUR MODE</span><h2>اختر طريقة المنافسة</h2></div><div class="fr108-modes"><div class="panel mode-card fr108-mode"><span class="tag green">AI · THREE LEVELS</span><h3>🤖 ضد الذكاء الاصطناعي</h3><p>اختار مستوى منافسك وخوض التحدي بنفس القواعد.</p><button type="button" class="btn gold block" data-fr128="start-ai">واجه الذكاء الاصطناعي</button></div><div class="panel mode-card fr108-mode fr108-mode-rival"><span class="tag red">1 VS 1 · REAL TIME</span><h3>⚔️ مواجهة صديق</h3><p>أنشئ غرفة وشارك الرابط أو انضم بكود الغرفة.</p><button type="button" class="btn gold block" data-fr128="start-pvp">إنشاء غرفة</button><button type="button" class="btn ghost block" data-fr128="join">دخول غرفة</button></div></div>'+rules()+'</section></main><footer class="foot">FOOTBALL RIVALS · YA DOBAK</footer></div>'}
+function setup(){const grid=clubs.map(c=>'<button type="button" class="club-option '+(club===c[0]?'selected':'')+'" data-fr128-club="'+c[0]+'" aria-pressed="'+(club===c[0])+'"><img src="'+(c[0]==='alahly'?'/assets/clubs/al-ahly.png':'https://crests.football-data.org/'+c[2]+'.png')+'" alt="" loading="lazy"><span>'+c[1]+'</span></button>').join('');
+const choose='<div class="row-buttons"><button type="button" data-fr128="mode-ai" class="btn '+(mode==='ai'?'gold':'ghost')+'">🤖 ضد AI</button><button type="button" data-fr128="mode-pvp" class="btn '+(mode==='pvp'?'gold':'ghost')+'">⚔️ 1 ضد 1</button></div>';
+const details=mode==='ai'?'<div><h3>مستوى الذكاء الاصطناعي</h3><div class="difficulty">'+[['easy','سهل'],['medium','متوسط'],['pro','احترافي']].map(([id,label])=>'<button type="button" data-fr128-level="'+id+'" class="btn '+(difficulty===id?'active':'ghost')+'" aria-pressed="'+(difficulty===id)+'">'+label+'</button>').join('')+'</div><p class="hint">المنافس يخمن ويشتري الكروت بنفس قواعدك.</p></div>':join?'<div class="control"><label for="fr128-room">كود الغرفة</label><input class="input code" id="fr128-room" maxlength="8" value="'+esc(room)+'" placeholder="XXXXXXXX" autocomplete="off"></div>':'<div><h3>غرفة خاصة</h3><p class="hint">هتحصل فورًا على كود ورابط مشاركة؛ صاحبك يدخل منه مباشرة.</p><button type="button" class="btn ghost" data-fr128="join">عندي كود غرفة</button></div>';
+return '<div class="fr123-ui app-shell">'+header()+'<main><div class="top-intro"><span class="eyebrow">STEP 01 · READY TO PLAY</span><h1 class="h1">'+(join?'الانضمام إلى غرفة':'جهّز منافستك')+'</h1><p>اختر ناديك وشعارك الحقيقي قبل بداية الجولات.</p></div><div class="split-2"><section class="panel stack"><div class="control"><label for="fr128-name">اسمك داخل المباراة</label><input id="fr128-name" class="input" maxlength="20" autocomplete="nickname" value="'+esc(name)+'" placeholder="اكتب اسمك"></div><div><h2 class="section-title">اختار ناديك</h2><div class="club-grid" role="group" aria-label="اختيار النادي">'+grid+'</div></div></section><section class="panel stack"><div><span class="eyebrow">GAME MODE</span><h2 class="section-title">طريقة اللعب</h2></div>'+choose+details+'<button type="button" data-fr128="submit" class="btn gold block">'+(mode==='ai'?'ابدأ التحدي ضد AI':join?'انضم إلى الغرفة':'أنشئ الغرفة الآن')+'</button><p class="hint">7 جولات تخمين · سوق لاعبين · مباراة نهائية.</p></section></div>'+rules()+'</main></div>'}
+function render(){root.innerHTML=scene==='entry'?entry():setup()}
+function remember(){const field=$('#fr128-name'),code=$('#fr128-room');if(field)name=field.value.trim();if(code)room=code.value.trim().toUpperCase()}
+function notice(text){const e=$('#toast');if(e){e.textContent=text;e.classList.remove('hidden');e.style.borderColor='#ff7d7d';setTimeout(()=>e.classList.add('hidden'),3000)}}
+root.addEventListener('click',event=>{
+ const card=event.target.closest('[data-fr128-club]');if(card){remember();club=card.dataset.fr128Club;rememberChoice();try{localStorage.setItem('fr127:yadobak:club',club);localStorage.setItem('fr:club:preferred:v1',club)}catch(e){}render();return}
+ const level=event.target.closest('[data-fr128-level]');if(level){remember();difficulty=level.dataset.fr128Level;try{localStorage.setItem('fr:ai:difficulty:v1',difficulty)}catch(e){}rememberChoice();render();return}
+ const button=event.target.closest('[data-fr128]');if(!button)return;const action=button.dataset.fr128;
+ if(action==='rules'){const d=$('#fr128-rules');if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'})}return}
+ if(action==='back'){if(scene==='entry'){location.href='/?view=games';return}scene='entry';join=false;if(location.search)history.replaceState(null,'','/ya-dobak/');render();return}
+ if(action==='start-ai'||action==='start-pvp'||action==='join'){remember();scene='setup';join=action==='join';mode=action==='start-ai'?'ai':'pvp';rememberChoice();render();return}
+ if(action==='mode-ai'||action==='mode-pvp'){remember();mode=action==='mode-ai'?'ai':'pvp';if(mode==='ai')join=false;rememberChoice();render();return}
+ if(action==='submit'){
+  remember();if(name.length<2){notice('اكتب اسمك الأول');$('#fr128-name')?.focus();return}
+  if(!window.FR127_CLIENT_READY){notice('جارٍ تجهيز اللعبة، حاول مرة أخرى');return}
+  rememberChoice();try{localStorage.setItem('fr:pentagon:name',name)}catch(e){}
+  if(mode==='pvp'&&join){if(!/^[A-HJ-NP-Z2-9]{8}$/.test(room)){notice('اكتب كود الغرفة المكوّن من 8 حروف');return}$('#guestName').value=name;$('#roomCode').value=room;$('#joinBtn').click()}
+  else{$('#hostName').value=name;$('#createBtn').click()}
+ }
+});
+root.addEventListener('input',e=>{if(e.target.id==='fr128-room')e.target.value=e.target.value.replace(/[^A-Za-z0-9]/g,'').toUpperCase()});
+try{const saved=JSON.parse(localStorage.getItem('fr13-dobak')||'null');root.hidden=!!saved&&(!invite||String(saved.id).toUpperCase()===invite)}catch(e){}
+render();
+})();
+
+;document.addEventListener('input',function(e){if(e.target&&e.target.id==='fr128-name'){try{const n=e.target.value.trim().slice(0,28);if(n)localStorage.setItem('fr:pentagon:name',n)}catch(_){}}});

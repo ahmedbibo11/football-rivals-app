@@ -1,0 +1,260 @@
+/* FR50 original source portraits: exact tile crop, no stretched face. */
+body.fr47-career-reveal .fr49-photo-wrap{isolation:isolate}
+#fr50-photo-atlas{position:absolute;z-index:3;left:50%;bottom:0;transform:translateX(-50%);height:100%;width:auto;aspect-ratio:246/239;
+ max-width:100%;opacity:0;background-repeat:no-repeat;mask-image:linear-gradient(#000 67%,transparent 100%);
+ -webkit-mask-image:linear-gradient(#000 67%,transparent 100%);transition:opacity .2s ease}
+#fr50-photo-atlas.loaded{opacity:1}
+body.fr47-career-reveal .fr49-portrait-frame{filter:drop-shadow(0 0 12px #efb85770)!important}
+body.fr47-career-reveal .fr49-photo-wrap{inset:3% 3% 18%!important}
+body.fr47-career-reveal .fr49-player-label{z-index:7}
+@media(prefers-reduced-motion:reduce){#fr50-photo-atlas{transition:none!important}}
+
+/* ====================================================
+   FR52: STADIUM LEGEND — PORTRAIT FRAME HEIGHT HOTFIX
+   Original cards/sprites are untouched; no image edits.
+   Pure scoped styling, no effects on gameplay or scoring.
+   ==================================================== */
+body.fr47-career-reveal{
+ --fr51-gold:#efbd5e;
+ --fr51-cream:#fff0c8;
+ background-color:#041324!important;
+ background-image:
+  radial-gradient(ellipse 45% 23% at 0 29%,rgba(252,199,108,.17),transparent 81%),
+  radial-gradient(ellipse 45% 23% at 100% 29%,rgba(252,199,108,.17),transparent 81%),
+  linear-gradient(180deg,rgba(2,15,30,.12),rgba(3,15,30,.7) 84%),
+  url('/assets/brand/fr47-stadium.svg')!important;
+ background-size:cover!important;
+ background-position:center top!important;
+ background-repeat:no-repeat!important;
+}
+body.fr47-career-reveal #reveal .panel.reveal{
+ isolation:isolate!important;
+ position:relative!important;
+ box-sizing:border-box!important;
+ width:min(100%,700px)!important;
+ max-width:700px!important;
+ margin:10px auto 22px!important;
+ padding:clamp(13px,2.7vw,23px) clamp(12px,2.8vw,25px) 24px!important;
+ border:1.5px solid rgba(251,206,123,.78)!important;
+ border-radius:clamp(20px,3vw,32px)!important;
+ background:
+  radial-gradient(ellipse 47% 31% at 0 24%,rgba(226,166,79,.15),transparent 91%),
+  radial-gradient(ellipse 47% 31% at 100% 24%,rgba(226,166,79,.15),transparent 91%),
+  radial-gradient(ellipse 76% 46% at 50% 35%,rgba(16,67,99,.49),transparent 90%),
+  linear-gradient(175deg,#092840e9,#061d36f7 60%,#04182ef9)!important;
+ box-shadow:0 19px 55px #0009,0 0 22px #d6aa5830,inset 0 1px #ffecac48!important;
+ overflow:hidden!important;
+}
+body.fr47-career-reveal #reveal .panel.reveal::before{
+ content:"";position:absolute;pointer-events:none;z-index:-1;
+ top:65px;left:0;right:0;height:min(62vw,390px);
+ background:
+  radial-gradient(ellipse 38% 9% at 0 15%,#f5d18da8,transparent 80%),
+  radial-gradient(ellipse 38% 9% at 100% 15%,#f5d18da8,transparent 80%),
+  linear-gradient(133deg,transparent 5%,#e3b8663d 15%,transparent 33%),
+  linear-gradient(227deg,transparent 5%,#e3b8663d 15%,transparent 33%);
+ -webkit-mask-image:linear-gradient(#000 0%,transparent 100%);
+ mask-image:linear-gradient(#000 0%,transparent 100%);
+}
+body.fr47-career-reveal #fr47-reveal-scene.fr49-upgraded{
+ display:flex!important;flex-direction:column!important;
+ width:100%!important;max-width:none!important;min-width:0!important;
+ gap:0!important;
+}
+body.fr47-career-reveal #fr49-result{
+ width:100%!important;max-width:100%!important;min-width:0!important;
+ display:flex!important;flex-direction:column!important;
+ align-items:stretch!important;gap:clamp(10px,2vw,17px)!important;
+ direction:rtl!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-starline{
+ width:100%!important;text-align:center!important;
+ font-size:clamp(10px,1.5vw,12px)!important;
+ font-weight:900!important;letter-spacing:2px!important;
+ color:#eed39d!important;opacity:.95!important;
+ text-shadow:0 2px 6px #00101f!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-result-banner{
+ align-self:center!important;max-width:100%!important;
+ border:1.5px solid #50eb9a!important;
+ border-radius:999px!important;
+ padding:6px clamp(13px,3.5vw,31px)!important;
+ background:linear-gradient(100deg,#044b3e,#087b57 58%,#06402e)!important;
+ box-shadow:0 0 22px #15f59d42,inset 0 1px #d5ffef63!important;
+ color:#f1fff7!important;
+ font-weight:900!important;font-size:clamp(18px,4.7vw,30px)!important;
+ line-height:1.45!important;text-align:center!important;
+ text-shadow:0 2px 5px #003526!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame{
+ display:block!important;
+ position:relative!important;
+ box-sizing:border-box!important;
+ flex:none!important;
+ width:100%!important;max-width:350px!important;
+ height:365px!important;
+ margin:4px auto 12px!important;
+ transform:none!important;
+ filter:drop-shadow(0 0 13px #f7c46a94) drop-shadow(0 20px 30px #0009)!important;
+}
+@media(max-width:639px){
+ body.fr47-career-reveal #fr49-result .fr49-portrait-frame{
+  width:min(84vw,350px)!important;
+  height:clamp(300px,99vw,425px)!important;
+ }
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame::after{
+ content:"";position:absolute;z-index:-1;pointer-events:none;
+ left:-6%;right:-6%;top:10%;bottom:3%;border-radius:40%;
+ box-shadow:0 0 75px 12px rgba(237,177,76,.18);
+}
+body.fr47-career-reveal #fr49-result .fr49-photo-wrap{
+ inset:3% 3% 18%!important;isolation:isolate!important;
+ overflow:hidden!important;
+}
+body.fr47-career-reveal #fr49-result #fr50-photo-atlas{
+ background-repeat:no-repeat!important;
+ image-rendering:auto!important;
+}
+body.fr47-career-reveal #fr49-result #fr49-player-photo{
+ object-fit:contain!important;
+ object-position:center bottom!important;
+ image-rendering:auto!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-player-label{
+ z-index:7!important;
+ width:min(88%,500px)!important;max-width:100%!important;
+ margin-inline:auto!important;min-width:0!important;
+ padding:8px 12px!important;
+ border:1px solid #fff0bb!important;border-radius:14px!important;
+ background:linear-gradient(180deg,#f9d880 0%,#d8a247 38%,#936326 80%,#6e461c 100%)!important;
+ color:#fff9ed!important;
+ box-shadow:0 5px 14px #0008,inset 0 1px #fff6d8b0!important;
+ text-shadow:0 2px 5px #46300b!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-player-label :is(strong,b,span,small){
+ max-width:100%!important;overflow-wrap:anywhere!important;
+}
+body.fr47-career-reveal #fr49-result :is(.fr49-facts,.fr49-facts-grid,.fr49-facts-row,.fr49-meta-grid,.fr49-info-grid,.fr49-profile-row,.fr49-player-info,.fr49-detail-grid){
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ width:100%!important;max-width:100%!important;min-width:0!important;
+ gap:clamp(9px,2vw,17px)!important;
+}
+body.fr47-career-reveal #fr49-result :is(.fr49-fact,.fr49-fact-card,.fr49-info-card,.fr49-detail,.fr49-meta-card,.fr49-nation,.fr49-position){
+ min-width:0!important;max-width:100%!important;box-sizing:border-box!important;
+ border:1px solid rgba(244,190,96,.78)!important;
+ border-radius:18px!important;
+ background:linear-gradient(155deg,#0a3653,#061c35)!important;
+ box-shadow:inset 0 1px #f4e5b02a,0 5px 15px #0005!important;
+}
+body.fr47-career-reveal #fr49-result :is(.fr49-career,.fr49-clubs,.fr49-clubs-row,.fr49-career-track,.fr49-career-path,.fr49-journey,.fr49-club-path,.fr49-route){
+ width:100%!important;max-width:100%!important;min-width:0!important;
+ border-radius:20px!important;
+ border-color:#eabc67!important;
+ background:linear-gradient(160deg,#0a3253,#051a31 90%)!important;
+ box-shadow:inset 0 1px #d1f5ff2b!important;
+}
+body.fr47-career-reveal #fr49-result :is(.fr49-career,.fr49-clubs,.fr49-career-track,.fr49-career-path,.fr49-journey,.fr49-club-path) img{
+ object-fit:contain!important;object-position:center!important;
+ background:transparent!important;
+}
+body.fr47-career-reveal #reveal button,
+body.fr47-career-reveal #reveal .btn{
+ font-weight:900!important;
+}
+@media(max-width:430px){
+ body.fr47-career-reveal #reveal .panel.reveal{
+  width:calc(100% - 12px)!important;max-width:100%!important;
+  padding:12px 10px 17px!important;
+  border-radius:21px!important;
+ }
+ body.fr47-career-reveal #fr49-result{gap:11px!important;}
+ body.fr47-career-reveal #fr49-result .fr49-portrait-frame{
+  width:min(84vw,350px)!important;max-width:100%!important;
+  height:clamp(300px,99vw,425px)!important;
+  margin:2px auto 7px!important;
+ }
+ body.fr47-career-reveal #fr49-result .fr49-player-label{
+  padding:6px 9px!important;border-radius:12px!important;
+ }
+ body.fr47-career-reveal #fr49-result .fr49-result-banner{
+  font-size:clamp(17px,5.1vw,24px)!important;
+  padding:6px 14px!important;
+ }
+}
+@media(max-width:355px){
+ body.fr47-career-reveal #reveal .panel.reveal{
+  padding-inline:8px!important;
+ }
+ body.fr47-career-reveal #fr49-result :is(.fr49-fact,.fr49-fact-card,.fr49-info-card,.fr49-detail,.fr49-meta-card){
+  border-radius:14px!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body.fr47-career-reveal #fr49-result .fr49-portrait-frame{animation:none!important;}
+}
+
+/* FR53 NATIVE FULL CARD: uncropped original source tile, no artificial portrait enlargement. */
+body.fr47-career-reveal #fr49-result .fr49-reveal-layout:has(.fr53-full-card){
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ grid-template-areas:"portrait portrait" "career bio"!important;
+ width:100%!important;max-width:640px!important;min-width:0!important;
+ align-items:stretch!important;gap:clamp(9px,2vw,16px)!important;direction:rtl!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-reveal-layout:has(.fr53-full-card) .fr49-career-history{grid-area:career!important;min-width:0!important}
+body.fr47-career-reveal #fr49-result .fr49-reveal-layout:has(.fr53-full-card) .fr49-biography{grid-area:bio!important;min-width:0!important}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card{
+ grid-area:portrait!important;display:flex!important;flex-direction:column!important;
+ justify-content:flex-start!important;align-items:center!important;
+ width:min(87vw,340px)!important;max-width:100%!important;
+ height:auto!important;min-height:0!important;aspect-ratio:auto!important;
+ padding:0!important;margin:5px auto 12px!important;
+ filter:none!important;overflow:visible!important;
+ transform:none!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card :is(.fr49-card-gold,.fr49-photo-glow,.fr49-sparkle){display:none!important}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card .fr49-photo-wrap{
+ position:relative!important;display:block!important;flex:0 0 auto!important;
+ inset:auto!important;width:100%!important;height:auto!important;
+ min-height:0!important;max-width:100%!important;
+ aspect-ratio:var(--fr53-card-ratio,.72)!important;
+ box-sizing:border-box!important;
+ margin:0!important;padding:0!important;overflow:hidden!important;
+ border:0!important;border-radius:0!important;clip-path:none!important;
+ background:transparent!important;
+ filter:drop-shadow(0 8px 12px rgba(0,0,0,.70)) drop-shadow(0 0 8px rgba(245,184,80,.34))!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card #fr50-photo-atlas{
+ position:absolute!important;inset:0!important;
+ width:100%!important;height:100%!important;min-width:0!important;
+ max-width:none!important;max-height:none!important;
+ aspect-ratio:auto!important;transform:none!important;
+ opacity:1!important;background-repeat:no-repeat!important;
+ background-color:transparent!important;background-clip:border-box!important;
+ mask-image:none!important;-webkit-mask-image:none!important;
+ image-rendering:auto!important;transition:none!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card #fr49-player-photo,
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card #fr49-photo-loading{display:none!important}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card .fr49-player-label{
+ position:relative!important;inset:auto!important;
+ width:96%!important;max-width:100%!important;
+ height:auto!important;min-height:64px!important;
+ box-sizing:border-box!important;
+ margin:10px auto 0!important;padding:7px 10px!important;
+ border-radius:14px!important;background:linear-gradient(180deg,#fbe091,#d7a347 48%,#80521e)!important;
+ border:1px solid #ffe6ab!important;
+ box-shadow:0 5px 13px #0008,inset 0 1px #fff5cc8c!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card .fr49-player-label strong{
+ font-size:clamp(17px,4.8vw,24px)!important;line-height:1.3!important;overflow-wrap:anywhere!important;
+}
+body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card .fr49-player-label span{
+ font-size:clamp(11px,3vw,15px)!important;
+}
+@media(min-width:640px){
+ body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card{width:min(100%,350px)!important}
+}
+@media(max-width:355px){
+ body.fr47-career-reveal #fr49-result .fr49-portrait-frame.fr53-full-card{width:min(88vw,295px)!important}
+}

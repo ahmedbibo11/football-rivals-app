@@ -1,0 +1,35 @@
+/* FR44: visual parity + clear icons + quick cross-document transitions. */
+html body.fr44-site.fr43-site.fr28-universe nav.fr-bottom-nav .fr-nav-icon,
+html body.fr44-site.fr43-site.fr28-universe nav.fr31-site-nav .fr31-nav-symbol{
+  font-size:0!important;
+  text-indent:0!important;
+  letter-spacing:0!important;
+  white-space:nowrap!important;
+}
+html body.fr44-site.fr43-site.fr28-universe nav.fr-bottom-nav .fr-nav-icon::before,
+html body.fr44-site.fr43-site.fr28-universe nav.fr31-site-nav .fr31-nav-symbol::before{
+  display:block!important;
+  font-family:system-ui,sans-serif!important;
+  font-size:27px!important;
+  font-style:normal!important;
+  font-weight:700!important;
+}
+html body.fr44-site.fr43-site.fr28-universe [data-fr-nav=home] .fr-nav-icon::before,
+html body.fr44-site.fr43-site.fr28-universe [data-fr31-nav=home] .fr31-nav-symbol::before{font-size:30px!important}
+html body.fr44-site.fr43-site.fr28-universe [data-fr-nav=games] .fr-nav-icon::before,
+html body.fr44-site.fr43-site.fr28-universe [data-fr31-nav=games] .fr31-nav-symbol::before{font-size:24px!important}
+html body.fr44-site.fr43-site.fr28-universe nav.fr-bottom-nav,
+html body.fr44-site.fr43-site.fr28-universe nav.fr31-site-nav{
+  contain:layout style!important;
+  -webkit-tap-highlight-color:transparent;
+}
+html body.fr44-site.fr43-site.fr28-universe nav.fr-bottom-nav>*,
+html body.fr44-site.fr43-site.fr28-universe nav.fr31-site-nav>*{
+  touch-action:manipulation;
+}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:fr44-page-away .105s ease-out both}
+::view-transition-new(root){animation:fr44-page-appear .145s ease-in both}
+@keyframes fr44-page-away{from{opacity:1}to{opacity:.82}}
+@keyframes fr44-page-appear{from{opacity:.88}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none!important}}
